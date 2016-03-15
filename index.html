@@ -24,10 +24,427 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
         <meta name="theme-color" content="#ffffff">
-        <link href='https://fonts.googleapis.com/css?family=Merriweather:700,400,400italic|Karla:400,700|Inconsolata' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:700,700italic,400,400italic|Karla:400,700|Inconsolata' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/styles/main.css">
+        <style type="text/css">
+            .container {
+              text-align: center;
+              padding: 60px 20px 10px;
+            }
+
+            .container h2.title, .container p.pitch {
+                text-align: center !important;
+            }
+
+            .footer {
+                border-top: 1px solid #F4F4F4;
+                padding: 40px;
+                margin-top: 80px;
+            }
+
+            .footer-content {
+                max-width:540px;
+                margin: 0 auto;
+            }
+
+            .column {
+                display:block;
+                float:left;
+            }
+
+            .column-2 {
+                display:block;
+                float:right;
+            }
+             .column-3 {
+                display:block;
+            }
+
+            p.pitch {
+                max-width:540px;
+                margin: 0 auto;
+                padding:10px 0;
+                font-size: 18px;
+            }
+
+            form {
+                margin-top:40px;
+            }
+
+            svg {
+              width: 80px;
+              height: 60px;
+              margin: 0 auto;
+            }
+
+            .icon {
+              fill: rgba(6, 214, 179, 0);
+              stroke: rgba(6, 214, 179, 0);
+              stroke-width: 1.5px;
+              stroke-dasharray: 300;
+              stroke-dashoffset: 300;
+              animation: line 3s linear alternate forwards;
+            }
+            .icon:nth-child(1) {
+              animation-delay: 0s;
+            }
+            .icon:nth-child(2) {
+              animation-delay: 3s;
+            }
+            .icon:nth-child(3) {
+              animation-delay: 6s;
+            }
+            .icon:nth-child(4) {
+              animation-delay: 9s;
+            }
+            .icon:nth-child(5) {
+              animation-delay: 12s;
+            }
+            .icon:nth-child(6) {
+              animation-delay: 15s;
+            }
+            .icon:nth-child(7) {
+              animation-delay: 18s;
+            }
+            .icon:nth-child(8) {
+              animation-delay: 21s;
+            }
+            .icon:nth-child(9) {
+              animation-delay: 24s;
+            }
+            .icon:nth-child(10) {
+              animation-delay: 27s;
+            }
+            .icon:nth-child(11) {
+              animation-delay: 30s;
+            }
+
+            @keyframes line {
+              0% {
+                stroke-dashoffset: 300;
+                fill: rgba(6, 214, 179, 0);
+                stroke: rgba(6, 214, 179, 0);
+              }
+              5% {
+                fill: rgba(6, 214, 179, 0);
+                stroke: #06d6b3;
+              }
+              40% {
+                stroke-dashoffset: 0;
+              }
+              60% {
+                stroke-dashoffset: 0;
+                fill: rgba(6, 214, 179, 0);
+                stroke: #06d6b3;
+              }
+              80% {
+                stroke-dashoffset: 300;
+                fill: rgba(6, 214, 179, 0);
+                stroke: #06d6b3;
+              }
+              83% {
+                stroke-dashoffset: 300;
+                fill: rgba(6, 214, 179, 0);
+                stroke: rgba(6, 214, 179, 0);
+              }
+              100% {
+                stroke-dashoffset: 300;
+                fill: rgba(6, 214, 179, 0);
+                stroke: rgba(6, 214, 179, 0);
+              }
+            }
+            .folio {
+              fill: rgba(6, 214, 179, 0);
+              stroke: rgba(6, 214, 179, 0);
+              stroke-width: 1.5px;
+              stroke-dasharray: 300;
+              stroke-dashoffset: 300;
+              animation: folio 3s linear forwards;
+            }
+            .folio:nth-child(1) {
+              animation-delay: 33s;
+            }
+
+            @keyframes folio {
+              0% {
+                stroke-dashoffset: 300;
+                fill: rgba(6, 214, 179, 0);
+                stroke: rgba(6, 214, 179, 0);
+              }
+              5% {
+                fill: rgba(6, 214, 179, 0);
+                stroke: #06d6b3;
+              }
+              40% {
+                stroke-dashoffset: 0;
+              }
+              100% {
+                stroke-dashoffset: 0;
+                fill: rgba(6, 214, 179, 0);
+                stroke: #06d6b3;
+              }
+            }
+        </style>
     </head>
     <body>
-        <h1>Hello, world!</h1>
+        <div class="logo">
+            Fondfolio Logo
+        </div>
+        <div class="animation">
+            <div class="container">
+                <div id="sequence">
+                    <svg class="run-animation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+                        <g class="icon icon-folio">
+                          <g>
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            M76.283,1.031c-0.634,2.377-4.922,5.355-10.213,5.355c-8.975,0-12.048-4.332-18.688-4.418c-6.639-0.084-8.729,4.418-8.729,4.418
+                            s-2.09-4.502-8.729-4.418c-6.639,0.086-9.713,4.418-18.688,4.418C6.078,6.387,1.808,3.381,1,1"/>
+                                        
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            M76.376,44.939c-0.409,2.412-4.802,5.582-10.263,5.582c-8.975,0-12.049-4.33-18.688-4.416c-6.639-0.086-8.729,4.416-8.729,4.416
+                            s-2.09-4.502-8.729-4.416s-9.713,4.416-18.688,4.416c-5.26,0-9.597-3.123-10.28-5.525"/>
+                            <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M33.578,25.557
+                            c2.144,1.504,6.378,2.525,9.954,0"/>
+                        </g>
+                          </g>
+                          
+                        <g class="icon icon-recovery">
+                          <line class="path" fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="11.554" y1="6.186" x2="14.865" y2="17.27"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M27.271,1
+                                    C16.925,1,11.517,6.07,11.517,6.07"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M13.226,11.934
+                                    c0,0-11.18,5.471-12.178,21.344c-1,15.875,13.766,16.912,13.766,16.912"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M9.662,32.68
+                                    c0,0,0.113,22.445,17.414,23.322C44.388,55.125,44.957,32.68,44.957,32.68"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M7.605,32.1
+                                    c6,0,13.691-0.943,19.578-9.268"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M26.373,19.145
+                                    c0,7.949,13.885,13.955,21.18,12.889"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="27.31" y1="6.287" x2="27.31" y2="13.609"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="30.97" y1="9.949" x2="23.65" y2="9.949"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M22.617,45.758
+                                c2.143,1.504,6.377,2.525,9.953,0"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="43.066" y1="6.186" x2="39.753" y2="17.27"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M27.349,1
+                                    c10.346,0,15.754,5.07,15.754,5.07"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M41.394,11.934
+                                    c0,0,11.178,5.471,12.178,21.344c1,15.875-13.766,16.912-13.766,16.912"/>
+                          </g>
+                          <g class="icon icon-moving">
+                                <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="32.668" y1="47.216" x2="63.338" y2="37.427"/>
+                            
+                                <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                                1,1.466 12.582,7.127 24.125,42.663      "/>
+                            
+                                <circle fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="26.538" cy="49.259" r="6.462"/>
+                            
+                                <rect x="26.212" y="4.975" transform="matrix(0.9501 -0.312 0.312 0.9501 -4.2193 13.9152)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="30.338" height="30.338"/>
+                            
+                                <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="36.359" y1="5.957" x2="39.393" y2="15.313"/>
+                            </g>
+                          
+                        <g class="icon icon-retirement">
+                            <g>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="26.504" y1="1" x2="26.301" y2="5.332"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="41.631" y1="8.447" x2="38.396" y2="11.334"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="46.904" y1="24.459" x2="42.584" y2="24.17"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="39.543" y1="39.305" x2="36.629" y2="35.908"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="23.896" y1="40.119" x2="23.516" y2="44.516"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="8.535" y1="37.244" x2="11.934" y2="34.443"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="2.963" y1="21.221" x2="7.795" y2="21.734"/>
+                                <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="10.73" y1="6.186" x2="13.557" y2="9.754"/>
+                                <circle fill="none" stroke-miterlimit="10" cx="25.202" cy="22.732" r="13.183"/>
+                            </g>
+                            <g>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M16.793,50.352
+                                    c-1.201,3.191-4.283,5.461-7.895,5.461c-3.615,0-6.699-2.273-7.898-5.473"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M32.779,50.352
+                                    c-1.201,3.191-4.281,5.461-7.893,5.461c-3.615,0-6.699-2.273-7.898-5.473"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M48.572,50.352
+                                    c-1.201,3.191-4.283,5.461-7.895,5.461c-3.615,0-6.699-2.273-7.898-5.473"/>
+                            </g>
+                         </g>
+                          
+                        <g class="icon icon-birthday">
+                            <rect x="1" y="29.482" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="47.684" height="28.033"/>
+                            <line fill="none" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="35.517" x2="48.684" y2="35.517"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            M21.461,19.395c0-0.832,1.486-2.85,3.098-4.631c1.609,1.662,3.096,3.682,3.096,4.631c0,1.662-1.363,2.967-3.096,2.967
+                            C22.824,22.361,21.461,21.057,21.461,19.395z"/>
+                            <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="24.686" y1="20.186" x2="24.686" y2="29.486"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            M11.812,10.627c0-0.854,1.486-2.93,3.096-4.76c1.611,1.709,3.098,3.785,3.098,4.76c0,1.709-1.363,3.051-3.098,3.051
+                            S11.812,12.336,11.812,10.627z"/>
+                            <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="14.893" y1="11.338" x2="14.893" y2="29.48"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            M31.518,5.859c0-0.871,1.484-2.99,3.096-4.859c1.609,1.746,3.098,3.865,3.098,4.859c0,1.746-1.363,3.115-3.098,3.115
+                            S31.518,7.605,31.518,5.859z"/>
+                            <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="34.598" y1="6.838" x2="34.598" y2="29.48"/>
+                        </g>
+                          
+                        <g class="icon icon-graduation">
+                            <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                            1,55.726 21.999,55.726 21.999,42.166 35.553,42.166 35.553,28.611 49.49,28.611 49.49,14.676 58.725,14.676 58.725,1.287"/>
+                            <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                            1,55.726 1,42.166 14.552,42.166 14.552,28.611 28.49,28.611 28.49,14.676 50.328,14.676"/>
+                            <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                            54.891,5.183 58.723,1 62.336,4.963"/>
+                            <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="29.326" y1="28.648" x2="39.994" y2="28.648"/>
+                            <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="14.927" y1="42.147" x2="25.593" y2="42.147"/>
+                       </g>
+                          
+                        <g class="icon icon-cause">
+                            <g>
+                                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M44.795,1c-5.123,0-9.91,2.229-13.197,6.055C28.307,3.232,23.509,1,18.399,1C8.805,1,1,8.807,1,18.406
+                                c0,4.559,1.748,8.869,4.924,12.135L27.709,54.26c1.027,1.117,2.408,1.732,3.889,1.732c1.482,0,2.863-0.615,3.891-1.732
+                                l21.773-23.707c3.186-3.268,4.938-7.582,4.938-12.146C62.201,8.807,54.391,1,44.795,1z"/>
+                            </g>
+                            <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M25.331,35.941
+                            c2.144,1.504,6.378,2.525,9.954,0"/>
+                        </g>
+                          
+                        <g class="icon icon-engagement">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-miterlimit="10" d="
+                                M24.018,10.079l-2.084,0.026c-0.816-0.347-1.537-1.048-1.764-1.833l-1.833-6.378c-0.107-0.363-0.064-0.594,0.008-0.694
+                                C18.419,1.104,18.628,1,19.009,1h5.008h0.057h5.006c0.379,0,0.588,0.104,0.664,0.2c0.07,0.101,0.113,0.331,0.006,0.694
+                                l-1.83,6.378c-0.227,0.785-0.947,1.486-1.762,1.833l-2.084-0.026H24.018z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-miterlimit="10" d="
+                                M47.082,32.965C47.082,45.687,36.77,56,24.045,56C11.317,56,1,45.687,1,32.965C1,20.242,11.317,9.929,24.045,9.929
+                                C36.77,9.929,47.082,20.242,47.082,32.965z"/>
+                        </g>
+                        <g class="icon icon-wedding">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-miterlimit="10" d="
+                                M38.248,19.62c0,10.283-8.338,18.62-18.621,18.62C9.338,38.24,1,29.903,1,19.62S9.338,1,19.627,1
+                                C29.91,1,38.248,9.337,38.248,19.62z"/>
+                            <ellipse fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-miterlimit="10" cx="36.828" cy="36.824" rx="18.625" ry="18.619"/>
+                        </g>
+                          
+                        <g class="icon icon-anniversary">
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M6.004,30.573c-0.148-1.128-0.227-2.279-0.227-3.448C5.777,12.697,17.475,1,31.902,1"/>
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M57.404,23.953c0.127,1.04,0.191,2.099,0.191,3.172c0,14.429-11.697,26.125-26.125,26.125"/>
+                                <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                                1,25.459 5.859,30.861 10.75,25.459  "/>
+                            
+                                <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                                52.5,28.834 57.52,23.357 62.25,28.834   "/>
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M35.014,20.104c-1.314,0-2.545,0.572-3.389,1.555c-0.846-0.981-2.078-1.555-3.391-1.555c-2.465,0-4.469,2.005-4.469,4.471
+                                c0,1.171,0.449,2.278,1.266,3.117l5.594,6.092c0.266,0.287,0.619,0.445,1,0.445s0.734-0.158,1-0.445l5.592-6.089
+                                c0.818-0.84,1.268-1.947,1.268-3.12C39.486,22.108,37.479,20.104,35.014,20.104z"/>
+                            <path fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M11.113,42.651c-0.029-0.026-0.059-0.052-0.088-0.077 M15.218,47.106c-0.029-0.026-0.059-0.052-0.088-0.077 M20.282,50.293
+                                c-0.029-0.026-0.059-0.052-0.088-0.077"/>
+                            <path fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M48.987,7.263c0.029,0.025,0.059,0.051,0.088,0.077 M52.717,11.818c-0.029-0.026-0.059-0.052-0.088-0.077 M44.427,4.048
+                                c-0.029-0.026-0.059-0.052-0.088-0.077"/>
+                        </g>
+
+                        <g class="icon icon-baby">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            M13.363,20.072c-1.052,0.718-1.987,1.322-2.888,1.979c-1.068,0.78-1.93,0.71-2.771-0.302c-2.053-2.468-4.105-4.938-6.156-7.409
+                            c-0.721-0.871-0.744-1.8,0.014-2.536C5.17,8.287,9.051,5.14,13.699,3.062c2.338-1.046,4.781-1.719,7.322-2.026
+                            c1.266-0.153,1.756,0.177,2.338,1.306c1.582,3.075,4.138,4.733,7.579,4.741c3.418,0.007,5.965-1.642,7.564-4.673
+                            c0.66-1.252,1.166-1.532,2.531-1.358c4.768,0.608,9.029,2.49,12.848,5.322c2.203,1.633,4.238,3.493,6.307,5.302
+                            c0.936,0.817,0.922,1.749,0.127,2.704c-2.041,2.454-4.08,4.909-6.117,7.364c-0.838,1.009-1.717,1.09-2.773,0.317
+                            c-0.9-0.657-1.836-1.266-2.898-1.992c0,0.419,0,0.649,0,0.879c0,7.05,0.002,14.1,0,21.149c0,1.508-0.641,2.152-2.162,2.181
+                            c-5,0.096-8.596,3.141-9.471,8.054c-0.115,0.648-0.123,1.317-0.162,1.979c-0.059,1.004-0.738,1.684-1.742,1.686
+                            c-2.691,0.008-5.383,0.007-8.074,0.001c-1.038-0.003-1.729-0.68-1.751-1.733c-0.053-2.52-0.678-4.847-2.361-6.782
+                            c-1.785-2.049-4.119-2.981-6.781-3.188c-0.199-0.015-0.402-0.01-0.602-0.015c-1.385-0.031-2.055-0.713-2.057-2.106
+                            c-0.002-7.05,0-14.1,0-21.149C13.363,20.781,13.363,20.541,13.363,20.072z"/>
+                        
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                            M39.502,31.559c-1.947,1.886-5.023,3.102-8.482,3.102c-3.543,0-6.685-1.277-8.622-3.241"/>
+                        </g>
+                         
+                        <g class="folio">
+                            <g class="folio">
+                                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M76.283,1.031c-0.634,2.377-4.922,5.355-10.213,5.355c-8.975,0-12.048-4.332-18.688-4.418c-6.639-0.084-8.729,4.418-8.729,4.418
+                                s-2.09-4.502-8.729-4.418c-6.639,0.086-9.713,4.418-18.688,4.418C6.078,6.387,1.808,3.381,1,1"/>
+                                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M76.376,44.939c-0.409,2.412-4.802,5.582-10.263,5.582c-8.975,0-12.049-4.33-18.688-4.416c-6.639-0.086-8.729,4.416-8.729,4.416
+                                s-2.09-4.502-8.729-4.416s-9.713,4.416-18.688,4.416c-5.26,0-9.597-3.123-10.28-5.525"/>
+                                <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M33.578,25.557
+                                    c2.144,1.504,6.378,2.525,9.954,0"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <h2 class="title turquoise text-center">
+                Affection abound <em>for</em><br>life’s most important events.
+            </h2>
+            <p class="pitch xlarge text-center">
+                Imagine, giving someone close to you a beautiful custom-made book filled with thoughtful anecdotes and shared personal memories from their closest friends and family.<br>Warm feelings all around.
+            </p>
+            <p class="pitch xlarge text-center">
+                Enter your email below to be notified when we launch, and recieve 15% off your first order.
+            </p>
+            <div class="form text-center">
+                <!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup">
+                    <form action="//fondfolio.us13.list-manage.com/subscribe/post?u=65e81a3fa309924ed7ff3fd68&amp;id=97599ffa7f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_65e81a3fa309924ed7ff3fd68_97599ffa7f" tabindex="-1" value=""></div>
+                        <div class="clear"><input class="button" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                        <p class="small">
+                            Never shared, never spammed
+                        </p>
+                    </form>
+                    </div>
+                    <!--End mc_embed_signup-->
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="column column-1">
+                    <p>
+                        What do Fondfolios look like?<br>
+                    <a class="link--primary" href="http://instagram.com/fondfolio">
+                        Follow us on Instagram
+                    </a>
+                    </p>
+                </div>
+                <div class="column column-2">
+                    <p>
+                        Questions? Send us an email!<br>
+                    <a class="link--secondary" href="mailto:hello@fondfolio.com">
+                        hello@fondfolio.com
+                    </a>
+                    </p>
+                </div>
+                <div class="column column-3 text-center">
+                    <p class="small text-center">
+                        Copyright 2016 Fondfolio Inc.
+                    </p>
+                </div>
+            </div>
+        </div>
   </body>
+  <script type="text/javascript">
+    // retrieve the element
+    element = document.getElementById("sequence");
+
+    // reset the transition by...
+    element.addEventListener("click", function(e) {
+      e.preventDefault;
+      
+      // -> removing the class
+      element.classList.remove("icon");
+      
+      // -> triggering reflow /* The actual magic */
+      // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+      element.offsetWidth = element.offsetWidth;
+      
+      // -> and re-adding the class
+      element.classList.add("icon");
+    }, false);
+
+  </script>
 </html>
