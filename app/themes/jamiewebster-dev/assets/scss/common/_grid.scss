@@ -1,0 +1,57 @@
+/* =========================================
+Grid Component
+========================================= */
+
+
+.container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  max-width: $d-container-max;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.row--full {
+  max-width: 100%;
+}
+
+.column {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+@for $i from 0 to $d-grid-columns + 1 {
+  .column-#{$i} {
+    @include grid-item($i, $d-grid-columns);
+  }
+  .offset-#{$i} {
+    @include grid-item-offset($i, $d-grid-columns);
+  }
+
+  .column-#{$i}-mobile {
+    @include bp($bp-mobile) {
+      @include grid-item($i, $d-grid-columns);
+    }
+  }
+  .offset-#{$i}-mobile {
+    @include bp($bp-mobile) {
+      @include grid-item-offset($i, $d-grid-columns);
+    }
+  }
+
+  .column-#{$i}-tablet {
+    @include bp($bp-tablet) {
+      @include grid-item($i, $d-grid-columns);
+    }
+  }
+  .offset-#{$i}-tablet {
+    @include bp($bp-tablet) {
+      @include grid-item-offset($i, $d-grid-columns);
+    }
+  }
+}

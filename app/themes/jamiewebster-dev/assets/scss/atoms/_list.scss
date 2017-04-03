@@ -1,0 +1,87 @@
+/* =========================================
+List Component
+========================================= */
+
+.list {
+  &,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+  }
+
+  flex-direction: column;
+  display: flex;
+
+  li {
+    color: $ca-list-color;
+  }
+
+  @include bp($bp-tablet) {
+    flex-direction: row;
+  }
+}
+
+.list--small {
+  font-size: $t-font-size-epsilon;
+  a {
+    @extend .link.is-active;
+  }
+}
+
+.list--spaced-horizontal {
+  padding: 0 $d-base;
+  @include bp($bp-tablet) {
+    padding: 0 $d-duo;
+  }
+  li {
+    padding: 0 $d-duo;
+  }
+}
+
+.list--spaced-vertical {
+  li {
+    padding: $d-base 0;
+  }
+}
+
+.list--vertical {
+  @include bp($bp-tablet) {
+    flex-direction: column;
+  }
+}
+
+.list--right {
+  justify-content: flex-end;
+}
+
+.list--large {
+  li {
+    font-size: $t-font-size-alpha;
+    padding-bottom: $d-duo;
+    font-weight: $t-font-weight-bold;
+  }
+}
+
+.nav__sep {
+  height: 1px;
+  width: $d-duo;
+  background: $ca-list-sep-background;
+  display: inline-block;
+}
+
+.list--with-active {
+  a span {
+    transition: all $a-timing $a-easing;
+  }
+
+  &:hover {
+    a:not(.is-active) span {
+        color: $ca-anchor-hover-color;
+    }
+
+    a:hover span {
+      color: $ca-anchor-color;
+    }
+  }
+}

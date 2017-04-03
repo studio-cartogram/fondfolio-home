@@ -1,0 +1,77 @@
+/* =========================================
+Nav Component
+========================================= */
+
+.nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+  z-index: index($l-site, nav);
+	pointer-events: none;
+  overflow: hidden;
+
+  &.is-active {
+    pointer-events: visible;
+  }
+}
+
+.nav__inner {
+  overflow-y: scroll;
+	height: 100vh;
+	margin: 0;
+	background: $ca-nav-background;
+  display: flex;
+  @include bp($bp-tablet) {
+    justify-content: center;
+  }
+}
+
+.nav__section {
+  padding: $d-oct $d-trio;
+
+  @include bp($bp-tablet) {
+    padding: $d-oct $d-sep;
+  }
+
+  @include bp($bp-laptop) {
+    padding-top: $d-duo;
+  }
+}
+
+.nav__list {
+  flex-direction: column;
+}
+
+.nav__sep,
+.nav__list--social li,
+.nav__list--pages li {
+	transition: all $a-timing;
+  opacity: 0;
+
+  .is-active & {
+    opacity: 1;
+  }
+}
+
+
+
+.nav__list--works li {
+	transform: translate3d(0, 400%, 0);
+	transition: transform 0s $a-timing;
+  opacity: 0;
+
+  .is-active & {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: all $a-timing $a-easing;
+
+    @for $i from 0 to 50 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 30ms;
+      }
+    }
+  }
+}
+

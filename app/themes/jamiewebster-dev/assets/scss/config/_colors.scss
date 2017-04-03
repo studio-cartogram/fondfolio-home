@@ -1,0 +1,53 @@
+/* =========================================
+Color Index
+========================================= */
+/**
+ * Prefix colors with $c- this
+ * makes them easily findable
+ * with auto complete
+ *
+ * Give colors their names in the
+ * index. This makes it easier to
+ * arrange them reasonably in the
+ * index
+ */
+
+$c-black: #171617;
+$c-dark: #252328;
+$c-light: #93939E;
+$c-white: #F3F3F3;
+
+/* =========================================
+Colors Applied
+========================================= */
+/**
+ * Prefix applied colors with $ca-
+ * this makes them easily findable
+ * with auto complete
+ *
+ * Define where colors where and how
+ * colors are used. This makes it
+ * easier to use them in the rest
+ * of the sass code
+ */
+
+$ca-hamburger-line-background: $c-white;
+$ca-carousel-background: $c-black;
+$ca-site-background: $c-dark;
+$ca-nav-background: $c-dark;
+$ca-curtain-background: $c-dark;
+$ca-anchor-color: $c-white;
+$ca-anchor-hover-color: $c-light;
+$ca-paragraph-color: $c-white;
+$ca-list-color: $c-white;
+$ca-heading-color: $c-white;
+$ca-heading-secondary-color: $c-light;
+$ca-spinner-color: $c-white;
+$ca-list-sep-background: $c-white;
+$ca-overlay-background: $c-black;
+$ca-feature-background: $c-black;
+$ca-commongood-background: $c-dark;
+$ca-commongood-img-background: $c-black;
+$ca-pagination-color: $c-light;
+
+

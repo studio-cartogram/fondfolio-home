@@ -1,0 +1,83 @@
+/**
+ * Global Project Specific Variables
+ */
+
+@import 'config/paths';
+@import 'config/colors';
+@import 'config/typography';
+@import 'config/dimensions';
+@import 'config/breakpoints';
+@import 'config/animations';
+@import 'config/layers';
+@import 'config/keyframes';
+
+
+/**
+ * Utilities
+ */
+@import 'helpers/mixins/bp';
+@import 'helpers/mixins/fit';
+@import 'helpers/mixins/reset';
+@import 'helpers/mixins/clearfix';
+@import 'helpers/mixins/visuallyhidden';
+@import 'helpers/mixins/grid-item';
+@import 'helpers/mixins/placeholder';
+
+/**
+ * Vendor Styles
+ */
+@import 'vendor/sanitize';
+@import 'vendor/barba';
+@import 'vendor/revealer';
+@import 'vendor/swiper';
+
+/**
+ * Common Styles
+ */
+@import 'common/global';
+@import 'common/grid';
+@import 'common/visibility';
+@import 'common/utils';
+
+/**
+ * Typography Styles
+ */
+@import 'typography/global';
+@import 'typography/headings';
+@import 'typography/paragraphs';
+
+/**
+ * Atoms Styles
+ */
+@import 'atoms/anchor';
+@import 'atoms/logo';
+@import 'atoms/icon';
+@import 'atoms/media';
+@import 'atoms/hamburger';
+@import 'atoms/spinner';
+@import 'atoms/list';
+@import 'atoms/curtain';
+@import 'atoms/overlay';
+@import 'atoms/thumbnail';
+
+/**
+ * Organisms Styles
+ */
+@import 'organisms/header';
+@import 'organisms/footer';
+@import 'organisms/nav';
+@import 'organisms/prev-next';
+@import 'organisms/featured';
+
+/**
+ * Template Styles
+ */
+@import 'templates/work';
+@import 'templates/static';
+@import 'templates/commongoods';
+
+/**
+ * Shame Styles
+ * Obviously keep this to a minimum
+ */
+@import 'shame';

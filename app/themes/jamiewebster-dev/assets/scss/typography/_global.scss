@@ -1,0 +1,35 @@
+/* =========================================
+Basic/Global Typography
+========================================= */
+
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $t-font-family;
+  font-size:14px;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &.nav-is-shown {
+    overflow: hidden;
+  }
+
+  @include bp($bp-tablet) {
+  }
+}
+
+b,
+strong,
+.font-weight-bold,
+.strong {
+  font-weight: $t-font-weight-bold !important;
+}
+
+.font-weight-regular {
+  font-weight: $t-font-weight-regular !important;
+}
+
+.text-align-right {
+  text-align: right;
+}
