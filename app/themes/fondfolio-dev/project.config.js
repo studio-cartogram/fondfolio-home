@@ -21,10 +21,10 @@
  */
 
 module.exports = {
-	name: 'jamiewebster-2017',
-	prettyName: 'Jamie Webster',
-  devUrl: 'jamiewebster.dev',
-	description: 'A theme for Jamie Webster',
+	name: 'fondfolio',
+	prettyName: 'Fondfolio',
+  devUrl: 'fondfolio.dev',
+	description: 'A theme for Fondfolio',
 	version: '0.1.0',
 	author: 'Cartogram',
 	authorURI: 'http://cartogram.ca',
