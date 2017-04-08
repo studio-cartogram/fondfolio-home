@@ -29,24 +29,15 @@
 
     function create_post_types() {
 
-      $works_args = array(
+      $faqs_args = array(
         'public'              => true,
-        'label'               => 'Works',
+        'label'               => 'FAQs',
         'has_archive'         => false,
         'exclude_from-search' => true,
-        'supports'            => array( 'title', 'thumbnail')
+        'supports'            => array( 'title')
       );
 
-      $commongoods_args = array(
-        'public'              => true,
-        'label'               => '@Commongood',
-        'has_archive'         => false,
-        'exclude_from-search' => true,
-        'supports'            => array( 'title', 'editor', 'thumbnail')
-      );
-
-      register_post_type( 'works', $works_args );
-      register_post_type( 'commongoods', $commongoods_args );
+      register_post_type( 'works', $faqs_args );
 
       flush_rewrite_rules( false );
 
