@@ -1,3 +1,5 @@
+
+
 .header {
   z-index: index($l-site, header);
   overflow: hidden;
@@ -8,12 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: $d-dec;
-  padding: 0 $d-trio;
   pointer-events: none;
+  background-color: $ca-header-background;
+  border-bottom: $b-default;
 
+  padding: 0 $d-trio;
+  height: $d-header-height-mobile;
   @include bp($bp-tablet) {
     padding: 0 $d-quad;
+    height: $d-header-height;
   }
 
 }
@@ -28,9 +33,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: $d-dec;
-  line-height: $d-dec;
+  height: $d-header-height-mobile;
+  line-height: $d-header-height-mobile;
   text-align: left;
+
+  @include bp($bp-tablet) {
+    height: $d-header-height;
+    line-height: $d-header-height;
+  }
+
 }
 
 .header__group {

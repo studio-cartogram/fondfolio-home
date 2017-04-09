@@ -6,9 +6,10 @@ Icon Component
   display:inline-block;
 }
 
-.icon--logo {
+.icon--logo,
+.icon--logo-full {
   display:inline-block;
-  max-width: $d-sep * 2;
+  max-width: $d-dec * 2;
 
   .curtain__logo & {
     max-width: $d-sep * 2.5;

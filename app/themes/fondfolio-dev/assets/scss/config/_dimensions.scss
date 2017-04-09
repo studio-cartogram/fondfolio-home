@@ -9,6 +9,7 @@ Dimensions
  */
 
 $d-container-max: 1200px;
+
 $d-base: 8px;
 $d-half: $d-base/2;
 $d-duo: $d-base * 2;
@@ -21,5 +22,8 @@ $d-oct: $d-base * 8;
 $d-nano: $d-base * 9;
 $d-dec: $d-base * 10;
 $d-doz: $d-base * 12;
+
 $d-grid-columns: 12;
-$d-thumbnail-padding: 2px;
+
+$d-header-height: $d-dec;
+$d-header-height-mobile: $d-quin;

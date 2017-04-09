@@ -27,10 +27,15 @@ List Component
 }
 
 .list--spaced-horizontal {
-  padding: 0 $d-base;
-  margin-right: -$d-trio;
+  margin-right: -$d-base;
   li {
-    padding: 0 $d-duo;
+    padding: 0 $d-base;
+  }
+  @include bp($bp-tablet) {
+    margin-right: -$d-duo;
+    li {
+      padding: 0 $d-duo;
+    }
   }
 }
 

@@ -1335,7 +1335,10 @@ body {
           flex: 1;
   opacity: 0;
   transition: all 400ms 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  padding-top: 80px; }
+  padding-top: 40px; }
+  @media all and (min-width: 800px) {
+    .main {
+      padding-top: 80px; } }
   .js-is-initialized .main {
     opacity: 1; }
   .js-is-loading .main {
@@ -1357,7 +1360,11 @@ Grid Component
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  padding: 0 24px; }
+  @media all and (min-width: 800px) {
+    .row {
+      padding: 0 32px; } }
 
 .row--full {
   max-width: 100%; }
@@ -2070,16 +2077,30 @@ a,
 .logo {
   pointer-events: auto; }
 
+.logo__full {
+  display: none; }
+  @media all and (min-width: 800px) {
+    .logo__full {
+      display: block; } }
+
+.logo__icon {
+  display: block; }
+  @media all and (min-width: 800px) {
+    .logo__icon {
+      display: none; } }
+
 /* =========================================
 Icon Component
 ========================================= */
 .icon {
   display: inline-block; }
 
-.icon--logo {
+.icon--logo,
+.icon--logo-full {
   display: inline-block;
-  max-width: 112px; }
-  .curtain__logo .icon--logo {
+  max-width: 160px; }
+  .curtain__logo .icon--logo, .curtain__logo
+  .icon--logo-full {
     max-width: 140px; }
 
 .icon--logo-icon {
@@ -2278,10 +2299,14 @@ List Component
   font-size: 0.875em; }
 
 .list--spaced-horizontal {
-  padding: 0 8px;
-  margin-right: -24px; }
+  margin-right: -8px; }
   .list--spaced-horizontal li {
-    padding: 0 16px; }
+    padding: 0 8px; }
+  @media all and (min-width: 800px) {
+    .list--spaced-horizontal {
+      margin-right: -16px; }
+      .list--spaced-horizontal li {
+        padding: 0 16px; } }
 
 .list--spaced-vertical li {
   padding: 8px 0; }
@@ -2394,12 +2419,15 @@ Button Component
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 80px;
+  pointer-events: none;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F5F5F5;
   padding: 0 24px;
-  pointer-events: none; }
+  height: 40px; }
   @media all and (min-width: 800px) {
     .header {
-      padding: 0 32px; } }
+      padding: 0 32px;
+      height: 80px; } }
 
 .header__nav {
   pointer-events: auto; }
@@ -2416,9 +2444,13 @@ Button Component
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 80px;
-  line-height: 80px;
+  height: 40px;
+  line-height: 40px;
   text-align: left; }
+  @media all and (min-width: 800px) {
+    .header__item {
+      height: 80px;
+      line-height: 80px; } }
 
 .header__group {
   -webkit-flex-direction: column;

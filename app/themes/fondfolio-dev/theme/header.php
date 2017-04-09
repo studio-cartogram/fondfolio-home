@@ -15,9 +15,21 @@ echo '<header role="banner" class="js-header header">';
 
     echo '<span class="visuallyhidden">' . get_bloginfo('name') . '</span>';
 
-      set_query_var( 'icon', 'logo' );
+      echo '<span class="logo__icon">';
 
-      get_template_part('partials/icon');
+        set_query_var( 'icon', 'logo-icon' );
+
+        get_template_part('partials/icon');
+
+      echo '</span>';
+
+      echo '<span class="logo__full">';
+
+        set_query_var( 'icon', 'logo-full' );
+
+        get_template_part('partials/icon');
+
+      echo '</span>';
 
     echo '</a>';
 
