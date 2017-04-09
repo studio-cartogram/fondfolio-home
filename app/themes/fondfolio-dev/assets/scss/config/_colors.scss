@@ -16,6 +16,22 @@ $c-black: #171617;
 $c-dark: #252328;
 $c-light: #93939E;
 $c-white: #F3F3F3;
+$c-purple: '#962DA1';
+$c-lightPurple: '#D9B1DD';
+$c-lightestPurple: '#FCEFFD';
+$c-black: '#231D24';
+$c-white: '#FFFFFF';
+$c-grey: '#7E7A7E';
+$c-lightGrey: '#D5D0D4';
+$c-lightestGrey: '#F5F5F5';
+$c-green: '#0EC8A9';
+$c-lightestGreen: '#EEFBF8';
+$c-yellow: '#F8D04D';
+$c-lightestYellow: '#FEFCE2';
+$c-red: '#EE5E5E';
+$c-lightestRed: '#FDEEEE';
+$c-blue: '#3FC5D9';
+$c-lightestBlue: '#EEFBFD';
 
 /* =========================================
 Colors Applied
@@ -33,8 +49,8 @@ Colors Applied
 
 $ca-hamburger-line-background: $c-white;
 $ca-carousel-background: $c-black;
-$ca-site-background: $c-dark;
-$ca-nav-background: $c-dark;
+$ca-site-background: $c-white;
+$ca-nav-background: $c-white;
 $ca-curtain-background: $c-dark;
 $ca-anchor-color: $c-white;
 $ca-anchor-hover-color: $c-light;

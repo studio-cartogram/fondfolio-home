@@ -90,6 +90,7 @@
 
   if( function_exists('acf_add_options_page') ) {
 
+        acf_add_options_page('Footer');
         acf_add_options_page('Homepage');
 
   }
@@ -170,7 +171,6 @@
       register_nav_menus( array(
         'nav_primary'	=>  'Primary Nav',
         'nav_footer'	=>  'Footer Nav',
-        'nav_social'	=>  'Social Nav'
       ) );
 
 
@@ -182,9 +182,7 @@
 
 	function cartogram_fonts() {
 
-    $output = '<script src="https://use.typekit.net/rlw1jok.js"></script>
-               <script>try{Typekit.load({ async: true });}catch(e){}</script>';
-
+    $output = '<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700|Lora:400,400i,700,700i" rel="stylesheet" />';
 		echo $output;
 
   }
