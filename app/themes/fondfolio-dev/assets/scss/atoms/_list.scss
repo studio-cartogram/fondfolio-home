@@ -10,16 +10,13 @@ List Component
     list-style:none;
   }
 
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
 
   li {
     color: $ca-list-color;
   }
 
-  @include bp($bp-tablet) {
-    flex-direction: row;
-  }
 }
 
 .list--small {
@@ -31,9 +28,7 @@ List Component
 
 .list--spaced-horizontal {
   padding: 0 $d-base;
-  @include bp($bp-tablet) {
-    padding: 0 $d-duo;
-  }
+  margin-right: -$d-trio;
   li {
     padding: 0 $d-duo;
   }

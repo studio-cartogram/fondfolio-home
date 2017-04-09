@@ -5,6 +5,7 @@
  *
  */
 import Barba from 'barba.js'
+import scrollDir from 'scrolldir'
 import Swiper from 'swiper'
 import log from './utils/log'
 import creatDOMEl from './utils/createDOMEl'

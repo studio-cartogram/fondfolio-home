@@ -8,19 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: $d-oct;
-  padding: 0 $d-trio 0 0;
+  height: $d-dec;
+  padding: 0 $d-trio;
   pointer-events: none;
 
   @include bp($bp-tablet) {
-    padding: 0 $d-sep 0 $d-trio;
-  }
-
-  &.is-active {
-    transform: translateX(-100%);
-    @include bp($bp-tablet) {
-      transform: translateX(0%);
-    }
+    padding: 0 $d-quad;
   }
 }
 
@@ -34,22 +27,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: $d-oct;
-  line-height: $d-oct;
+  height: $d-dec;
+  line-height: $d-dec;
   text-align: left;
 }
 
 .header__group {
   flex-direction: column;
-  align-self: flex-end;
   justify-content: center;
   text-align: center;
   transition: opacity $a-timing $a-easing, transform $a-timing * 2 $a-easing;
-
-  .js-is-initialized & {
-    transform: translate(0, 50%);
-    opacity: 1;
-  }
 
   &.header__group--right {
     flex-grow: 1;

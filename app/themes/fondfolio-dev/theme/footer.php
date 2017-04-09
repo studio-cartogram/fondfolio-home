@@ -1,14 +1,18 @@
 <?php
 
 $nav_footer = array(
-    'theme_location'  => 'nav_footer',
-    'container'       => false,
-    'items_wrap'      => '%3$s',
+  'theme_location'  => 'nav_footer',
+  'container'       => false,
+  'items_wrap'      => '%3$s',
 );
+
+$copyright = get_field('copyright', 'options');
 
 set_query_var( 'icon', 'logo-icon' );
 
 echo '<footer class="footer">';
+
+  echo $copyright;
 
   echo '<nav role="navigation" class="footer__nav footer__nav--left">';
 
