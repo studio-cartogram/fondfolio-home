@@ -7,7 +7,7 @@ $nav_primary = array(
   'items_wrap'      => '%3$s',
 );
 
-echo '<header role="banner" class="header">';
+echo '<header role="banner" class="js-header header">';
 
   echo '<div class="header__group ">';
 
