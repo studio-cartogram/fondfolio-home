@@ -1,11 +1,5 @@
 <?php
 
-$nav_social = array(
-    'theme_location'  => 'nav_social',
-    'container'       => false,
-    'items_wrap'      => '%3$s',
-);
-
 $nav_footer = array(
     'theme_location'  => 'nav_footer',
     'container'       => false,
@@ -30,7 +24,6 @@ echo '<footer class="footer">';
 
     echo '<ul class="list--spaced-horizontal list list--right list--small">';
 
-      wp_nav_menu( $nav_social );
 
     echo '</ul>';
 

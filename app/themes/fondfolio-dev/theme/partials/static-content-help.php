@@ -4,7 +4,7 @@ echo '<div class="static__content row">';
 
   echo '<div class="column column-6-tablet ">';
 
-    echo '<div class="paragraph--lead">';
+    echo '<div class="soft-duo--bottom paragraph--lead">';
 
       the_content();
 
@@ -14,6 +14,7 @@ echo '<div class="static__content row">';
 
 echo '</div>';
 
-set_query_var('context', 'commongoods');
-get_template_part('partials/loop', 'commongoods');
+set_query_var('context', 'faqs');
+get_template_part('partials/loop', 'faqs');
+
 ?>
