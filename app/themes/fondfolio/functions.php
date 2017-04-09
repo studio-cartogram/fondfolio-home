@@ -33,11 +33,10 @@
         'public'              => true,
         'label'               => 'FAQs',
         'has_archive'         => false,
-        'exclude_from-search' => true,
-        'supports'            => array( 'title')
+        'supports'            => array( 'title', 'editor')
       );
 
-      register_post_type( 'works', $faqs_args );
+      register_post_type( 'faqs', $faqs_args );
 
       flush_rewrite_rules( false );
 
@@ -51,22 +50,22 @@
     function create_taxonomies() {
 
       $labels = array(
-        'name'                       => _x( 'Role', 'taxonomy general name' ),
-        'singular_name'              => _x( 'Role', 'taxonomy singular name' ),
-        'search_items'               => __( 'Search Roles' ),
-        'popular_items'              => __( 'Popular Roles' ),
-        'all_items'                  => __( 'All Roles' ),
+        'name'                       => _x( 'Topic', 'taxonomy general name' ),
+        'singular_name'              => _x( 'Topic', 'taxonomy singular name' ),
+        'search_items'               => __( 'Search Topics' ),
+        'popular_items'              => __( 'Popular Topics' ),
+        'all_items'                  => __( 'All Topics' ),
         'parent_item'                => null,
         'parent_item_colon'          => null,
-        'edit_item'                  => __( 'Edit Role' ),
-        'update_item'                => __( 'Update Role' ),
-        'add_new_item'               => __( 'Add New Role' ),
-        'new_item_name'              => __( 'New Role Name' ),
-        'separate_items_with_commas' => __( 'Separate Role with commas' ),
-        'add_or_remove_items'        => __( 'Add or remove Role' ),
-        'choose_from_most_used'      => __( 'Choose from the most used Role' ),
-        'not_found'                  => __( 'No Roles found.' ),
-        'menu_name'                  => __( 'Roles' ),
+        'edit_item'                  => __( 'Edit Topic' ),
+        'update_item'                => __( 'Update Topic' ),
+        'add_new_item'               => __( 'Add New Topic' ),
+        'new_item_name'              => __( 'New Topic Name' ),
+        'separate_items_with_commas' => __( 'Separate Topic with commas' ),
+        'add_or_remove_items'        => __( 'Add or remove Topic' ),
+        'choose_from_most_used'      => __( 'Choose from the most used Topic' ),
+        'not_found'                  => __( 'No Topics found.' ),
+        'menu_name'                  => __( 'Topics' ),
       );
 
       $args = array(
@@ -74,7 +73,7 @@
         'labels'            => $labels,
       );
 
-      register_taxonomy( 'roles', array('resources'), $args );
+      register_taxonomy( 'topic', array('faqs'), $args );
 
       flush_rewrite_rules( false );
 
