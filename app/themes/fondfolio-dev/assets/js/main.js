@@ -21,6 +21,7 @@ import RevealFx from './vendor/RevealFx'
 class App {
   constructor() {
     this.init()
+    scrollDir()
     loadSprite()
     document.body.classList.remove('js-is-loading')
     document.body.classList.add('js-is-initialized')

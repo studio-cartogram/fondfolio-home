@@ -10,6 +10,7 @@
 @import 'config/animations';
 @import 'config/layers';
 @import 'config/keyframes';
+@import 'config/borders';
 
 
 /**
@@ -58,13 +59,14 @@
 @import 'atoms/list';
 @import 'atoms/curtain';
 @import 'atoms/overlay';
-@import 'atoms/thumbnail';
+@import 'atoms/button';
 
 /**
  * Organisms Styles
  */
 @import 'organisms/header';
 @import 'organisms/footer';
+@import 'organisms/banner';
 @import 'organisms/nav';
 @import 'organisms/prev-next';
 

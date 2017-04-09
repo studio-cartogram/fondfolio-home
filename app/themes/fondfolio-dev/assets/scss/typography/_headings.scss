@@ -23,12 +23,14 @@ h6 {
 .mega {
   font-size: $t-font-size-mega;
   font-size: calc(100% + 5vw);
-  font-weight: $t-font-weight-bold;
+  font-weight: $t-font-weight-regular;
   line-height: 1;
 }
 
 h1 {
+  font-family: $t-font-family-serif;
   font-size: $t-font-size-alpha;
+  font-weight: $t-font-weight-regular;
 }
 
 h2 {

@@ -18,8 +18,8 @@ echo '<div id="barba-wrapper">';
 
     echo '<div class="static static--' . $post->post_name . '">';
 
-      get_template_part('partials/static-header');
-      get_template_part('partials/static-content', $post->post_name);
+      get_template_part('partials/page-banner');
+      get_template_part('partials/page-content', $post->post_name);
 
     echo '</div>';
 

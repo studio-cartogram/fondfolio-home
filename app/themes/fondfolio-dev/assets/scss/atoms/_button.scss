@@ -1,0 +1,23 @@
+/* =========================================
+Button Component
+========================================= */
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  padding: $d-base $d-duo;
+  background: $ca-button-background;
+  color: $ca-button-color;
+  font-weight: $t-font-weight-bold;
+  border-radius: $b-radius;
+
+  &:hover {
+    background: $ca-button-background;
+    color: $ca-button-color;
+  }
+}
+
