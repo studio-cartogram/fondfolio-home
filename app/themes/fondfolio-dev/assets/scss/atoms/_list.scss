@@ -31,10 +31,18 @@ List Component
   li {
     padding: 0 $d-base;
   }
+
+  li:first-child {
+    padding-left: 0;
+  }
+
   @include bp($bp-tablet) {
     margin-right: -$d-duo;
     li {
       padding: 0 $d-duo;
+    }
+    li:first-child {
+      padding-left: 0;
     }
   }
 }

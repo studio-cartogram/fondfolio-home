@@ -10,6 +10,7 @@ Icon Component
 .icon--logo-full {
   display:inline-block;
   max-width: $d-dec * 2;
+  max-height: $d-dec * 2;
 
   .curtain__logo & {
     max-width: $d-sep * 2.5;
@@ -18,6 +19,8 @@ Icon Component
 
 .icon--logo-icon {
   max-width: $d-trio;
+  max-height: $d-trio;
+
 }
 
 .icon--arrow-down,

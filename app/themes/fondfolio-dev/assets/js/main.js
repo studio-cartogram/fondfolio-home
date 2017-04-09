@@ -13,6 +13,7 @@ import Scroll from './scripts/Scroll'
 import Nav from './scripts/Nav'
 import loadSprite from './vendor/loadSprite'
 import RevealFx from './vendor/RevealFx'
+
 class App {
   constructor() {
     this.init()
