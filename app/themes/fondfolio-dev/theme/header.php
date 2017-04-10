@@ -7,19 +7,31 @@ $nav_primary = array(
   'items_wrap'      => '%3$s',
 );
 
-echo '<header role="banner" class="header">';
+echo '<header role="banner" class="js-header header">';
 
   echo '<div class="header__group ">';
 
     echo '<a href="' . get_bloginfo('url') . '" class="logo">';
 
-    echo '<span class="">' . get_bloginfo('name') . '</span>';
+    echo '<span class="visuallyhidden">' . get_bloginfo('name') . '</span>';
+
+      echo '<span class="logo__icon">';
+
+        set_query_var( 'icon', 'logo-icon' );
+
+        get_template_part('partials/icon');
+
+      echo '</span>';
+
+      echo '<span class="logo__full">';
+
+        set_query_var( 'icon', 'logo-full' );
+
+        get_template_part('partials/icon');
+
+      echo '</span>';
 
     echo '</a>';
-
-    echo '<span class="header__item spinner spinner--right">';
-    // Loading
-    echo '</span>';
 
   echo '</div>';
 
@@ -38,13 +50,6 @@ echo '<header role="banner" class="header">';
       wp_nav_menu( $nav_primary );
 
     echo '</ul>';
-
-
-    echo '<div class="spinner">';
-
-      echo '<span class="loading open-circle"></span>';
-
-    echo '</div>';
 
   echo '</div>';
 

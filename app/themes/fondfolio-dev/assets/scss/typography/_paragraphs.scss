@@ -9,6 +9,11 @@ p,
   padding: 0;
 }
 
+.p--small > p,
+p.p--small {
+  font-size: $t-font-size-p-small;
+}
+
 .paragraph--lead > p,
 p.paragraph--lead {
   @include bp($bp-tablet) {

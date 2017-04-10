@@ -25,7 +25,11 @@ body {
   flex: 1;
   opacity: 0;
   transition: all $a-timing $a-timing $a-easing;
-  padding-top: $d-oct;
+  padding-top: $d-header-height-mobile;
+
+  @include bp($bp-tablet) {
+    padding-top: $d-header-height;
+  }
 
   .js-is-initialized & {
     opacity: 1;

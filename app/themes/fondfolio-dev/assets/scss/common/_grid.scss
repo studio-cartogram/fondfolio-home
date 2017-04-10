@@ -14,6 +14,10 @@ Grid Component
   margin: 0 auto;
   display:flex;
   flex-wrap: wrap;
+  padding: 0 $d-trio;
+  @include bp($bp-tablet) {
+    padding: 0 $d-quad;
+  }
 }
 
 .row--full {

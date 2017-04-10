@@ -1,3 +1,18 @@
 .logo {
   pointer-events: auto;
+
+  .logo__full {
+    display: none;
+    @include bp($bp-tablet) {
+      display: block;
+    }
+  }
+
+  .logo__icon {
+    display: block;
+    @include bp($bp-tablet) {
+      display: none;
+    }
+  }
 }
+
