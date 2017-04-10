@@ -1,37 +1,14 @@
 <?php
-
-$slug = $post->post_name;
-
-$context = $slug === 'help' ? 'faqs' : $slug;
-
-echo '<div class="row">';
-
-  echo '<div class="column column-6-tablet ">';
-
-    echo '<div class="soft-duo--bottom paragraph--lead">';
-
-      the_content();
-
-    echo '</div>';
-
-  echo '</div>';
-
-echo '</div>';
-
-echo '<div class="row">';
-
-  echo '<div class="column column-6-tablet ">';
-
-    echo '<div class="soft-duo--bottom paragraph--lead">';
-
-      set_query_var('context', $context);
-      get_template_part('partials/loop', $context);
-
-    echo '</div>';
-
-  echo '</div>';
-
-echo '</div>';
-
-
-?>
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/page-content-help.php';

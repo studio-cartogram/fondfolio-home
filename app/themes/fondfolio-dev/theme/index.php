@@ -12,9 +12,11 @@ echo '<main id="main" role="main" class="main">';
 
 echo '<div id="barba-wrapper">';
 
-  echo '<div class="barba-container" data-namespace="works">';
+  echo '<div class="barba-container" data-namespace="landing">';
 
   echo 'homepage';
+
+  get_template_part('partials/loop-sections');
 
   echo '</div>';
 

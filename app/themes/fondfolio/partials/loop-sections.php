@@ -11,4 +11,4 @@
  * for production before deploying!
  *
  */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/head.php';
+include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/loop-sections.php';
