@@ -2524,11 +2524,6 @@ Footer Component
   .js-is-loading .footer {
     opacity: 0; }
 
-.banner {
-  padding: 32px 0;
-  background: #FFFFFF;
-  text-align: center; }
-
 /* =========================================
 Nav Component
 ========================================= */
@@ -2557,6 +2552,22 @@ Nav Component
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+
+.mast {
+  padding: 32px 0;
+  background: #F5F5F5; }
+
+.stack__mast {
+  text-align: center; }
+
+.stack {
+  padding: 32px 0;
+  background: #F5F5F5; }
+
+.banner {
+  padding: 32px 0;
+  background: #FFFFFF;
+  text-align: center; }
 
 /**
  * Template Styles

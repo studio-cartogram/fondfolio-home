@@ -10,34 +10,51 @@ $size = 'full';
 $video = get_sub_field('video');
 $type = get_sub_field('type');
 
-echo '<h2>' . $title . '</h2>';
-echo '<p class="secondary">' . $subtitle . '</p>';
+echo '<section class="stack">';
 
-// check if the nested repeater field has rows of data
-if( have_rows('blocks') ):
+  echo '<div class="row">';
 
-  echo '<ul class="' . $type . '">';
+    echo '<div class="column stack__mast">';
 
-// loop through the rows of data
-while ( have_rows('blocks') ) : the_row();
+      echo '<h2>' . $title . '</h2>';
 
-$title = get_sub_field('title');
-$description = get_sub_field('description');
-$button_text = get_sub_field('button_text');
-$button_link = get_sub_field('button_link');
-$icon = get_sub_field('icon');
+      echo '<p class="secondary">' . $subtitle . '</p>';
 
-echo '<li>';
-echo '<span class="icon-' . $type . ' ' . $icon . '">icon-' . $icon . '</span>';
-echo '<h3>' . $title. '</h3>';
-echo '<p>' . $description. '</p>';
-echo '<a href="' . $button_link .'" class="button large">' . $button_text . '</a>';
-echo '</li>';
+    echo '</div>';
 
-endwhile;
+   echo '</div>';
 
-echo '</ul>';
+    echo '<div class="row">';
 
-endif;
+      if( have_rows('blocks') ):
+
+        echo '<div class="column column-6-tablet ' . $type . '">';
+
+        while ( have_rows('blocks') ) : the_row();
+
+        $title = get_sub_field('title');
+        $description = get_sub_field('description');
+        $button_text = get_sub_field('button_text');
+        $button_link = get_sub_field('button_link');
+        $icon = get_sub_field('icon');
+
+
+        set_query_var( 'icon', $icon );
+
+        get_template_part('partials/icon');
+
+        echo '<h3>' . $title. '</h3>';
+        echo '<p>' . $description. '</p>';
+        echo '<a href="' . $button_link .'" class="button large">' . $button_text . '</a>';
+
+      endwhile;
+
+      echo '</div>';
+
+      endif;
+
+   echo '</div>';
+
+echo '</section>';
 
 ?>
