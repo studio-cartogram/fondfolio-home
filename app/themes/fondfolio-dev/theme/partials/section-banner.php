@@ -10,18 +10,33 @@ $size = 'full';
 $video = get_sub_field('video');
 $type = get_sub_field('type');
 
-echo '<h1>' . $title . '</h1>';
-echo '<p class="large">' . $description . '</p>';
-echo '<a href="' . $button_link .'" class="button large">' . $button_text . '</a>';
+echo '<section class="banner">';
 
-if( $video ) :
+  echo '<div class="row">';
 
-  echo 'Put the video in the background';
+    echo '<div class="column">';
 
-else :
+      echo '<h1 class="">' . $title . '</h1>';
 
-  echo wp_get_attachment_image( $image, $size );
+      echo '<p class="p-large">' . $description . '</p>';
 
-endif;
+      echo '<a href="' . $button_link .'" class="button large">' . $button_text . '</a>';
+
+    echo '</div>';
+
+   echo '</div>';
+
+  if( $video ) :
+
+    echo 'Put the video in the background';
+
+  else :
+
+    echo wp_get_attachment_image( $image, $size );
+
+  endif;
+
+
+echo '</section>';
 
 ?>

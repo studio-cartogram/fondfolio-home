@@ -10,7 +10,6 @@ $size = 'full';
 $video = get_sub_field('video');
 $type = get_sub_field('type');
 
-
 echo '<h2>' . $title . '</h2>';
 echo '<p class="secondary">' . $subtitle . '</p>';
 
