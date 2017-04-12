@@ -1,9 +1,9 @@
 <?php
-echo '<section class="banner">';
+echo '<section class="mast">';
 
   echo '<div class="row">';
 
-    echo '<div class="column banner__title">';
+    echo '<div class="column mast__title">';
 
       echo '<h1 class="">' . get_the_title() . '</h1>';
 
