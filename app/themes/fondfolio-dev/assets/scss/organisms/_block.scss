@@ -1,0 +1,24 @@
+.block {
+
+  padding: $d-duo;
+  text-align: center;
+
+  @include bp($bp-tablet) {
+    text-align: left;
+  }
+}
+
+.block--columns {
+
+}
+
+.block--rows {
+  &:nth-child(odd) {
+    margin-left: $d-sex;
+  }
+}
+
+.block__content {
+  padding: $d-duo;
+}
+

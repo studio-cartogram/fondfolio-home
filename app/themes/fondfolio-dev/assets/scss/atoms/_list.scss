@@ -62,34 +62,3 @@ List Component
 .list--right {
   justify-content: flex-end;
 }
-
-.list--large {
-  li {
-    font-size: $t-font-size-alpha;
-    padding-bottom: $d-duo;
-    font-weight: $t-font-weight-bold;
-  }
-}
-
-.nav__sep {
-  height: 1px;
-  width: $d-duo;
-  background: $ca-list-sep-background;
-  display: inline-block;
-}
-
-.list--with-active {
-  a span {
-    transition: all $a-timing $a-easing;
-  }
-
-  &:hover {
-    a:not(.is-active) span {
-        color: $ca-anchor-hover-color;
-    }
-
-    a:hover span {
-      color: $ca-anchor-color;
-    }
-  }
-}

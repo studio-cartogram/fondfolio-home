@@ -11,15 +11,16 @@ Button Component
   text-align: center;
   margin: 0;
   cursor: pointer;
-  padding: $d-base $d-duo;
   font-weight: $t-font-weight-bold;
   border-radius: $b-radius;
+  color: $ca-button-color;
 
   &:hover {
   }
 }
 
 .button--primary {
+  padding: $d-base $d-duo;
   background: $ca-button-primary-background;
   color: $ca-button-primary-color;
 
@@ -30,6 +31,7 @@ Button Component
 }
 
 .button--secondary {
+  padding: $d-base $d-duo;
   background: $ca-button-secondary-background;
   color: $ca-button-secondary-color;
 
@@ -51,4 +53,10 @@ Button Component
     height: $d-trio;
     width: $d-trio;
   }
+}
+
+
+.button--large {
+  padding: $d-duo $d-quad;
+  font-size: $t-font-size-button-large;
 }

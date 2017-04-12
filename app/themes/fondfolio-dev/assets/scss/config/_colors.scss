@@ -12,9 +12,6 @@ Color Index
  * index
  */
 
-$c-black: #171617;
-$c-dark: #252328;
-$c-light: #93939E;
 $c-purple: #962DA1;
 $c-lightPurple: #D9B1DD;
 $c-lightestPurple: #FCEFFD;
@@ -52,6 +49,7 @@ $ca-site-background: $c-white;
 $ca-banner-background: $c-white;
 $ca-mast-background: $c-lightestGrey;
 $ca-button-primary-background: $c-purple;
+$ca-button-color: $c-purple;
 $ca-button-primary-color: $c-white;
 $ca-button-secondary-background: $c-purple;
 $ca-button-secondary-color: $c-white;
@@ -60,17 +58,21 @@ $ca-border-default: $c-lightestGrey;
 $ca-nav-background: $c-lightestYellow;
 $ca-curtain-background: $c-white;
 $ca-anchor-color: $c-grey;
-$ca-anchor-hover-color: $c-light;
-$ca-paragraph-color: $c-grey;
+$ca-anchor-hover-color: $c-purple;
 $ca-list-color: $c-grey;
-$ca-heading-color: $c-grey;
-$ca-heading-secondary-color: $c-light;
+
+$ca-icon-color: $c-purple;
+$ca-icon-border-color: $c-lightPurple;
+$ca-icon-shadow-color: $c-lightestPurple;
+
+$ca-paragraph-color: $c-black;
+$ca-paragraph-secondary-color: $c-grey;
+
+
+$ca-heading-color: $c-black;
+$ca-heading-secondary-color: $c-grey;
+
 $ca-spinner-color: $c-white;
-$ca-list-sep-background: $c-white;
 $ca-overlay-background: $c-black;
-$ca-feature-background: $c-black;
-$ca-commongood-background: $c-dark;
-$ca-commongood-img-background: $c-black;
-$ca-pagination-color: $c-light;
 
 

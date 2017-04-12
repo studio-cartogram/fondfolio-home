@@ -6,7 +6,11 @@ p,
 .p {
   color: $ca-paragraph-color;
   margin: 0;
-  padding: 0;
+  padding: 0 0 $d-duo;
+
+  &.secondary {
+    color: $ca-paragraph-secondary-color;
+  }
 }
 
 .p--small > p,
@@ -14,9 +18,10 @@ p.p--small {
   font-size: $t-font-size-p-small;
 }
 
-.paragraph--lead > p,
-p.paragraph--lead {
+.p--large > p,
+p.p--large {
+  padding: 0 0 $d-quad;
   @include bp($bp-tablet) {
-    font-size: $t-font-size-lead;
+    font-size: $t-font-size-p-large;
   }
 }

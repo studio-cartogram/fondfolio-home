@@ -4,6 +4,7 @@ Icon Component
 
 .icon {
   display:inline-block;
+  max-width: 100%;
 }
 
 .icon--logo,
@@ -20,20 +21,37 @@ Icon Component
 .icon--logo-icon {
   max-width: $d-trio;
   max-height: $d-trio;
-
 }
 
-.icon--arrow-down,
-.icon--arrow-right,
-.icon--arrow-left {
-  max-height: $d-quad;
-  max-width: $d-quad;
+.icon--doodle {
+  padding: $d-duo;
 }
 
-.icon--arrow-down {
-  max-height: $d-trio;
-  max-width: $d-trio;
-  position: relative;
-  bottom: 1px;
-  right: -6px;
+.icon--doodle-empty,
+.icon--doodle-hatch {
+  fill: $ca-icon-color;
 }
+
+.icon--event {
+  margin: $d-quad $d-duo 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: $d-doz;
+  max-height: $d-doz;
+  padding: $d-trio;
+  fill: $ca-icon-color;
+  border: 1px $ca-icon-border-color solid;
+  border-radius: 50%;
+  box-shadow: 5px 5px 0px $ca-icon-shadow-color;
+}
+
+.icon--event-birthday,
+.icon--event-wedding,
+.icon--event-retirement,
+.icon--event-recovery {
+  max-width: $d-oct;
+  max-height: $d-oct;
+  fill: $ca-icon-color;
+}
+

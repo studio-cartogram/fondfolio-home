@@ -20,6 +20,14 @@ Grid Component
   }
 }
 
+.row--justify-center {
+  justify-content: center;
+}
+
+.row--align-center {
+  align-items: center;
+}
+
 .row--full {
   max-width: 100%;
 }
@@ -55,6 +63,21 @@ Grid Component
   }
   .offset-#{$i}-tablet {
     @include bp($bp-tablet) {
+      @include grid-item-offset($i, $d-grid-columns);
+    }
+  }
+
+}
+
+@for $i from 0 to $d-grid-columns + 1 {
+  .column-#{$i}-laptop {
+    @include bp($bp-laptop) {
+      @include grid-item($i, $d-grid-columns);
+    }
+  }
+
+  .offset-#{$i}-laptop {
+    @include bp($bp-laptop) {
       @include grid-item-offset($i, $d-grid-columns);
     }
   }

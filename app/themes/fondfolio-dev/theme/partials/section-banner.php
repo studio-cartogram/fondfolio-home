@@ -12,15 +12,15 @@ $type = get_sub_field('type');
 
 echo '<section class="banner">';
 
-  echo '<div class="row">';
+  echo '<div class="row row--justify-center">';
 
-    echo '<div class="column">';
+    echo '<div class="column column-8-laptop">';
 
       echo '<h1 class="">' . $title . '</h1>';
 
-      echo '<p class="p-large">' . $description . '</p>';
+      echo '<p class="p--large">' . $description . '</p>';
 
-      echo '<a href="' . $button_link .'" class="button large">' . $button_text . '</a>';
+      echo '<a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a>';
 
     echo '</div>';
 
@@ -35,7 +35,6 @@ echo '<section class="banner">';
     echo wp_get_attachment_image( $image, $size );
 
   endif;
-
 
 echo '</section>';
 
