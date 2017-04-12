@@ -23,9 +23,9 @@ echo '<header role="banner" class="js-header header">';
 
       echo '</span>';
 
-      echo '<span class="logo__full">';
+      echo '<span class="logo logo__word">';
 
-        set_query_var( 'icon', 'logo-full' );
+        set_query_var( 'icon', 'logo' );
 
         get_template_part('partials/icon');
 

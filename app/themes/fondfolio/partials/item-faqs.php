@@ -1,14 +1,18 @@
 <?php
-/**
- *
- * DEVELOPMENT MODE ONLY
- *
- * Includes and Runs php files directly
- * from the dev theme to enable debugging
- * php from within the dev theme!
- *
- * Run "gulp build" to generate the theme
- * for production before deploying!
- *
- */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/item-faqs.php';
+
+$item = get_query_var('item');
+
+echo '<article class="faq">';
+
+    echo '<div class="faq__question"><h3>' . get_the_title($item->ID) . '</h3></div>';
+
+    echo '<div class="faq__answer">';
+
+      the_content();
+
+    echo '</div>';
+
+echo '</artcle>';
+
+
+?>

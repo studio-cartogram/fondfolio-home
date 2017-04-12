@@ -1,7 +1,7 @@
 .logo {
   pointer-events: auto;
 
-  .logo__full {
+  .logo__word {
     display: none;
     @include bp($bp-tablet) {
       display: block;

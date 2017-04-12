@@ -8,10 +8,11 @@ Icon Component
 }
 
 .icon--logo,
-.icon--logo-full {
+.icon--logo-word {
   display:inline-block;
   max-width: $d-dec * 2;
   max-height: $d-dec * 2;
+  fill: $ca-logo-color;
 
   .curtain__logo & {
     max-width: $d-sep * 2.5;
@@ -19,6 +20,7 @@ Icon Component
 }
 
 .icon--logo-icon {
+  fill: $ca-logo-color;
   max-width: $d-trio;
   max-height: $d-trio;
 }

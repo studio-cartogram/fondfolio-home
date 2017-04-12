@@ -1,14 +1,18 @@
 <?php
-/**
- *
- * DEVELOPMENT MODE ONLY
- *
- * Includes and Runs php files directly
- * from the dev theme to enable debugging
- * php from within the dev theme!
- *
- * Run "gulp build" to generate the theme
- * for production before deploying!
- *
- */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/page-mast.php';
+echo '<section class="mast">';
+
+  echo '<div class="row">';
+
+    echo '<div class="column mast__title">';
+
+      echo '<h1 class="">' . get_the_title() . '</h1>';
+
+      echo '<a class="button button--primary" href="">Contact Us</a>';
+
+    echo '</div>';
+
+  echo '</div>';
+
+echo '</section>';
+
+?>
