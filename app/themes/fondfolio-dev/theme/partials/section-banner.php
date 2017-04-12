@@ -14,7 +14,7 @@ echo '<section class="banner">';
 
   echo '<div class="row row--justify-center">';
 
-    echo '<div class="column column-8-laptop">';
+    echo '<div class="column column-8-laptop intro">';
 
       echo '<h1 class="">' . $title . '</h1>';
 

@@ -13,7 +13,7 @@ echo '<div class="block__content">';
 
   if ($button_link && $button_text) :
 
-    echo '<a href="' . $button_link .'" class="button large">' . $button_text . '</a>';
+    echo '<p><a href="' . $button_link .'" class="link link--primary">' . $button_text . '</a></p>';
 
   endif;
 

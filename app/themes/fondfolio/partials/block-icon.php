@@ -1,16 +1,14 @@
 <?php
-
-$icon = get_sub_field('icon');
-$type = get_query_var('type');
-
-$icon_type = $type === 'rows' ? 'doodle' : 'event';
-
-echo '<div class="block__icon icon--' . $icon_type . '">';
-
-  set_query_var( 'icon', $icon );
-
-  get_template_part('partials/icon');
-
-echo '</div>';
-
-?>
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/block-icon.php';

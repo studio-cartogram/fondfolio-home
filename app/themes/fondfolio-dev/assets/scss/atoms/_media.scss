@@ -2,6 +2,11 @@
 Images/Videos/Iframes
 ========================================= */
 
+figure {
+  margin: 0;
+  padding: 0 0 $d-duo;
+}
+
 img,
 iframe,
 video {

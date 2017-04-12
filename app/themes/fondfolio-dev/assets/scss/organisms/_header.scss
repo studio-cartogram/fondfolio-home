@@ -25,6 +25,11 @@
 
 .header__nav {
   pointer-events: auto;
+  font-size: $t-font-size-epsilon;
+
+  @include bp($bp-tablet) {
+    font-size: $t-font-size-gamma;
+  }
 }
 
 .header__item {

@@ -8,8 +8,9 @@ $icon_type = $type === 'rows' ? 'doodle' : 'event';
 echo '<div class="block__icon icon--' . $icon_type . '">';
 
   set_query_var( 'icon', $icon );
-
   get_template_part('partials/icon');
+
+  if ($icon_type === 'doodle') : get_template_part('partials/icon'); endif;
 
 echo '</div>';
 

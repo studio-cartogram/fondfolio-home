@@ -8,7 +8,7 @@ echo '<section class="stack">';
 
   echo '<div class="row">';
 
-    echo '<div class="column stack__mast">';
+    echo '<div class="column intro">';
 
       echo '<h2>' . $title . '</h2>';
 

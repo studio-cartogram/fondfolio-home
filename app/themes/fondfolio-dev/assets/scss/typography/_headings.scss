@@ -52,6 +52,10 @@ h5 {
   font-weight: $t-font-weight-regular;
 }
 
+h6 {
+  font-size: $t-font-size-zeta;
+}
+
 .alpha {
   @extend h1;
 }

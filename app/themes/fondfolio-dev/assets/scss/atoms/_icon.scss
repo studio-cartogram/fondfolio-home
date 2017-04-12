@@ -24,26 +24,58 @@ Icon Component
 }
 
 .icon--doodle {
-  padding: $d-duo;
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: $d-oct * 2;
+  max-height: $d-oct * 2;
+  margin: auto auto $d-quad;
+  @include bp($bp-tablet) {
+    float:right;
+  }
 }
 
 .icon--doodle-empty,
+.icon--doodle-swoosh,
 .icon--doodle-hatch {
-  fill: $ca-icon-color;
+  fill: $ca-icon-doodle-color;
+  position: relative;
+  top: 50%;
+  z-index: 2;
+  @include bp($bp-tablet) {
+    right:$d-quad;
+    position: absolute;
+    transform: translate(0%, -50%);
+  }
+
+  ~ .icon {
+    fill: $ca-icon-shadow-color;
+    left: 50%;
+    position: absolute;
+    transform: translate(-45%, -45%);
+    z-index: 1;
+    @include bp($bp-tablet) {
+      left: auto;
+      transform: translate(5%, -45%);
+    }
+  }
+
 }
 
 .icon--event {
-  margin: $d-quad $d-duo 0;
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: $d-doz;
   max-height: $d-doz;
   padding: $d-trio;
-  fill: $ca-icon-color;
   border: 1px $ca-icon-border-color solid;
   border-radius: 50%;
   box-shadow: 5px 5px 0px $ca-icon-shadow-color;
+  margin: 0 auto 0;
+  @include bp($bp-tablet) {
+    margin: $d-quad $d-duo 0;
+  }
 }
 
 .icon--event-birthday,
@@ -52,6 +84,6 @@ Icon Component
 .icon--event-recovery {
   max-width: $d-oct;
   max-height: $d-oct;
-  fill: $ca-icon-color;
+  fill: $ca-icon-event-color;
 }
 

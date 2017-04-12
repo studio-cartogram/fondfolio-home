@@ -4,7 +4,7 @@ Footer Component
 
 .footer {
   position: relative;
-  padding: $d-quad 0;
+  padding: $d-quad;
   transition: all $a-timing * 2 $a-easing;
 
   @include bp($bp-tablet) {

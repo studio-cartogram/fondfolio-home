@@ -9,31 +9,58 @@ $image = get_sub_field('image');
 $size = 'full';
 $video = get_sub_field('video');
 $type = get_sub_field('type');
-echo '<h2>' . $title . '</h2>';
-echo '<p class="secondary">' . $subtitle . '</p>';
 
-if( have_rows('images') ):
+echo '<section class="gallery">';
 
-  echo '<ul>';
+  echo '<div class="row">';
 
-while ( have_rows('images') ) : the_row();
+    echo '<div class="column intro">';
 
-$image = get_sub_field('image');
-$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+      echo '<h2>' . $title . '</h2>';
 
-echo '<li>';
+      echo '<p class="secondary">' . $subtitle . '</p>';
 
-echo wp_get_attachment_image( $image, $size );
+    echo '</div>';
 
-echo '</li>';
+  echo '</div>';
 
-endwhile;
+  echo '<div class="row">';
 
-echo '</ul>';
+    if( have_rows('images') ):
 
-endif;
+      echo '<div class="column column-6-tablet column-8-laptop">';
 
-echo '<p class="secondary">' . $description . '</p>';
+        echo '<div class="gallery__images">';
 
+          while ( have_rows('images') ) : the_row();
 
+          $image = get_sub_field('image');
+
+          echo '<figure class="gallery__image">';
+
+            echo wp_get_attachment_image( $image, $size );
+
+          echo '</figure>';
+
+          endwhile;
+
+        echo '</div>';
+
+      echo '</div>';
+
+    endif;
+
+      echo '<div class="column column-6-tablet column-4-laptop">';
+
+        echo '<div class="gallery__content format">';
+
+          echo $description;
+
+        echo '</div>';
+
+      echo '</div>';
+
+  echo '</div>';
+
+echo '</section>';
 ?>

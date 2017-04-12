@@ -1,22 +1,14 @@
 <?php
-
-$title = get_sub_field('title');
-$description = get_sub_field('description');
-$button_text = get_sub_field('button_text');
-$button_link = get_sub_field('button_link');
-
-echo '<div class="block__content">';
-
-  echo '<h3>' . $title. '</h3>';
-
-  echo $description;
-
-  if ($button_link && $button_text) :
-
-    echo '<a href="' . $button_link .'" class="button large">' . $button_text . '</a>';
-
-  endif;
-
-echo '</div>';
-
-?>
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/block-content.php';

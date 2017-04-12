@@ -13,8 +13,18 @@
 }
 
 .block--rows {
-  &:nth-child(odd) {
-    margin-left: $d-sex;
+  .row {
+    flex-direction: column;
+  }
+  @include bp($bp-tablet) {
+    .row {
+      flex-direction: row;
+    }
+    &:nth-child(even) {
+      > .column {
+        margin-left: $d-dec * 3;
+      }
+    }
   }
 }
 
