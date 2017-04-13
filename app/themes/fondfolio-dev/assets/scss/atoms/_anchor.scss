@@ -38,3 +38,12 @@ a,
   }
 }
 
+.link--secondary {
+  color: $ca-anchor-secondary-color;
+  text-decoration: underline;
+  &:hover,
+  &:focus,
+  &.is-active {
+    color: $ca-anchor-primary-hover-color;
+  }
+}

@@ -1,5 +1,5 @@
 .tabs {
-  padding: $d-quad 0 0;
+  padding: $d-quad $d-quad 0;
   background: $ca-tabs-background;
   display:flex;
   overflow-x: auto;
@@ -12,58 +12,60 @@
   }
 }
 
-.tabs__inner {
+.tabs__nav {
   align-items: stretch;
   width: 100%;
   max-width: $d-container-max;
   margin: 0 auto;
-}
+  padding: 0;
 
+  li {
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    margin: 0 $d-duo;
+    padding: 0 0 $d-duo;
 
-.tab {
-  position: relative;
-  align-items: center;
-  cursor: pointer;
-  display: inline-flex;
-  margin: 0 $d-duo;
-  padding: 0 0 $d-duo;
-
-  &:before {
-    content: '';
-    left:0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    background: $ca-tab-line-color;
-    position: absolute;
-    display: block;
-    transform-origin: 0 0;
-    transition: transform $a-timing $a-easing;
-    transform: scaleX(0);
-  }
-
-  &.is-active,
-  &:hover {
     &:before {
-      transform: scaleX(1);
+      content: '';
+      left:0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: $ca-tab-line-color;
+      position: absolute;
+      display: block;
+      transform-origin: 0 0;
+      transition: transform $a-timing $a-easing;
+      transform: scaleX(0);
     }
-  }
 
-  > span,
-  > strong {
-    margin-left: $d-base;
-    margin-right: $d-base;
-  }
+    &.is-active,
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+      }
+    }
 
-  &:first-child {
-    margin-left: 0;
     > span,
     > strong {
-      margin-left: 0;
+      margin-left: $d-base;
+      margin-right: $d-base;
     }
-  }
-  > strong {
-    margin-right: 0;
-  }
 
+    &:first-child {
+      margin-left: 0;
+      > span,
+      > strong {
+        margin-left: 0;
+      }
+    }
+    > strong {
+      margin-right: 0;
+    }
+
+  }
 }
+
+

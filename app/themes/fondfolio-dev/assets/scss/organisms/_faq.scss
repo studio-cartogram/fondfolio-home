@@ -1,0 +1,16 @@
+.faq {
+  padding: $d-quad $d-quad $d-quad 0;
+  border-bottom: 1px solid $ca-faq-border-color;
+}
+
+.faq__question {
+  position: relative;
+  padding-bottom: $d-quad;
+}
+
+.faq__toggle {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: block;
+}

@@ -20,10 +20,7 @@ List Component
 }
 
 .list--small {
-  font-size: $t-font-size-epsilon;
-  a {
-    @extend .link.is-active;
-  }
+  font-size: $t-font-size-zeta;
 }
 
 .list--spaced-horizontal {
@@ -61,4 +58,15 @@ List Component
 
 .list--right {
   justify-content: flex-end;
+}
+
+.list--sep-comma {
+  li:after {
+    content: ', ';
+    padding-right: 3px;
+  }
+  li:first-child:after,
+  li:last-child:after {
+    content: '';
+  }
 }

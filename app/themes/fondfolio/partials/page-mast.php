@@ -7,8 +7,6 @@ echo '<section class="mast">';
 
       echo '<h1 class="secondary">' . get_the_title() . '</h1>';
 
-      echo '<a class="button button--primary" href="">Contact Us</a>';
-
     echo '</div>';
 
   echo '</div>';

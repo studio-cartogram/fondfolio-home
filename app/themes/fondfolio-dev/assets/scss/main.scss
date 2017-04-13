@@ -70,14 +70,18 @@
 @import 'organisms/nav';
 @import 'organisms/mast';
 @import 'organisms/tabs';
+@import 'organisms/faq';
 @import 'organisms/stack';
 @import 'organisms/gallery';
 @import 'organisms/banner';
 @import 'organisms/block';
+@import 'organisms/searchform';
 
 /**
  * Template Styles
  */
+@import 'templates/homepage';
+@import 'templates/page';
 
 /**
  * Shame Styles

@@ -167,6 +167,7 @@
       ======================================================================================================================== */
 
       register_nav_menus( array(
+        'nav_tabs'	=>  'Topics Nav',
         'nav_primary'	=>  'Primary Nav',
         'nav_footer'	=>  'Footer Nav',
       ) );
@@ -186,19 +187,30 @@
   }
 
 
-
   /* ========================================================================================================================
 
-  Extra
+  Custom Search
 
   ======================================================================================================================== */
 
-  function getVimeoThumb($id, $size) {
+  add_filter('get_search_form', 'fondfolio_search_form');
 
-    $vimeo = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$id.php"));
-    $key = 'thumbnail_' . $size;
+  function fondfolio_search_form($html) {
 
-    return $vimeo[0][$key];
+    $icon = 'search';
+
+    $html = '<form class="searchform__form" action="/" method="get">';
+
+      $html .= '<label class="visuallyhidden" for="search">Search in ' . home_url( '/' ) . '</label>';
+
+      $html .= '<input class="search-field" placeholder="' . 'Search...' . '" type="search" value="' . get_search_query() . '" name="s" id="s" />';
+
+      $html .= '<button class="searchform__button"><svg class="icon icon--' . $icon . '"><use xlink:href="#icon-' . $icon . '"></use></svg></button>';
+
+    $html .= '</form>';
+
+	  return $html;
+
   }
 
 ?>

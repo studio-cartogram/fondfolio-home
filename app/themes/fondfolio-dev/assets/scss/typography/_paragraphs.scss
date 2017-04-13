@@ -25,3 +25,15 @@ p.p--large {
     font-size: $t-font-size-p-large;
   }
 }
+
+blockquote {
+  padding: $d-quad;
+  margin: 0;
+
+  p {
+    font-size: $t-font-size-p-large;
+    font-family: $t-font-family-serif;
+    font-style: italic;
+    color: $ca-blockquote-color;
+  }
+}

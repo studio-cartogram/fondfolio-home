@@ -19,6 +19,7 @@ echo '<div id="barba-wrapper">';
     echo '<div class="static static--' . $post->post_name . '">';
 
       get_template_part('partials/page-mast');
+      get_template_part('partials/page-search');
       get_template_part('partials/tabs');
       get_template_part('partials/page-content', $post->post_name);
 
