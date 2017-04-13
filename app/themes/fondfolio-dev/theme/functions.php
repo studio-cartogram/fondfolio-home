@@ -32,7 +32,6 @@
       $faqs_args = array(
         'public'              => true,
         'label'               => 'FAQs',
-        'has_archive'         => false,
         'supports'            => array( 'title', 'editor')
       );
 

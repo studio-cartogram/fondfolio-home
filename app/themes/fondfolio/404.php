@@ -12,19 +12,9 @@ echo '<main id="main" role="main" class="main">';
 
 echo '<div id="barba-wrapper">';
 
-  echo '<div class="barba-container" data-namespace="page">';
+  echo '<div class="barba-container" data-namespace="landing">';
 
-  while ( have_posts() ) : the_post();
-
-    echo '<div class="static static--' . $post->post_name . '">';
-
-      get_template_part('partials/page-mast');
-      get_template_part('partials/tabs');
-      get_template_part('partials/page-content', $post->post_name);
-
-    echo '</div>';
-
-  endwhile;
+    get_template_part('partials/empty');
 
   echo '</div>';
 
@@ -37,5 +27,3 @@ get_footer();
 get_template_part('partials/curtain');
 
 get_template_part('partials/foot');
-
-?>
