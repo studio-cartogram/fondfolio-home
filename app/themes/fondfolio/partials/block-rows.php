@@ -1,14 +1,29 @@
 <?php
-/**
- *
- * DEVELOPMENT MODE ONLY
- *
- * Includes and Runs php files directly
- * from the dev theme to enable debugging
- * php from within the dev theme!
- *
- * Run "gulp build" to generate the theme
- * for production before deploying!
- *
- */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/block-rows.php';
+
+$type = get_query_var('type');
+
+echo '<div class="row row--justify-center block block--' . $type . '">';
+
+  echo '<div class="column column-10-tablet">';
+
+  echo '<div class="row row--align-center">';
+
+    echo '<div class="column column-4-tablet">';
+
+      get_template_part('partials/block-icon');
+
+    echo '</div>';
+
+    echo '<div class="column column-8-tablet">';
+
+      get_template_part('partials/block-content');
+
+    echo '</div>';
+
+  echo '</div>';
+
+  echo '</div>';
+
+echo '</div>';
+
+?>

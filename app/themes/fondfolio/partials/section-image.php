@@ -1,14 +1,30 @@
 <?php
-/**
- *
- * DEVELOPMENT MODE ONLY
- *
- * Includes and Runs php files directly
- * from the dev theme to enable debugging
- * php from within the dev theme!
- *
- * Run "gulp build" to generate the theme
- * for production before deploying!
- *
- */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/section-image.php';
+
+$description = get_sub_field('description');
+$image = get_sub_field('image');
+$size = 'full';
+
+echo '<section class="image">';
+
+  echo '<div class="row">';
+
+    echo '<div class="column intro">';
+
+    if ($image) :
+
+      echo '<figure class="gallery__image">';
+
+        echo wp_get_attachment_image( $image, $size );
+
+      echo '</figure>';
+
+    endif;
+
+      echo '<h2>' . $description . '</h2>';
+
+    echo '</div>';
+
+  echo '</div>';
+
+echo '</section>';
+?>

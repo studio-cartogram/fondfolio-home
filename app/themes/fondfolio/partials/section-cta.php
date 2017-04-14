@@ -1,14 +1,61 @@
 <?php
-/**
- *
- * DEVELOPMENT MODE ONLY
- *
- * Includes and Runs php files directly
- * from the dev theme to enable debugging
- * php from within the dev theme!
- *
- * Run "gulp build" to generate the theme
- * for production before deploying!
- *
- */
-include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/section-cta.php';
+
+$title = get_sub_field('title');
+$description = get_sub_field('description');
+$divider_text = get_sub_field('divider_text');
+$button_text = get_sub_field('button_text');
+$button_link = get_sub_field('button_link');
+$button_micro = get_sub_field('button_micro');
+
+echo '<section class="cta">';
+
+  echo '<div class="row row--justify-center">';
+
+    echo '<div class="column column-8-laptop intro">';
+
+      echo '<h1 class="">' . $title . '</h1>';
+
+      if ($button_link && $button_text) :
+
+      echo '<a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a>';
+
+      endif;
+
+      if ($button_micro) :
+
+      echo '<p class="p--small">' . $button_micro . '</p>';
+
+      endif;
+
+      echo '<p class="divider">' . $divider_text . '</p>';
+
+      if( have_rows('blocks') ):
+
+        echo '<div class="row">';
+
+          while ( have_rows('blocks') ) : the_row();
+
+            echo '<div class="block__content">';
+
+              $title = get_sub_field('title');
+              $description = get_sub_field('description');
+
+              echo '<h3>' . $title . '</h3>';
+
+              echo '<p class="p--large">' . $description . '</p>';
+
+            echo '</div>';
+
+          endwhile;
+
+        echo '</div>';
+
+      endif;
+
+    echo '</div>';
+
+   echo '</div>';
+
+echo '</section>';
+
+?>
