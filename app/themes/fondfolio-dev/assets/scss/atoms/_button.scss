@@ -23,10 +23,12 @@ Button Component
   padding: $d-base $d-duo;
   background: $ca-button-primary-background;
   color: $ca-button-primary-color;
+  box-shadow: 0 2px 20px 0 rgba(35,29,36,0.15);
 
   &:hover {
-    background: $ca-button-primary-background;
+    background: $ca-button-primary-background-hover;
     color: $ca-button-primary-color;
+    box-shadow: none;
   }
 }
 

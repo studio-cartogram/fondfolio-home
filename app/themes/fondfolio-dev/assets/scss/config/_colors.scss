@@ -14,6 +14,7 @@ Color Index
 
 $c-purple: #962DA1;
 $c-lightPurple: #D9B1DD;
+$c-darkPurple: #872391;
 $c-lightestPurple: #FCEFFD;
 $c-black: #231D24;
 $c-white: #FFFFFF;
@@ -51,6 +52,7 @@ $ca-mast-background: $c-lightestGrey;
 $ca-gallery-background: $c-lightestGrey;
 
 $ca-button-primary-background: $c-purple;
+$ca-button-primary-background-hover: $c-darkPurple;
 $ca-button-color: $c-purple;
 $ca-button-primary-color: $c-white;
 $ca-button-secondary-background: $c-purple;

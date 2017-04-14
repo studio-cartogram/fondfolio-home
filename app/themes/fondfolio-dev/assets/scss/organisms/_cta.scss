@@ -10,4 +10,7 @@
 .cta .button--primary {
   background: $c-white;
   color: $c-blue;
+  &:hover {
+    background: rgba(255,255,255,0.95);
+  }
 }
