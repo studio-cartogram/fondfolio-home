@@ -1,0 +1,13 @@
+.cta {
+  background-image: linear-gradient(-132deg, #39CFE7 0%, #189FB3 100%);
+}
+
+.cta p,
+.cta h3 {
+  color: $c-white;
+}
+
+.cta .button--primary {
+  background: $c-white;
+  color: $c-blue;
+}

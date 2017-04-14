@@ -50,17 +50,17 @@ Icon Component
     transform: translate(0%, -50%);
   }
 
-  ~ .icon {
-    fill: $ca-icon-shadow-color;
-    left: 50%;
-    position: absolute;
-    transform: translate(-45%, -45%);
-    z-index: 1;
-    @include bp($bp-tablet) {
-      left: auto;
-      transform: translate(5%, -45%);
-    }
-  }
+  // ~ .icon {
+  //   fill: $ca-icon-shadow-color;
+  //   left: 50%;
+  //   position: absolute;
+  //   transform: translate(-45%, -45%);
+  //   z-index: 1;
+  //   @include bp($bp-tablet) {
+  //     left: auto;
+  //     transform: translate(5%, -45%);
+  //   }
+  // }
 
 }
 
@@ -71,19 +71,26 @@ Icon Component
   max-width: $d-doz;
   max-height: $d-doz;
   padding: $d-trio;
-  border: 1px $ca-icon-border-color solid;
-  border-radius: 50%;
-  box-shadow: 5px 5px 0px $ca-icon-shadow-color;
-  margin: 0 auto 0;
-  @include bp($bp-tablet) {
-    margin: $d-quad $d-duo 0;
-  }
+  // border: 1px $ca-icon-border-color solid;
+  // border-radius: 50%;
+  // box-shadow: 5px 5px 0px $ca-icon-shadow-color;
+  margin: 0 auto;
+  // @include bp($bp-tablet) {
+  //   margin: $d-quad $d-duo 0;
+  // }
 }
 
 .icon--event-birthday,
 .icon--event-wedding,
 .icon--event-retirement,
-.icon--event-recovery {
+.icon--event-recovery,
+.icon--event-moving,
+.icon--event-engagement,
+.icon--event-remembering,
+.icon--event-anniversary,
+.icon--event-newborn,
+.icon--event-success,
+.icon--event-cause {
   max-width: $d-oct;
   max-height: $d-oct;
   fill: $ca-icon-event-color;
