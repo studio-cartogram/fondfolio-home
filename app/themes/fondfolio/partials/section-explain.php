@@ -69,7 +69,7 @@ echo '<section class="explain">';
 
   if ($button_link && $button_text) :
 
-    echo '<p><a href="' . $button_link .'" class="link link--primary">' . $button_text . '</a></p>';
+    echo '<p><a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a></p>';
 
   endif;
 
