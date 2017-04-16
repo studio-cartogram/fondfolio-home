@@ -12,6 +12,7 @@ h6 {
   color: $ca-heading-color;
   font-weight: $t-font-weight-bold;
   margin: 0;
+  padding-bottom: $d-duo;
   &.secondary {
     color: $ca-heading-secondary-color;
   }
@@ -24,14 +25,12 @@ h1 {
   font-family: $t-font-family-serif;
   font-size: $t-font-size-alpha;
   font-weight: $t-font-weight-regular;
-  padding-bottom: $d-duo;
 }
 
 h2 {
   font-family: $t-font-family-serif;
   font-size: $t-font-size-beta;
   font-weight: $t-font-weight-regular;
-  padding-bottom: $d-base;
   &.secondary {
     font-weight: $t-font-weight-bold;
     color: $ca-heading-secondary-color;
@@ -41,7 +40,6 @@ h2 {
 
 h3 {
   font-size: $t-font-size-gamma;
-  padding-bottom: $d-duo;
 }
 
 h4 {
@@ -56,7 +54,6 @@ h5 {
 h6 {
   font-size: $t-font-size-zeta;
   font-family: $t-font-family-serif;
-  font-weight: $t-font-weight-regular;
 }
 
 .alpha {

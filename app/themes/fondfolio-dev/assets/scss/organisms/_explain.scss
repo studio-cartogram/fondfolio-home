@@ -1,13 +1,8 @@
 .explain {
-  padding: $d-sex;
-  background-image: linear-gradient(-180deg, #FEFAF1 0%, #FEF7E2 75%);
+  padding: $d-oct;
+  background-image: $ca-explain-background-gradient;
 }
 
-.explain .block__content {
-  background: $c-white;
-  box-shadow: 0 2px 20px 0 rgba(35,29,36,0.05);
-  text-align: center;
-}
 
 .explain h1,
 .explain .badge__content h3 {

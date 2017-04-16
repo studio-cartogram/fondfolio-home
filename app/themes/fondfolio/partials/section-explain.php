@@ -1,86 +1,14 @@
 <?php
-
-$title = get_sub_field('title');
-$subtitle = get_sub_field('subtitle');
-$type = get_sub_field('type');
-$button_text = get_sub_field('button_text');
-$button_link = get_sub_field('button_link');
-
-echo '<section class="explain">';
-
-echo '<div class="row row--justify-center">';
-
-  echo '<div class="column column-10-laptop intro">';
-
-    echo '<div class="row">';
-
-      echo '<div class="column intro">';
-
-        echo '<h1>' . $title . '</h1>';
-
-        echo '<p class="secondary">' . $subtitle . '</p>';
-
-      echo '</div>';
-
-    echo '</div>';
-
-    if( have_rows('blocks') ):
-
-      echo '<div class="row">';
-
-        while ( have_rows('blocks') ) : the_row();
-
-          echo '<div class="block__content block column column-6-tablet column-6-laptop">';
-
-            $title = get_sub_field('title');
-            $description = get_sub_field('description');
-
-            get_template_part('partials/block-icon');
-
-            echo '<h3>' . $title. '</h3>';
-
-            echo $description;
-
-          echo '</div>';
-
-        endwhile;
-
-      echo '</div>';
-
-    endif;
-
-    if( have_rows('badges') ):
-
-      echo '<div class="row row--justify-center">';
-
-        while ( have_rows('badges') ) : the_row();
-
-          echo '<div class="badge__content block">';
-
-            $title = get_sub_field('title');
-
-            get_template_part('partials/block-icon');
-
-            echo '<h3>' . $title . '</h3>';
-
-          echo '</div>';
-
-        endwhile;
-
-      echo '</div>';
-
-    endif;
-
-    if ($button_link && $button_text) :
-
-      echo '<p class="buttons"><a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a></p>';
-
-    endif;
-
-   echo '</div>';
-
-  echo '</div>';
-
-echo '</section>';
-
-?>
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/section-explain.php';
