@@ -1,0 +1,13 @@
+.image {
+  align-content: stretch;
+
+}
+
+.image__content {
+  padding: $d-oct;
+  background: $ca-image-content-background;
+
+  .image:nth-child(odd) & {
+    order: 1;
+  }
+}

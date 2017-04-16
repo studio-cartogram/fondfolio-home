@@ -6,6 +6,7 @@ Footer Component
   position: relative;
   padding: $d-quad;
   transition: all $a-timing * 2 $a-easing;
+  background: $ca-footer-background;
 
   @include bp($bp-tablet) {
     padding: $d-quad $d-trio;

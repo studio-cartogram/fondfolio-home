@@ -69,7 +69,6 @@ echo '<section class="' . $section . '">';
             set_query_var( 'context', 'badge' );
             get_template_part('partials/icon');
 
-
             echo '<h4 class="badge__title">' . $title. '</h3>';
 
           echo '</div>';
