@@ -1,3 +1,25 @@
 .banner {
   padding: $d-sex 0 0;
+  position: relative;
+  min-height: calc(100vh - #{$d-header-height-mobile};
+  @include bp($bp-tablet) {
+    min-height: calc(100vh - #{$d-header-height};
+  }
+
+}
+
+.banner__image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  // right: 0;
+  width: auto;
+
+  img {
+    min-height: 50vh;
+    max-height: 75vh;
+    width: auto;
+    margin: auto;
+  }
 }

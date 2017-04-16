@@ -1,16 +1,9 @@
 .cta {
-  background-image: linear-gradient(-132deg, #39CFE7 0%, #189FB3 100%);
+  padding: $d-oct;
+  background-image: $ca-cta-background-gradient;
 }
 
-.cta p,
-.cta h3 {
-  color: $c-white;
-}
 
-.cta .button--primary {
-  background: $c-white;
-  color: $c-blue;
-  &:hover {
-    background: rgba(255,255,255,0.95);
-  }
+.cta__extra {
+  padding: $d-oct 0;
 }
