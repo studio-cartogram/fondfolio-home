@@ -36,7 +36,11 @@ echo '<section class="banner">';
 
   else :
 
+    echo '<div class="banner__image">';
+
     echo wp_get_attachment_image( $image, $size );
+
+    echo '</div>';
 
   endif;
 

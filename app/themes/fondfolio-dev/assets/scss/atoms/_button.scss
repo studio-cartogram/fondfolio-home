@@ -30,7 +30,16 @@ Button Component
     color: $ca-button-primary-color;
     box-shadow: none;
   }
+
+  &.button--inverted {
+    background: $ca-button-inverted-background;
+    color: $ca-button-inverted-color;
+    &:hover {
+      background: $ca-button-inverted-background-hover;
+    }
+  }
 }
+
 
 .button--secondary {
   padding: $d-base $d-duo;
