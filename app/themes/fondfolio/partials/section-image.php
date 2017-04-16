@@ -5,27 +5,24 @@ $image = get_sub_field('image');
 $orientation = get_sub_field('orientation');
 $size = 'full';
 
-echo '<section class="image">';
+echo '<section class="image row row--full">';
 
-  echo '<div class="row">';
+  echo '<div class="image__content column column-6-laptop">';
 
-    if ($image) :
+    echo '<h2 class="secondary">' . $description . '</h2>';
 
-      echo '<figure class="gallery__image column column-6-laptop">';
+  echo '</div>';
 
-        echo wp_get_attachment_image( $image, $size );
+  if ($image) :
 
-      echo '</figure>';
+    echo '<figure class=" column column-6-laptop">';
 
-    endif;
+      echo wp_get_attachment_image( $image, $size );
 
-      echo '<div class="column column-6-laptop">';
+    echo '</figure>';
 
-        echo '<h2>' . $description . '</h2>';
+  endif;
 
-      echo '</div>';
-
-    echo '</div>';
 
 echo '</section>';
 ?>

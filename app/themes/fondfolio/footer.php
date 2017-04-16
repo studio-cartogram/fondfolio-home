@@ -13,6 +13,7 @@ $instagram = get_field('instagram', 'options');
 $twitter = get_field('twitter', 'options');
 $newsletter_button_text = get_field('newsletter_button_text', 'options');
 
+set_query_var( 'context', 'footer' );
 set_query_var( 'icon', 'logo-icon' );
 
 echo '<footer class="footer">';

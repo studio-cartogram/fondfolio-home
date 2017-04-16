@@ -12,6 +12,14 @@ $type = get_sub_field('type');
 
 echo '<section class="banner">';
 
+  echo '<div class="banner__background">';
+
+    set_query_var('icon', 'splotches');
+
+    get_template_part('partials/icon');
+
+  echo '</div>';
+
   echo '<div class="row row--justify-center">';
 
     echo '<div class="column column-8-laptop intro">';

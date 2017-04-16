@@ -80,9 +80,9 @@ $ca-anchor-secondary-hover-color: $c-grey;
 
 $ca-logo-color: $c-purple;
 
-$ca-icon-event-color: $c-purple;
-$ca-icon-doodle-color: $c-lightPurple;
-$ca-icon-border-color: $c-lightPurple;
+$ca-icon-badge-color: $c-purple;
+$ca-icon-block-corner-color: $c-lightestRed;
+$ca-icon-block-color: $c-lightPurple;
 $ca-icon-shadow-color: $c-lightestPurple;
 
 $ca-paragraph-color: $c-black;
@@ -105,5 +105,10 @@ $ca-icon-search-color: $c-lightGrey;
 $ca-input-background: $c-white;
 $ca-input-border-color: $c-lightGrey;
 
+$ca-footer-background: $c-white;
 
+// Sections
+$ca-image-content-background: $c-white;
+$ca-badge-title-color: $c-purple;
+$ca-explain-background-gradient: linear-gradient(-180deg, #FEFAF1 0%, #FEF7E2 75%);
 $ca-cta-background-gradient: linear-gradient(-132deg, #39CFE7 0%, #189FB3 100%);

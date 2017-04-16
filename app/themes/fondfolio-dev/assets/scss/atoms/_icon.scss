@@ -25,76 +25,6 @@ Icon Component
   max-height: $d-trio;
 }
 
-.icon--doodle {
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: $d-oct * 2;
-  max-height: $d-oct * 2;
-  margin: auto auto $d-quad;
-  @include bp($bp-tablet) {
-    float:right;
-  }
-}
-
-.icon--doodle-empty,
-.icon--doodle-swoosh,
-.icon--doodle-hatch {
-  fill: $ca-icon-doodle-color;
-  position: relative;
-  top: 50%;
-  z-index: 2;
-  @include bp($bp-tablet) {
-    right:$d-quad;
-    position: absolute;
-    transform: translate(0%, -50%);
-  }
-
-  // ~ .icon {
-  //   fill: $ca-icon-shadow-color;
-  //   left: 50%;
-  //   position: absolute;
-  //   transform: translate(-45%, -45%);
-  //   z-index: 1;
-  //   @include bp($bp-tablet) {
-  //     left: auto;
-  //     transform: translate(5%, -45%);
-  //   }
-  // }
-
-}
-
-.icon--event {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: $d-doz;
-  max-height: $d-doz;
-  padding: $d-trio;
-  // border: 1px $ca-icon-border-color solid;
-  // border-radius: 50%;
-  // box-shadow: 5px 5px 0px $ca-icon-shadow-color;
-  margin: 0 auto;
-  // @include bp($bp-tablet) {
-  //   margin: $d-quad $d-duo 0;
-  // }
-}
-
-.icon--event-birthday,
-.icon--event-wedding,
-.icon--event-retirement,
-.icon--event-recovery,
-.icon--event-moving,
-.icon--event-engagement,
-.icon--event-remembering,
-.icon--event-anniversary,
-.icon--event-newborn,
-.icon--event-success,
-.icon--event-cause {
-  max-width: $d-oct;
-  max-height: $d-oct;
-  fill: $ca-icon-event-color;
-}
 
 .icon--dropdown {
   max-width: $d-trio;
@@ -105,4 +35,12 @@ Icon Component
   fill: $ca-icon-search-color;
   max-width: $d-quad;
   max-height: $d-quad;
+}
+
+
+.badge__icon {
+  max-width: $d-quin;
+  max-height: $d-quin;
+  margin: $d-duo;
+  fill: $ca-icon-badge-color;
 }
