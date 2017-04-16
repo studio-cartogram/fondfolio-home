@@ -42,9 +42,15 @@ echo '<section class="' . $section . '">';
 
             echo '<h3 class="block__title">' . $title. '</h3>';
 
-            echo '<p>' . $description . '</p>';
+            echo '<p class="secondary">' . $description . '</p>';
 
             echo '</div>';
+
+            $icon = get_sub_field('icon');
+            set_query_var( 'icon', 'doodle-loop' );
+            set_query_var( 'context', 'block-corner' );
+            get_template_part('partials/icon');
+
 
           echo '</div>';
 

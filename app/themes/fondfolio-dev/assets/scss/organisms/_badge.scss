@@ -1,6 +1,8 @@
 .badges {
   justify-content: space-between;
   padding: $d-sex $d-dec;;
+  position: relative;
+  z-index: 1;
 }
 
 .badge {
