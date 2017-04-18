@@ -16,15 +16,25 @@ set_query_var( 'icon', 'logo-icon' );
 
 echo '<footer class="footer">';
 
-
-
   echo '<div class="row footer__inner">';
 
     echo '<div class="footer__left column column-6-tablet ">';
 
-    //   echo '<p class="p--hard p--large secondary ">' . $newsletter_text . '</p>';
-    //
-    //  echo '<p class="p--hard p--large "><a class="link">' . $newsletter_button_text . '</a></p>';
+      echo '<p class="p--hard p--large secondary ">';
+
+        echo 'Still have questions?';
+
+      echo '</p>';
+
+      echo '<p class="p--hard p--large secondary ">';
+
+        echo '<a href="' . get_bloginfo('url') . '/help" class="link link--primary">' . 'Visit our help center' . '</a>';
+
+        echo ' or ';
+
+        echo '<a href="mailto:' . 'hello@hello@fondfolio.com' . '" class="link link--primary">' . 'send us an email' . '</a>';
+
+      echo '</p>';
 
     echo '</div>';
 
@@ -33,36 +43,6 @@ echo '<footer class="footer">';
       get_template_part('partials/newsletter');
 
     echo '</div>';
-
-    // echo '<div class="soft-quad--bottom column column-3-tablet ">';
-    //
-    //   echo '<ul class="footer__list list list--spaced-horizontal list--small">';
-    //
-    //     echo '<li><a class="button button--circle" href="' . $instagram . '">';
-    //
-    //       set_query_var( 'icon', 'instagram' );
-    //       get_template_part('partials/icon');
-    //
-    //     echo '</a></li>';
-    //
-    //     echo '<li><a class="button button--circle" href="' . $twitter . '">';
-    //
-    //       set_query_var( 'icon', 'twitter' );
-    //       get_template_part('partials/icon');
-    //
-    //     echo '</a></li>';
-    //
-    //     echo '<li><a class="button button--circle" href="' . $facebook . '">';
-    //
-    //       set_query_var( 'icon', 'facebook' );
-    //       get_template_part('partials/icon');
-    //
-    //     echo '</a></li>';
-    //
-    //   echo '</ul>';
-    //
-    // echo '</div>';
-
 
 
   echo '</div>';
@@ -79,13 +59,42 @@ echo '<footer class="footer">';
 
   echo '</a>';
 
+
   echo '<ul class="footer__list list--small list">';
+
+    echo '<li>';
+
+      echo '<span class="secondary ">' . $copyright . '</span>';
+
+    echo '</li>';
 
     wp_nav_menu( $nav_footer );
 
   echo '</ul>';
 
-  echo '<p class="p--small secondary ">' . $copyright . '</p>';
+  echo '<ul class="footer__list list list--small">';
 
+    echo '<li><a class="button button--circle" href="' . $instagram . '">';
+
+      set_query_var( 'icon', 'instagram' );
+      get_template_part('partials/icon');
+
+    echo '</a></li>';
+
+    echo '<li><a class="button button--circle" href="' . $twitter . '">';
+
+      set_query_var( 'icon', 'twitter' );
+      get_template_part('partials/icon');
+
+    echo '</a></li>';
+
+    echo '<li><a class="button button--circle" href="' . $facebook . '">';
+
+      set_query_var( 'icon', 'facebook' );
+      get_template_part('partials/icon');
+
+    echo '</a></li>';
+
+  echo '</ul>';
 echo '</footer>';
 ?>

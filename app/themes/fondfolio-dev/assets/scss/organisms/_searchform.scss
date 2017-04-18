@@ -8,15 +8,9 @@
   padding: $d-base;
   border: 1px solid $ca-input-border-color;
   display:flex;
+
+  input {
+    padding: 0 $d-duo;
+  }
 }
 
-input {
-  order: 1;
-  box-shadow: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 100%;
-  outline: none;
-  padding: 0 $d-duo;
-}
