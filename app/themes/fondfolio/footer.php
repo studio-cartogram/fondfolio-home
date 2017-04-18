@@ -34,6 +34,8 @@ echo '<footer class="footer">';
 
         echo '<a href="mailto:' . 'hello@hello@fondfolio.com' . '" class="link link--primary">' . 'send us an email' . '</a>';
 
+        echo '<br>we enourage and value your feedback.';
+
       echo '</p>';
 
     echo '</div>';
