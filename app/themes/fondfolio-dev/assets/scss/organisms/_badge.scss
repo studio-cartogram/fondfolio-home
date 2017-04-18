@@ -1,12 +1,16 @@
 .badges {
-  justify-content: space-between;
-  padding: $d-sex $d-dec;;
+  justify-content: center;
+  padding: $d-quad $d-duo;
   position: relative;
   z-index: 1;
+  @include bp($bp-tablet) {
+    padding: $d-duo $d-dec;
+  }
 }
 
 .badge {
   text-align: center;
+  padding: $d-base $d-duo;
 }
 
 .badge__title {

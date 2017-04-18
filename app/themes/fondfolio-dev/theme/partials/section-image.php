@@ -15,7 +15,7 @@ echo '<section class="image row row--full">';
 
   if ($image) :
 
-    echo '<figure class=" column column-6-laptop">';
+    echo '<figure class="image__image column column-6-laptop">';
 
       echo wp_get_attachment_image( $image, $size );
 

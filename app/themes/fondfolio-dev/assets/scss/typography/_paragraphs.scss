@@ -13,17 +13,28 @@ p,
   }
 }
 
+.secondary {
+  color: $ca-paragraph-secondary-color;
+}
+
 .p--small > p,
+.p--small,
 p.p--small {
   font-size: $t-font-size-p-small;
 }
 
+
 .p--large > p,
+.p--large,
 p.p--large {
   padding: 0 0 $d-quad;
   @include bp($bp-tablet) {
     font-size: $t-font-size-p-large;
   }
+}
+
+.p--hard {
+  padding: 0 !important
 }
 
 blockquote {

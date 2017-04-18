@@ -11,7 +11,7 @@ echo '<section class="cta">';
 
   echo '<div class="row row--justify-center">';
 
-    echo '<div class="column column-10-laptop intro">';
+    echo '<div class="column intro">';
 
       echo '<h2 class="text--inverted">' . $title . '</h2>';
 
