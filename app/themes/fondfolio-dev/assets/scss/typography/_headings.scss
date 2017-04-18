@@ -23,14 +23,20 @@ h6 {
 
 h1 {
   font-family: $t-font-family-serif;
-  font-size: $t-font-size-alpha;
+  font-size: $t-font-size-alpha-mobile;
   font-weight: $t-font-weight-regular;
+  @include bp($bp-tablet) {
+    font-size: $t-font-size-alpha;
+  }
 }
 
 h2 {
   font-family: $t-font-family-serif;
-  font-size: $t-font-size-beta;
+  font-size: $t-font-size-beta-mobile;
   font-weight: $t-font-weight-regular;
+  @include bp($bp-tablet) {
+    font-size: $t-font-size-beta;
+  }
 }
 
 

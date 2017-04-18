@@ -41,33 +41,6 @@ h6 {
   }
 }
 
-.with-line {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  position: relative;
-
-  &:before,
-  &:after {
-    top: 0.7em;
-    flex-grow: 1;
-    position: relative;
-    transform: translateY(-50%);
-    content: '';
-    height: 1px;
-    width: auto;
-    background-color: currentColor;
-    opacity: 0.5;
-  }
-
-  &:after {
-    margin-left: $d-quad;
-  }
-
-  &:before {
-    margin-right: $d-quad;
-  }
-}
 
 .format {
 

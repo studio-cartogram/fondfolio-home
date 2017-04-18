@@ -1,19 +1,27 @@
-.blocks__title {
-  padding: $d-quad 0;
-}
-
 .blocks {
   margin: 0 -$d-duo;
-  align-content: stretch;
+  align-content: center;
+  @include bp($bp-tablet) {
+    align-content: stretch;
+  }
 }
 
+.blocks__title {
+  padding: $d-quad $d-duo;
+  @include bp($bp-tablet) {
+    padding: $d-quad 0;
+  }
+}
+
+
 .block {
-  padding: $d-base;
   text-align: center;
   position: relative;
+  padding: 0 $d-quad;
 
   @include bp($bp-tablet) {
     text-align: left;
+    padding: $d-base;
   }
 }
 
@@ -23,24 +31,35 @@
 
 .block__inverted {
   text-align: center;
-  padding: $d-dec;
+  padding: $d-quad;
 
   > * {
     position: relative;
     z-index: 2;
   }
+
   &:before {
     z-index: 1;
     position: absolute;
     height: auto;
     width: auto;
-    top: $d-duo;
+    top: $d-base;
     left: $d-duo;
     right: $d-duo;
-    bottom: $d-duo;
+    bottom: $d-base;
     content: '';
     background: $c-white;
     box-shadow: 0 2px 20px 0 rgba(35,29,36,0.05);
+  }
+
+  @include bp($bp-tablet) {
+    padding: $d-dec;
+    &:before {
+      top: $d-duo;
+      left: $d-duo;
+      right: $d-duo;
+      bottom: $d-duo;
+    }
   }
 }
 

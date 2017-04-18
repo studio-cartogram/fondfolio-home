@@ -1,6 +1,12 @@
 .cta {
-  padding: $d-oct;
+  padding: $d-sex 0 $d-quad;
   background-image: $ca-cta-background-gradient;
+  @include bp($bp-tablet) {
+    padding: $d-oct $d-quad $d-sex;
+  }
+  @include bp($bp-laptop) {
+    padding: $d-oct $d-dec $d-sex;
+  }
 }
 
 

@@ -1,31 +1,27 @@
-.soft {
-  padding: $d-base !important;
-}
+.with-line {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
 
-.soft--bottom {
-  padding-bottom: $d-base !important;
-}
+  &:before,
+  &:after {
+    top: 0.7em;
+    flex-grow: 1;
+    position: relative;
+    transform: translateY(-50%);
+    content: '';
+    height: 1px;
+    width: auto;
+    background-color: currentColor;
+    opacity: 0.5;
+  }
 
-.soft-duo--bottom {
-  padding-bottom: $d-duo !important;
-}
+  &:after {
+    margin-left: $d-quad;
+  }
 
-.soft-duo--top {
-  padding-top: $d-duo !important;
-}
-
-.soft-trio--bottom {
-  padding-bottom: $d-trio !important;
-}
-
-.soft-trio--top {
-  padding-top: $d-trio !important;
-}
-
-.soft-quad--top {
-  padding-top: $d-quad !important;
-}
-
-.soft-quad--bottom {
-  padding-bottom: $d-quad !important;
+  &:before {
+    margin-right: $d-quad;
+  }
 }

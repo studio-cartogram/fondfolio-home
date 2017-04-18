@@ -3,17 +3,54 @@ Footer Component
 ========================================= */
 
 .footer {
+  padding: 0 0 $d-sex;
   position: relative;
-  padding: $d-quad;
   transition: all $a-timing * 2 $a-easing;
   background: $ca-footer-background;
-
-  @include bp($bp-tablet) {
-    padding: $d-quad $d-trio;
-  }
+  text-align: center;
 
   .js-is-loading & {
     opacity: 0;
+  }
+
+  .footer__icon {
+    color: $c-lightGrey;
+  }
+
+  .footer__inner {
+    align-items: center;
+    justify-content: center;
+    @include bp($bp-tablet) {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  .footer__right {
+    padding: $d-sex $d-sex;
+    @include bp($bp-tablet) {
+      text-align: left;
+    }
+  }
+
+  .footer__left {
+    padding: $d-quad $d-sex;
+    @include bp($bp-tablet) {
+      text-align: right;
+    }
+  }
+
+
+
+  .footer__list {
+    padding: $d-quad 0 $d-duo;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    li {
+      padding: $d-duo;
+    }
   }
 
 }
