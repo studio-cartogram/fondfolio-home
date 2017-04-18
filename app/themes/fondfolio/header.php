@@ -23,7 +23,7 @@ echo '<header role="banner" class="js-header header">';
 
       echo '</span>';
 
-      echo '<span class="logo logo__word">';
+      echo '<span class="logo logo-word">';
 
         set_query_var( 'icon', 'logo-full' );
 
