@@ -2,13 +2,13 @@
 global $language;
 
 $nav_primary_right = array(
-  'theme_location'  => 'nav_primary',
+  'theme_location'  => 'header_nav_secondary',
   'container'       => false,
   'items_wrap'      => '%3$s',
 );
 
 $nav_primary_left = array(
-  'theme_location'  => 'nav_primary_right',
+  'theme_location'  => 'header_nav_primary',
   'container'       => false,
   'items_wrap'      => '%3$s',
 );

@@ -168,7 +168,8 @@
 
       register_nav_menus( array(
         'nav_tabs'	=>  'Topics Nav',
-        'nav_primary'	=>  'Primary Nav',
+        'header_nav_secondary'	=>  'Primary Nav Right',
+        'header_nav_primary'	=>  'Primary Nav Left',
         'nav_footer'	=>  'Footer Nav',
       ) );
 
