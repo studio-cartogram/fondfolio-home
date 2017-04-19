@@ -1,6 +1,6 @@
 .badges {
   justify-content: center;
-  padding: $d-quad $d-duo;
+  padding: $d-quad 0;
   position: relative;
   z-index: 1;
   @include bp($bp-tablet) {
@@ -10,7 +10,10 @@
 
 .badge {
   text-align: center;
-  padding: $d-trio;
+  padding: $d-duo;
+  @include bp($bp-tablet) {
+    padding: $d-trio;
+  }
 }
 
 .badge__title {

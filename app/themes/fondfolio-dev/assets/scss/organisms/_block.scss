@@ -64,9 +64,11 @@
     bottom: $d-base;
     content: '';
     background: $c-white;
-    box-shadow: 0 2px 20px 0 rgba(35,29,36,0.05);
     border: 1px solid $c-purple;
-    box-shadow: $d-duo $d-duo 0px 0 $c-purple;
+    box-shadow: $d-base $d-base 0px 0 $c-purple;
+    @include bp($bp-tablet) {
+      box-shadow: $d-duo $d-duo 0px 0 $c-purple;
+    }
   }
 
   @include bp($bp-tablet) {
@@ -78,9 +80,6 @@
       bottom: $d-duo;
     }
   }
-
-
-
 }
 
 
@@ -98,6 +97,7 @@
   fill: $ca-icon-block-corner-color;
   position: absolute;
   z-index:0;
+  mix-blend-mode: multiply;
 
   .block:nth-child(1) & {
     transform: translate(-30%, -30%) rotate(180deg) scaleX(-1);

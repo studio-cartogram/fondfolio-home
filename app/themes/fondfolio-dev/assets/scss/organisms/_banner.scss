@@ -2,6 +2,7 @@
   padding: $d-sex 0 0;
   position: relative;
   min-height: calc(100vh - #{$d-header-height-mobile};
+  overflow: hidden;
   @include bp($bp-tablet) {
     min-height: calc(100vh - #{$d-header-height};
   }

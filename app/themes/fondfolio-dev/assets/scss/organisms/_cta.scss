@@ -1,4 +1,5 @@
 .cta {
+  overflow: hidden;
   padding: $d-sex 0 $d-quad;
   background-image: $ca-cta-background-gradient;
   @include bp($bp-tablet) {
