@@ -204,7 +204,7 @@
 
       $html .= '<label class="visuallyhidden" for="search">Search in ' . home_url( '/' ) . '</label>';
 
-      $html .= '<input class="search-field" placeholder="' . 'Search...' . '" type="search" value="' . get_search_query() . '" name="s" id="s" />';
+      $html .= '<input class="search-field" placeholder="' . 'Search our FAQs...' . '" type="search" value="' . get_search_query() . '" name="s" id="s" />';
 
       $html .= '<button class="searchform__button"><svg class="icon icon--' . $icon . '"><use xlink:href="#icon-' . $icon . '"></use></svg></button>';
 

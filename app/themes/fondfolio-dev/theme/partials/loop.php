@@ -2,11 +2,10 @@
 
 $context = get_query_var( 'context' );
 $modifications = array();
-$post_type = ($context == 'commongood' ? 'commongood' : 'works');
-$modifications['post_type'] = array($post_type);
+// $modifications['post_type'] = array($post_type);
 
 $args = array_merge(
-  // $wp_query->query_vars,
+  $wp_query->query_vars,
   $modifications 
 );
 

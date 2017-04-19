@@ -47,7 +47,7 @@ Colors Applied
 $ca-hamburger-line-background: $c-white;
 $ca-carousel-background: $c-black;
 $ca-site-background: $c-white;
-$ca-mast-background: $c-lightestGrey;
+$ca-mast-background: $c-white;
 
 $ca-gallery-background: $c-lightestGrey;
 $ca-color-inverted: $c-white;
@@ -94,7 +94,7 @@ $ca-heading-secondary-color: $c-grey;
 $ca-spinner-color: $c-white;
 $ca-overlay-background: $c-black;
 
-$ca-tabs-background: $c-lightestGrey;
+$ca-tabs-background: $c-white;
 $ca-tab-line-color: $c-purple;
 
 $ca-faq-border-color: $c-lightestGrey;
@@ -102,10 +102,11 @@ $ca-blockquote-color: $c-purple;
 
 $ca-icon-newsletter-color: $c-lightGrey;
 $ca-icon-newsletter-color-hover: $c-purple;
-$ca-searchform-background: $c-lightestGrey;
+$ca-searchform-background: $c-white;
 $ca-icon-search-color: $c-lightGrey;
 $ca-input-background: $c-white;
-$ca-input-border-color: $c-lightestGrey;
+$ca-input-border-color: $c-lightGrey;
+$ca-input-focus-border-color: $c-lightPurple;
 
 $ca-footer-background: $c-white;
 

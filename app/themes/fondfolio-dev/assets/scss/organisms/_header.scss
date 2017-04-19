@@ -38,7 +38,13 @@
   }
 
   a {
-    @extend .link--primary;
+    color: $ca-anchor-primary-color;
+  }
+
+  a:hover,
+  a:focus,
+  a.is-active {
+    color: $ca-anchor-primary-hover-color;
   }
 }
 

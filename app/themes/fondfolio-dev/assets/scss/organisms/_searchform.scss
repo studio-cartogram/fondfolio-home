@@ -1,13 +1,18 @@
 .searchform {
-  padding: 0 $d-quad 0;
+  padding: $d-quad;
   background: $ca-searchform-background;
 }
 
 .searchform__form {
+  border-radius: 2px;
   background: $ca-input-background;
   padding: $d-base;
   border: 1px solid $ca-input-border-color;
   display:flex;
+
+  &:hover {
+    border: 1px solid $ca-input-focus-border-color;
+  }
 
   input {
     padding: 0 $d-duo;
