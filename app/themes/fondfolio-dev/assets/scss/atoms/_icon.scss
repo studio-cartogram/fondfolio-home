@@ -10,13 +10,9 @@ Icon Component
 .icon--logo,
 .icon--logo-word {
   display:inline-block;
-  max-width: $d-duo * 2;
-  max-height: $d-duo * 2;
+  max-width: $d-dec * 2;
+  max-height: $d-dec;
   fill: $ca-logo-color;
-
-  .curtain__logo & {
-    max-width: $d-sep * 2.5;
-  }
 }
 
 .icon--logo-icon {

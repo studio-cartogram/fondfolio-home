@@ -36,6 +36,10 @@
   @include bp($bp-tablet) {
     font-size: $t-font-size-gamma;
   }
+
+  a {
+    @extend .link--primary;
+  }
 }
 
 .header__item {

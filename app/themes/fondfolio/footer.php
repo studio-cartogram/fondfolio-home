@@ -24,15 +24,17 @@ echo '<footer class="footer">';
 
         echo 'Still have questions?';
 
+        echo ' <a href="' . get_bloginfo('url') . '/help" class="link link--primary">' . 'Visit our help center' . '</a>';
+
       echo '</p>';
 
       echo '<p class="p--hard p--large secondary ">';
 
-        echo '<a href="' . get_bloginfo('url') . '/help" class="link link--primary">' . 'Visit our help center' . '</a>';
+        echo '<a class="link link--primary" href="javascript:Smooch.open()">Start a chat</a>';
 
-        echo ' or ';
+        echo ' <em class="dashed serif">&mdash;or&mdash;</em> ';
 
-        echo '<a href="mailto:' . 'hello@hello@fondfolio.com' . '" class="link link--primary">' . 'send us an email' . '</a>.';
+        echo '<a href="mailto:' . 'hello@hello@fondfolio.com' . '" class="link link--primary">' . 'Send us an email' . '</a>';
 
         echo '<br>We value your words.';
 

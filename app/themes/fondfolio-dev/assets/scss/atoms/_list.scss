@@ -60,6 +60,18 @@ List Component
   justify-content: flex-end;
 }
 
+.list--sep-slash {
+  li:after {
+    content: '/ ';
+    padding-left: 1px;
+    padding-right: 1px;
+    color: $c-lightGrey;
+  }
+  li:last-child:after {
+    content: '';
+  }
+}
+
 .list--sep-comma {
   li:after {
     content: ', ';
