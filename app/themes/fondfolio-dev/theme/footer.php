@@ -32,7 +32,9 @@ echo '<footer class="footer">';
 
         echo ' or ';
 
-        echo '<a href="mailto:' . 'hello@hello@fondfolio.com' . '" class="link link--primary">' . 'send us an email' . '</a>';
+        echo '<a href="mailto:' . 'hello@hello@fondfolio.com' . '" class="link link--primary">' . 'send us an email' . '</a>.';
+
+        echo '<br>We value your words.';
 
       echo '</p>';
 
