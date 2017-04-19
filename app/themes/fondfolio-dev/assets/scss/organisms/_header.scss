@@ -22,6 +22,13 @@
 
 }
 
+.header__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .header__nav {
   pointer-events: auto;
   font-size: $t-font-size-epsilon;
