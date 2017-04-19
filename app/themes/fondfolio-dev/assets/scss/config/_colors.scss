@@ -81,15 +81,15 @@ $ca-anchor-secondary-hover-color: $c-grey;
 $ca-logo-color: $c-purple;
 
 $ca-icon-badge-color: $c-purple;
-$ca-icon-block-corner-color: $c-lightestRed;
-$ca-icon-block-color: $c-lightPurple;
-$ca-icon-shadow-color: $c-lightestPurple;
+$ca-icon-block-corner-color: $c-purple;
+$ca-icon-block-color: $c-purple;
 
 $ca-paragraph-color: $c-black;
 $ca-paragraph-secondary-color: $c-grey;
 
 $ca-heading-color: $c-black;
 $ca-heading-secondary-color: $c-grey;
+$ca-heading-primary-color: $c-purple;
 
 $ca-spinner-color: $c-white;
 $ca-overlay-background: $c-black;
@@ -111,7 +111,7 @@ $ca-input-focus-border-color: $c-lightPurple;
 $ca-footer-background: $c-white;
 
 // Sections
-$ca-image-content-background: $c-white;
+$ca-image-content-background: $c-lightestGrey;
 $ca-badge-title-color: $c-purple;
 $ca-explain-background-gradient: linear-gradient(-180deg, #FEFAF1 0%, #FEF7E2 75%);
 $ca-cta-background-gradient: linear-gradient(-132deg, #39CFE7 0%, #189FB3 100%);

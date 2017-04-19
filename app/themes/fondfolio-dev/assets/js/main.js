@@ -52,7 +52,7 @@ class App {
         Promise
         .all([
           this.newContainerLoading,
-          // _scrollTop().finished,
+          _scrollTop().finished,
         ])
         .then(this.showNewPage.bind(this))
       },

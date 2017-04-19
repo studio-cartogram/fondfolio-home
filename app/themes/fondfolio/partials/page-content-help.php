@@ -1,23 +1,14 @@
 <?php
-
-$slug = $post->post_name;
-
-$context = $slug === 'help' ? 'faqs' : $slug;
-
-echo '<section class="page__content">';
-
-  echo '<div class="row row--justify-center">';
-
-    echo '<div class="column column-10-tablet column-7-laptop">';
-
-      set_query_var('context', $context);
-
-      get_template_part('partials/loop', $context);
-
-    echo '</div>';
-
-  echo '</div>';
-
-echo '</section>';
-
-?>
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/partials/page-content-help.php';

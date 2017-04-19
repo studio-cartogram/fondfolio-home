@@ -4,13 +4,13 @@
   position: relative;
   z-index: 1;
   @include bp($bp-tablet) {
-    padding: $d-duo $d-dec;
+    padding: $d-quad $d-duo;
   }
 }
 
 .badge {
   text-align: center;
-  padding: $d-base $d-duo;
+  padding: $d-trio;
 }
 
 .badge__title {

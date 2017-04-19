@@ -1,38 +1,14 @@
 <?php
-
-get_template_part('partials/head');
-
-get_template_part('partials/analytics');
-
-get_header();
-
-echo '<main id="main" role="main" class="main">';
-
-echo '<div id="barba-wrapper">';
-
-  echo '<div class="barba-container" data-namespace="page">';
-
-  while ( have_posts() ) : the_post();
-
-    echo '<div class="static static--' . $post->post_name . '">';
-
-      get_template_part('partials/page-mast');
-      get_template_part('partials/page-search');
-      get_template_part('partials/tabs');
-      get_template_part('partials/page-content', $post->post_name);
-
-    echo '</div>';
-
-  endwhile;
-
-  echo '</div>';
-
-echo '</div>';
-
-echo '</main>';
-
-get_footer();
-
-get_template_part('partials/foot');
-
-?>
+/**
+ *
+ * DEVELOPMENT MODE ONLY
+ *
+ * Includes and Runs php files directly
+ * from the dev theme to enable debugging
+ * php from within the dev theme!
+ *
+ * Run "gulp build" to generate the theme
+ * for production before deploying!
+ *
+ */
+include get_template_directory() . DIRECTORY_SEPARATOR . '../fondfolio-dev/theme/page.php';

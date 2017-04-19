@@ -6,6 +6,21 @@
   }
 }
 
+.blocks--explain {
+  align-items: flex-start;
+  @include bp($bp-tablet) {
+    margin-top: $d-doz;
+  }
+
+  @include bp($bp-tablet) {
+    .block:nth-child(3),
+    .block:nth-child(1) {
+      margin-top: -$d-doz;
+    }
+  }
+}
+
+
 .blocks__title {
   padding: $d-quad $d-duo;
   @include bp($bp-tablet) {
@@ -50,6 +65,8 @@
     content: '';
     background: $c-white;
     box-shadow: 0 2px 20px 0 rgba(35,29,36,0.05);
+    border: 1px solid $c-purple;
+    box-shadow: $d-duo $d-duo 0px 0 $c-purple;
   }
 
   @include bp($bp-tablet) {
@@ -61,7 +78,11 @@
       bottom: $d-duo;
     }
   }
+
+
+
 }
+
 
 .block__icon {
   max-width: $d-sep;
@@ -77,7 +98,6 @@
   fill: $ca-icon-block-corner-color;
   position: absolute;
   z-index:0;
-  mix-blend-mode: multiply;
 
   .block:nth-child(1) & {
     transform: translate(-30%, -30%) rotate(180deg) scaleX(-1);

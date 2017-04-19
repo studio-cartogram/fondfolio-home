@@ -13,6 +13,9 @@ h6 {
   font-weight: $t-font-weight-bold;
   margin: 0;
   padding-bottom: $d-duo;
+  &.primary {
+    color: $ca-heading-primary-color;
+  }
   &.secondary {
     color: $ca-heading-secondary-color;
   }
