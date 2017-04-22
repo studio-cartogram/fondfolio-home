@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+.nav-links {
+}
+
+.page-numbers {
+  padding: $d-duo;
+}
+
+.page-numbers.prev,
+.page-numbers.next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  padding-left: $d-quad;
+}
+
+
+.page-numbers.prev {
+  left: 0;
+  right: auto;
+}

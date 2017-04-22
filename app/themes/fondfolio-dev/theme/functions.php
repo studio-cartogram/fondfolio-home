@@ -32,6 +32,7 @@
       $faqs_args = array(
         'public'              => true,
         'label'               => 'FAQs',
+        'has_archive'         => true,
         'supports'            => array( 'title', 'editor')
       );
 
@@ -68,8 +69,8 @@
       );
 
       $args = array(
-        'hierarchical'      => false,
-        'labels'            => $labels,
+        'exclude_from_search' => false,
+        'labels'              => $labels,
       );
 
       register_taxonomy( 'topic', array('faqs'), $args );

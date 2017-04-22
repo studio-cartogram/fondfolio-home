@@ -14,8 +14,8 @@ echo '<div id="barba-wrapper">';
 
   echo '<div class="barba-container">';
 
-    get_template_part('partials/page-mast');
-    get_template_part('partials/page-search');
+    get_template_part('partials/archive-mast');
+    get_template_part('partials/archive-search');
     get_template_part('partials/tabs');
 
     echo '<div class="row row--justify-center">';
