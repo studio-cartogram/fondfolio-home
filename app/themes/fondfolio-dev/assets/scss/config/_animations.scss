@@ -53,19 +53,3 @@ $a-easing-easeInQuart: cubic-bezier(0.23, 1, 0.32, 1);
   animation-direction: alternate-reverse;
 }
 
-// On Scroll
-.scroll-watch {
-
-  .scene__item,
-  &.scene__item {
-    -webkit-animation-name: none;
-    animation-name: none;
-  }
-
-  &.is-in-view .scene__item--fadeinup,
-  &.is-in-view.scene__item--fadeinup {
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
-  }
-
-}

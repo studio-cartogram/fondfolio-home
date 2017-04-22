@@ -18,7 +18,7 @@ echo '<div id="barba-wrapper">';
     get_template_part('partials/archive-search');
     get_template_part('partials/tabs');
 
-    echo '<div class="row row--justify-center">';
+    echo '<div class="scene__item scene__item--fadinup row row--justify-center">';
 
     echo '<div class="column column-10-tablet column-7-laptop">';
 
