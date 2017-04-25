@@ -63,8 +63,9 @@ echo '<footer class="footer">';
 
   echo '</a>';
 
+  echo '<div class="row row--justify-center">';
 
-  echo '<ul class="footer__list list--small list">';
+  echo '<ul class="mono footer__list list--small list">';
 
     echo '<li>';
 
@@ -72,9 +73,25 @@ echo '<footer class="footer">';
 
     echo '</li>';
 
+  echo '</ul>';
+
+  echo '<ul class="mono footer__list list--small list list--narrow">';
+
     wp_nav_menu( $nav_footer );
 
   echo '</ul>';
+
+  echo '<ul class="mono footer__list list--small list">';
+
+    echo '<li>';
+
+      echo '<span class="secondary ">' . 'Made with love by <a href="http://carogram.ca">Cartogram</a>' . '</span>';
+
+    echo '</li>';
+
+  echo '</ul>';
+
+  echo '</div>';
 
   echo '<ul class="footer__list list list--small">';
 
