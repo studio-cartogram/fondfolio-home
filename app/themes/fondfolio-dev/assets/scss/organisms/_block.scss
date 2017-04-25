@@ -7,7 +7,7 @@
 }
 
 .blocks--explain {
-  align-items: flex-start;
+  padding: $d-duo;
   @include bp($bp-tablet) {
     margin-top: $d-doz;
   }
@@ -44,42 +44,47 @@
   padding: $d-base;
 }
 
+.block--explain {
+  padding: $d-duo;
+}
+
 .block__inverted {
   text-align: center;
-  padding: $d-quad;
-
-  > * {
-    position: relative;
-    z-index: 2;
+  color: $ca-block-color;
+  padding: $d-sex;
+  &:hover:after,
+  &:after {
+    transform: translate3d($d-base, $d-base, 0);
   }
-
-  &:before {
-    z-index: 1;
-    position: absolute;
-    height: auto;
-    width: auto;
-    top: $d-base;
-    left: $d-duo;
-    right: $d-duo;
-    bottom: $d-base;
-    content: '';
-    background: $c-white;
-    border: 1px solid $c-purple;
-    box-shadow: $d-base $d-base 0px 0 $c-purple;
-    @include bp($bp-tablet) {
-      box-shadow: $d-duo $d-duo 0px 0 $c-purple;
-    }
-  }
-
-  @include bp($bp-tablet) {
-    padding: $d-dec;
-    &:before {
-      top: $d-duo;
-      left: $d-duo;
-      right: $d-duo;
-      bottom: $d-duo;
-    }
-  }
+//   &:before {
+//     z-index: 1;
+//     position: absolute;
+//     height: auto;
+//     width: auto;
+//     top: $d-base;
+//     left: $d-duo;
+//     right: $d-duo;
+//     bottom: $d-base;
+//     content: '';
+//     background: $c-white;
+//     border: 1px solid $c-purple;
+//     box-shadow: $d-base $d-base 0px 0 $c-purple;
+//     transform: translate($d-duo, $d-duo);
+//     z-index:0;
+//     @include bp($bp-tablet) {
+//       box-shadow: 0 0 1px 0 $c-purple;
+//     }
+//   }
+//
+//   @include bp($bp-tablet) {
+//     padding: $d-dec;
+//     &:before {
+//       top: $d-duo;
+//       left: $d-duo;
+//       right: $d-duo;
+//       bottom: $d-duo;
+//     }
+//   }
 }
 
 
@@ -88,39 +93,5 @@
   max-height: $d-sep;
   margin: $d-duo;
   fill: $ca-icon-block-color;
-}
-
-.block-corner__icon {
-  width: $d-block-corner-icon;
-  height: $d-block-corner-icon;
-  transform-origin: 50% 50%;
-  fill: $ca-icon-block-corner-color;
-  position: absolute;
-  z-index:0;
-  mix-blend-mode: multiply;
-
-  .block:nth-child(1) & {
-    transform: translate(-30%, -30%) rotate(180deg) scaleX(-1);
-    top: 0;
-    left: 0;
-  }
-
-  .block:nth-child(2) & {
-    transform: translate(30%, -30%) rotate(180deg);
-    top: 0;
-    right: 0;
-  }
-
-  .block:nth-child(3) & {
-    transform: translate(-30%, 30%) rotate(180deg);
-    bottom: 0;
-    left: 0;
-  }
-
-  .block:nth-child(4) & {
-    transform: translate(30%, 30%) rotate(180deg) scaleX(-1);
-    bottom: 0;
-    right: 0;
-  }
 }
 
