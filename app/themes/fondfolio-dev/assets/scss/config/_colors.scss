@@ -12,10 +12,10 @@ Color Index
  * index
  */
 
-$c-purple: #962DA1;
-$c-lightPurple: #D9B1DD;
-$c-darkPurple: #872391;
-$c-lightestPurple: #FCEFFD;
+$c-teal: #00838f;
+$c-lightTeal: #83E6EB;
+$c-darkTeal: #00575c;
+$c-lightestTeal: #EBFFFF;
 $c-black: #231D24;
 $c-white: #FFFFFF;
 $c-grey: #7E7A7E;
@@ -24,7 +24,7 @@ $c-lightestGrey: #F5F5F5;
 $c-green: #0EC8A9;
 $c-lightestGreen: #EEFBF8;
 $c-yellow: #F8D04D;
-$c-lightestYellow: #FEFCE2;
+$c-lightestYellow: #fdfcf6;
 $c-red: #EE5E5E;
 $c-lightestRed: #FDEEEE;
 $c-blue: #3FC5D9;
@@ -57,11 +57,11 @@ $ca-button-inverted-background: $c-white;
 $ca-button-inverted-background-hover: rgba(255, 255, 255, 0.95);
 $ca-button-inverted-color: $c-blue;
 
-$ca-button-primary-background: $c-purple;
-$ca-button-primary-background-hover: $c-darkPurple;
-$ca-button-color: $c-purple;
+$ca-button-primary-background: $c-teal;
+$ca-button-primary-background-hover: $c-darkTeal;
+$ca-button-color: $c-teal;
 $ca-button-primary-color: $c-white;
-$ca-button-secondary-background: $c-purple;
+$ca-button-secondary-background: $c-teal;
 $ca-button-secondary-color: $c-white;
 
 $ca-header-background: transparent;
@@ -71,47 +71,47 @@ $ca-curtain-background: $c-white;
 $ca-list-color: $c-grey;
 
 $ca-anchor-color: $c-grey;
-$ca-anchor-hover-color: $c-purple;
+$ca-anchor-hover-color: $c-teal;
 
-$ca-anchor-primary-color: $c-purple;
+$ca-anchor-primary-color: $c-teal;
 $ca-anchor-primary-hover-color: $c-grey;
 $ca-anchor-secondary-color: $c-grey;
 $ca-anchor-secondary-hover-color: $c-grey;
 
-$ca-logo-color: $c-purple;
+$ca-logo-color: $c-teal;
 
-$ca-icon-badge-color: $c-purple;
-$ca-block-color: $c-purple;
-$ca-icon-block-color: $c-purple;
+$ca-icon-badge-color: $c-teal;
+$ca-block-color: $c-teal;
+$ca-icon-block-color: $c-teal;
 
 $ca-paragraph-color: $c-black;
 $ca-paragraph-secondary-color: $c-grey;
 
 $ca-heading-color: $c-black;
 $ca-heading-secondary-color: $c-grey;
-$ca-heading-primary-color: $c-purple;
+$ca-heading-primary-color: $c-teal;
 
 $ca-spinner-color: $c-white;
 $ca-overlay-background: $c-black;
 
 $ca-tabs-background: $c-white;
-$ca-tab-line-color: $c-purple;
+$ca-tab-line-color: $c-teal;
 
 $ca-faq-border-color: $c-lightestGrey;
-$ca-blockquote-color: $c-purple;
+$ca-blockquote-color: $c-teal;
 
 $ca-icon-newsletter-color: $c-lightGrey;
-$ca-icon-newsletter-color-hover: $c-purple;
+$ca-icon-newsletter-color-hover: $c-teal;
 $ca-searchform-background: $c-white;
 $ca-icon-search-color: $c-lightGrey;
 $ca-input-background: $c-white;
 $ca-input-border-color: $c-lightGrey;
-$ca-input-focus-border-color: $c-lightPurple;
+$ca-input-focus-border-color: $c-lightTeal;
 
 $ca-footer-background: $c-white;
 
 // Sections
 $ca-image-content-background: $c-lightestGrey;
-$ca-badge-title-color: $c-purple;
+$ca-badge-title-color: $c-teal;
 $ca-explain-background-gradient: linear-gradient(-180deg, #FEFAF1 0%, #FEF7E2 75%);
 $ca-cta-background-gradient: linear-gradient(-132deg, #39CFE7 0%, #189FB3 100%);
