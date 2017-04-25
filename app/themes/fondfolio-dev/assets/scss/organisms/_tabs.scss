@@ -15,13 +15,15 @@
 }
 
 .tabs__nav {
-  justify-content: center;
   display: flex;
   align-items: stretch;
   width: 100%;
   max-width: $d-container-max;
   margin: 0 auto;
   padding: 0;
+  @include bp($bp-tablet) {
+    justify-content: center;
+  }
 
   li {
     position: relative;

@@ -56,35 +56,6 @@
   &:after {
     transform: translate3d($d-base, $d-base, 0);
   }
-//   &:before {
-//     z-index: 1;
-//     position: absolute;
-//     height: auto;
-//     width: auto;
-//     top: $d-base;
-//     left: $d-duo;
-//     right: $d-duo;
-//     bottom: $d-base;
-//     content: '';
-//     background: $c-white;
-//     border: 1px solid $c-purple;
-//     box-shadow: $d-base $d-base 0px 0 $c-purple;
-//     transform: translate($d-duo, $d-duo);
-//     z-index:0;
-//     @include bp($bp-tablet) {
-//       box-shadow: 0 0 1px 0 $c-purple;
-//     }
-//   }
-//
-//   @include bp($bp-tablet) {
-//     padding: $d-dec;
-//     &:before {
-//       top: $d-duo;
-//       left: $d-duo;
-//       right: $d-duo;
-//       bottom: $d-duo;
-//     }
-//   }
 }
 
 
