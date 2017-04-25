@@ -1,6 +1,8 @@
 .tabs {
   padding: $d-quad $d-quad 0;
   background: $ca-tabs-background;
+  border-bottom: 1px solid $c-lightestGrey;
+  justify-content: center;
   display:flex;
   overflow-x: auto;
   overflow-y: hidden;
@@ -13,6 +15,8 @@
 }
 
 .tabs__nav {
+  justify-content: center;
+  display: flex;
   align-items: stretch;
   width: 100%;
   max-width: $d-container-max;
@@ -41,6 +45,7 @@
       transform: scaleX(0);
     }
 
+    &.current-menu-item,
     &.is-active,
     &:hover {
       &:before {

@@ -2,20 +2,13 @@
 
 $topics = wp_get_post_terms($post->ID, 'topic', array("fields" => "all"));
 $item = get_query_var('item');
+$context = get_query_var('context');
 
-echo '<article id="' . $post->post_name . '" class="faq">';
+echo '<article id="' . $post->post_name . '" class="faq faq--' . $context . ' with-paper">';
 
     echo '<div class="faq__question">';
 
-      echo '<h4>' . get_the_title($item->ID) . '</h4>';
-
-      echo '<a href="#' . $post->post_name . '" class="faq__toggle">';
-
-        set_query_var( 'icon', 'dropdown' );
-
-        get_template_part('partials/icon');
-
-      echo '</a>';
+      echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
 
     echo '</div>';
 
@@ -33,12 +26,11 @@ echo '<article id="' . $post->post_name . '" class="faq">';
 
       echo '<li>';
 
-        echo '<strong>Filed under:</strong>';
+        echo '<em class="serif">filed under &mdash;</em> ';
 
       echo '</li>';
 
-    foreach($topics as $topic) {
-
+    foreach($topics as $topic) :
 
       echo '<li>';
 
@@ -46,7 +38,7 @@ echo '<article id="' . $post->post_name . '" class="faq">';
 
       echo '</li>';
 
-    }
+    endforeach;
 
     echo '</ul>';
 

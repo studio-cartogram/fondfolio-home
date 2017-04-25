@@ -14,12 +14,16 @@ echo '<div id="barba-wrapper">';
 
   while ( have_posts() ) : the_post();
 
-    echo '<div class="work">';
+    echo '<div class="row row--justify-center">';
 
-      get_template_part('partials/work-header');
-      get_template_part('partials/work-video');
-      get_template_part('partials/work-footer');
-      get_template_part('partials/work-prev-next');
+      echo '<div class="column column-10-tablet column-7-laptop">';
+
+      set_query_var( 'context', 'single' );
+      set_query_var( 'item', $post );
+      get_template_part('partials/item');
+      get_template_part('partials/prevnext');
+
+      echo '</div>';
 
     echo '</div>';
 

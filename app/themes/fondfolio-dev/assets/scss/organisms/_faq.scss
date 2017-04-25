@@ -1,11 +1,30 @@
 .faq {
-  padding: $d-quad $d-quad $d-quad 0;
-  border-bottom: 1px solid $ca-faq-border-color;
+  margin: $d-sex $d-trio;
+  padding: $d-quad;
+  color: $c-purple;
+  padding: $d-trio;
+
+  @include bp($bp-mobile) {
+    padding: $d-quad;
+  }
+  @include bp($bp-tablet) {
+    padding: $d-oct;
+  }
 }
 
 .faq__question {
   position: relative;
   padding-bottom: $d-quad;
+  text-align: center;
+}
+
+.faq__answer {
+  position: relative;
+  padding-bottom: $d-quad;
+}
+
+.faq__footer {
+  justify-content: center;
 }
 
 .faq__toggle {
@@ -14,3 +33,4 @@
   left: 100%;
   display: block;
 }
+

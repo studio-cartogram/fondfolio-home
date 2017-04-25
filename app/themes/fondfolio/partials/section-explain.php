@@ -23,7 +23,7 @@ echo '<section class="' . $section . '">';
 
     if( have_rows('blocks') ):
 
-      echo '<div class="row">';
+      echo '<div class="row blocks--' . $section . '">';
 
         while ( have_rows('blocks') ) : the_row();
 
@@ -40,7 +40,7 @@ echo '<section class="' . $section . '">';
             set_query_var( 'context', 'block' );
             get_template_part('partials/icon');
 
-            echo '<h3 class="block__title">' . $title. '</h3>';
+            echo '<h3 class="primary block__title">' . $title. '</h3>';
 
             echo '<p class="secondary">' . $description . '</p>';
 

@@ -32,6 +32,7 @@
       $faqs_args = array(
         'public'              => true,
         'label'               => 'FAQs',
+        'has_archive'         => true,
         'supports'            => array( 'title', 'editor')
       );
 
@@ -68,8 +69,8 @@
       );
 
       $args = array(
-        'hierarchical'      => false,
-        'labels'            => $labels,
+        'exclude_from_search' => false,
+        'labels'              => $labels,
       );
 
       register_taxonomy( 'topic', array('faqs'), $args );
@@ -204,7 +205,7 @@
 
       $html .= '<label class="visuallyhidden" for="search">Search in ' . home_url( '/' ) . '</label>';
 
-      $html .= '<input class="search-field" placeholder="' . 'Search...' . '" type="search" value="' . get_search_query() . '" name="s" id="s" />';
+      $html .= '<input class="search-field" placeholder="' . 'Search our FAQs...' . '" type="search" value="' . get_search_query() . '" name="s" id="s" />';
 
       $html .= '<button class="searchform__button"><svg class="icon icon--' . $icon . '"><use xlink:href="#icon-' . $icon . '"></use></svg></button>';
 
