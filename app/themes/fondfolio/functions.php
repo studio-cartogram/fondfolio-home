@@ -33,6 +33,7 @@
         'public'              => true,
         'label'               => 'FAQs',
         'has_archive'         => true,
+        'rewrite'            => array( 'slug' => 'help' ),
         'supports'            => array( 'title', 'editor')
       );
 

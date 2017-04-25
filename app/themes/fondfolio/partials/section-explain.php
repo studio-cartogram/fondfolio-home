@@ -29,7 +29,7 @@ echo '<section class="' . $section . '">';
 
           echo '<div class="block block--' . $section  . ' column column-6-tablet column-6-laptop">';
 
-            echo '<div class="block__inverted block__content">';
+            echo '<div class="with-paper block__inverted block__content">';
 
             $title = get_sub_field('title');
             $description = get_sub_field('description');
@@ -45,12 +45,6 @@ echo '<section class="' . $section . '">';
             echo '<p class="secondary">' . $description . '</p>';
 
             echo '</div>';
-
-            $icon = get_sub_field('icon');
-            set_query_var( 'icon', 'doodle-loop' );
-            set_query_var( 'context', 'block-corner' );
-            get_template_part('partials/icon');
-
 
           echo '</div>';
 
