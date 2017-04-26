@@ -40,15 +40,14 @@ Button Component
   }
 }
 
-
 .button--secondary {
   padding: $d-base $d-duo;
   background: $ca-button-secondary-background;
   color: $ca-button-secondary-color;
+  border: 1px solid currentColor;
 
   &:hover {
-    background: $ca-button-secondary-background;
-    color: $ca-button-secondary-color;
+    color: $ca-button-secondary-color-hover;
   }
 }
 
@@ -66,6 +65,11 @@ Button Component
   }
 }
 
+
+.button--small {
+  padding: 0 $d-duo;
+  font-size: $t-font-size-button-small;
+}
 
 .button--large {
   padding: $d-duo $d-quad;

@@ -61,8 +61,9 @@ $ca-button-primary-background: $c-teal;
 $ca-button-primary-background-hover: $c-darkTeal;
 $ca-button-color: $c-teal;
 $ca-button-primary-color: $c-white;
-$ca-button-secondary-background: $c-teal;
-$ca-button-secondary-color: $c-white;
+$ca-button-secondary-background: $c-white;
+$ca-button-secondary-color: $c-teal;
+$ca-button-secondary-color-hover: $c-darkTeal;
 
 $ca-header-background: transparent;
 $ca-border-default: $c-lightestGrey;
@@ -86,6 +87,7 @@ $ca-icon-block-color: $c-teal;
 
 $ca-paragraph-color: $c-black;
 $ca-paragraph-secondary-color: $c-grey;
+$ca-hr-color: $c-lightGrey;
 
 $ca-heading-color: $c-black;
 $ca-heading-secondary-color: $c-grey;

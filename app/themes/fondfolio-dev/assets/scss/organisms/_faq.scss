@@ -27,10 +27,15 @@
   justify-content: center;
 }
 
-.faq__toggle {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  display: block;
+
+.faq__more {
+  padding-top: $d-duo;
+  text-align: center;
+}
+
+.link-more {
+  @extend .button;
+  @extend .button--secondary;
+  @extend .button--small;
 }
 

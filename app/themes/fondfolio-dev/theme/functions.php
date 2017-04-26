@@ -18,6 +18,8 @@
 	 **/
 	add_action('init', 'create_post_types' );
 	add_action('init', 'create_taxonomies' );
+	add_filter('the_excerpt', 'excerpt_ellipsis');
+	add_filter('the_content', 'cartogram_remove_more_link');
 
 	/* ========================================================================================================================
 

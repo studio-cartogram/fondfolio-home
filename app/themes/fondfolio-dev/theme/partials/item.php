@@ -14,7 +14,17 @@ echo '<article id="' . $post->post_name . '" class="faq faq--' . $context . ' wi
 
     echo '<div class="format faq__answer">';
 
+    if ($context === 'single') {
       the_content();
+    } else {
+
+      the_excerpt();
+
+      echo '<div class="faq__more">';
+      more_link('View Full Answer');
+      echo '</div>';
+
+    }
 
     echo '</div>';
 

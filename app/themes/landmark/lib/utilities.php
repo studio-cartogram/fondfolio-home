@@ -87,11 +87,11 @@
 	 * Custom More Link
 	 *
 	 */
-	function more_link() {
+	function more_link($text) {
 		global $post;
-		$more_link = '<p><a class="link-more" href="'.get_permalink().'" title="'.get_the_title().'">';
-		$more_link .= 'Read More<span></span>';
-		$more_link .= '</a></p>';
+		$more_link = '<a class="link-more" href="'.get_permalink().'" title="'.get_the_title().'">';
+		$more_link .= $text . '<span></span>';
+		$more_link .= '<a>';
 		echo $more_link;
 	}
 

@@ -58,11 +58,29 @@ h6 {
   h3,
   h4,
   h5,
+  li,
   h6 {
     @extend .secondary;
   }
   a:not(.button) {
     @extend .link--primary;
+  }
+
+  ol,
+  ul,
+  li {
+    margin: 0;
+    padding:0;
+  }
+
+  li {
+    padding-bottom: $d-duo;
+  }
+
+  hr {
+    margin: 0 0 $d-duo 0;
+    border: 0;
+    border-top: 1px solid $ca-hr-color;
   }
 }
 
