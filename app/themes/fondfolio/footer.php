@@ -34,7 +34,7 @@ echo '<footer class="footer">';
 
         echo ' <em class="dashed serif">&mdash;or&mdash;</em> ';
 
-        echo '<a href="mailto:' . 'hello@hello@fondfolio.com' . '" class="link link--primary">' . 'Send us an email' . '</a>';
+        echo '<a href="mailto:' . 'hello@fondfolio.com' . '" class="link link--primary">' . 'Send us an email' . '</a>';
 
         echo '<br>We value your words.';
 
@@ -85,7 +85,7 @@ echo '<footer class="footer">';
 
     echo '<li>';
 
-      echo '<span class="secondary ">' . 'Made with love by <a href="http://carogram.ca">Cartogram</a>' . '</span>';
+      echo '<span class="secondary ">' . 'Made with love by <a href="http://cartogram.ca">Cartogram</a>' . '</span>';
 
     echo '</li>';
 
