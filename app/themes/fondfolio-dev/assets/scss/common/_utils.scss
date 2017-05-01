@@ -45,12 +45,12 @@
     z-index: -1;
     transform: translate3d(0, 0, 0);
     transition: transform $a-timing $a-easing;
-    transform: translate3d($d-duo, $d-duo, 0);
+    transform: translate3d($d-base, $d-base, 0);
   }
 
   &:hover:after,
   &:focus:after {
-    transform: translate3d($d-duo, $d-duo, 0);
+    transform: translate3d($d-base, $d-base, 0);
   }
 
   > * {

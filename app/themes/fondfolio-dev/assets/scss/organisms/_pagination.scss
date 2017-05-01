@@ -10,9 +10,16 @@
 }
 
 .page-numbers {
-  padding: $d-duo;
+  padding: $d-duo $d-base;
+  margin-left: $d-base;
+  margin-right: $d-base;
+  border-bottom: 1px solid transparent;
 }
 
+.page-numbers.current {
+  color: $ca-anchor-hover-color;
+  border-bottom: 1px solid currentColor;
+}
 .page-numbers.prev,
 .page-numbers.next {
   position: absolute;
