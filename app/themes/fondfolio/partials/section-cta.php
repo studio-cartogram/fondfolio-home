@@ -51,6 +51,7 @@ echo '<section class="cta">';
 
     echo '</div>';
 
+    echo '<div class="row ">';
     echo '<div class="row blocks">';
 
       while ( have_rows('blocks') ) : the_row();
@@ -72,6 +73,7 @@ echo '<section class="cta">';
 
       endwhile;
 
+    echo '</div>';
     echo '</div>';
 
     endif;
