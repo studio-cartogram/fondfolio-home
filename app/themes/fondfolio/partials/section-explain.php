@@ -23,6 +23,8 @@ echo '<section class="' . $section . '">';
 
     if( have_rows('blocks') ):
 
+      echo '<div class="row">';
+
       echo '<div class="row blocks--' . $section . '">';
 
         while ( have_rows('blocks') ) : the_row();
@@ -50,6 +52,7 @@ echo '<section class="' . $section . '">';
 
         endwhile;
 
+      echo '</div>';
       echo '</div>';
 
     endif;
