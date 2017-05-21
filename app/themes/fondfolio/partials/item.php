@@ -20,7 +20,7 @@ echo '<article id="' . $item->post_name . '" class="faq faq--' . $context . ' wi
 
       the_excerpt();
 
-      if (has_excerpt($item->ID) {
+      if (has_excerpt($item->ID)) {
 
       echo '<div class="faq__more">';
 
