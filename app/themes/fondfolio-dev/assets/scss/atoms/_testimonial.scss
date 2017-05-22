@@ -3,7 +3,10 @@
 }
 
 .testimonial {
+  flex: 0 0 auto;
+  width: 100%;
   text-align: center;
+  padding: $d-duo;
   @include bp($bp-tablet) {
     padding: $d-quin $d-sex;
   }
@@ -32,3 +35,5 @@
 .testimonials {
   margin: auto;
 }
+
+

@@ -26,19 +26,15 @@ echo '<section class="' . $section . '">';
 
       while ( have_rows('testimonials') ) : the_row();
 
-        echo '<div class="block column ">';
+        echo '<div class="testimonial">';
 
-          echo '<div class="testimonial">';
+          $credit = get_sub_field('credit');
 
-            $credit = get_sub_field('credit');
+          $testimonial = get_sub_field('testimonial');
 
-            $testimonial = get_sub_field('testimonial');
+          echo '<p class="p--xlarge testimonial__text">' . $testimonial . '</p>';
 
-            echo '<p class="p--xlarge testimonial__text">' . $testimonial . '</p>';
-
-            echo '<p class="testimonial__credit secondary">&mdash; ' . $credit . '</p>';
-
-          echo '</div>';
+          echo '<p class="testimonial__credit secondary">&mdash; ' . $credit . '</p>';
 
         echo '</div>';
 
