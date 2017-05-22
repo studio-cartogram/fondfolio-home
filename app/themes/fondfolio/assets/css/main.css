@@ -1992,7 +1992,7 @@ Visibility
     height: 1px;
     width: auto;
     background-color: currentColor;
-    opacity: 0.5; }
+    opacity: 0.1; }
   .with-line:after {
     margin-left: 32px; }
   .with-line:before {
@@ -2236,6 +2236,16 @@ p.p--large {
     .p--large,
     p.p--large {
       font-size: 1.125em; } }
+
+.p--xlarge > p,
+.p--xlarge,
+p.p--xlarge {
+  padding: 0 0 32px; }
+  @media all and (min-width: 700px) {
+    .p--xlarge > p,
+    .p--xlarge,
+    p.p--xlarge {
+      font-size: 2em; } }
 
 .p--hard {
   padding: 0 !important; }
@@ -2688,6 +2698,35 @@ input {
   outline: none;
   font-family: "Karla", sans-serif;
   line-height: 1.5; }
+
+.testimonials {
+  padding: 16px 0 48px; }
+
+.testimonial {
+  text-align: center;
+  position: relative; }
+  @media all and (min-width: 700px) {
+    .testimonial {
+      padding: 40px 48px; } }
+  .testimonial:after {
+    z-index: -1;
+    content: '“';
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: .8;
+    font-size: 300px;
+    font-family: "Lora", serif;
+    color: #EEFBFD; }
+    @media all and (min-width: 700px) {
+      .testimonial:after {
+        font-size: 600px; } }
+
+.testimonial__text {
+  font-family: "Lora", serif; }
+
+.testimonials {
+  margin: auto; }
 
 /**
  * Organisms Styles

@@ -33,6 +33,15 @@ p.p--large {
   }
 }
 
+.p--xlarge > p,
+.p--xlarge,
+p.p--xlarge {
+  padding: 0 0 $d-quad;
+  @include bp($bp-tablet) {
+    font-size: $t-font-size-p-xlarge;
+  }
+}
+
 .p--hard {
   padding: 0 !important
 }
