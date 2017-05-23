@@ -22,9 +22,11 @@ echo '<section class="' . $section . '">';
 
     if( have_rows('testimonials') ):
 
-    echo '<div class="row">';
+    echo '<div id="js-slideshow" class="slideshow row">';
 
       while ( have_rows('testimonials') ) : the_row();
+
+        echo '<div class="js-slide slideshow__slide">';
 
         echo '<div class="testimonial">';
 
@@ -35,6 +37,8 @@ echo '<section class="' . $section . '">';
           echo '<p class="p--xlarge testimonial__text">' . $testimonial . '</p>';
 
           echo '<p class="testimonial__credit secondary">&mdash; ' . $credit . '</p>';
+
+        echo '</div>';
 
         echo '</div>';
 
