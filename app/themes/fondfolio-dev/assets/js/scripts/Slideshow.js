@@ -2,7 +2,7 @@ class Slideshow {
   constructor() {
     this.slides = document.querySelectorAll('#js-slideshow .js-slide');
     this.currentSlide = 0;
-    this.slideInterval = setInterval(this.nextSlide, 6000);
+    this.slideInterval = setInterval(this.nextSlide, 8000);
   }
 
   nextSlide = () => {
