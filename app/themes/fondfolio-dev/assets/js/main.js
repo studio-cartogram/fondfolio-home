@@ -10,6 +10,7 @@ import log from './utils/log'
 import './vendor/webpack.publicPath'
 import loadSprite from './vendor/loadSprite'
 import Scroll from './scripts/Scroll'
+import Slideshow from './scripts/Slideshow'
 import Fade from './scripts/Fade'
 import removeClasses from './utils/removeClasses'
 import {
@@ -30,6 +31,7 @@ class App {
   init = () => {
     this.scroll = new Scroll()
     this.fade = new Fade()
+    this.slideshow = new Slideshow()
     this.initTransitions()
     Barba.Dispatcher.on('initStateChange', () => {
       document.body.classList.add('js-is-loading')
@@ -70,6 +72,8 @@ class App {
       },
     })
   }
+
+
 }
 
 const app = new App()

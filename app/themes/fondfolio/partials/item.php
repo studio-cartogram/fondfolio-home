@@ -1,10 +1,10 @@
 <?php
 
-$topics = wp_get_post_terms($post->ID, 'topic', array("fields" => "all"));
 $item = get_query_var('item');
+$topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $context = get_query_var('context');
 
-echo '<article id="' . $post->post_name . '" class="faq faq--' . $context . ' with-paper">';
+echo '<article id="' . $item->post_name . '" class="faq faq--' . $context . ' with-paper">';
 
     echo '<div class="faq__question">';
 
@@ -20,9 +20,15 @@ echo '<article id="' . $post->post_name . '" class="faq faq--' . $context . ' wi
 
       the_excerpt();
 
+      if (has_excerpt($item->ID)) {
+
       echo '<div class="faq__more">';
-      more_link('View Full Answer');
+
+        more_link('View Full Answer');
+
       echo '</div>';
+
+      }
 
     }
 

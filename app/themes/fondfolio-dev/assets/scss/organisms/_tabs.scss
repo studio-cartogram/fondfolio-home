@@ -31,7 +31,6 @@
     cursor: pointer;
     display: inline-flex;
     margin: 0 $d-duo;
-    padding: 0 0 $d-duo;
 
     &:before {
       content: '';
@@ -45,6 +44,10 @@
       transform-origin: 0 0;
       transition: transform $a-timing $a-easing;
       transform: scaleX(0);
+    }
+
+    a {
+      padding: 0 0 $d-duo;
     }
 
     &.current-menu-item,

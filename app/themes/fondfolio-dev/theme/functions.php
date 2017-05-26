@@ -36,7 +36,7 @@
         'label'               => 'FAQs',
         'has_archive'         => true,
         'rewrite'            => array( 'slug' => 'help' ),
-        'supports'            => array( 'title', 'editor')
+        'supports'            => array( 'title', 'excerpt', 'editor')
       );
 
       register_post_type( 'faqs', $faqs_args );

@@ -1,16 +1,8 @@
 {
   "name": "fondfolio-home",
-  "description": "WordPress Theme Boilerplate - Build Tools Included :)",
   "version": "4.3.0",
-  "author": "Mozaik Ltd.",
-  "authorURI": "http://mozaik.com/",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MozaikAgency/wp-theme-starter.git"
-  },
   "keywords": [
-    "mozaik",
     "wordpress",
     "theme",
     "gulp"
