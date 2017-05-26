@@ -28,6 +28,7 @@
     <meta name="msapplication-TileColor" content="#fddfee">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <meta property="og:description" content="Fondfolio allows you to create a beautiful collaborative book filled with sincere and heartwarming words from loved ones. A personal gift, to be treasured forever." />
     <script async defer src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/core.js"></script>
     <?php wp_head(); ?>
   </head>
