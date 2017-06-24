@@ -54,4 +54,6 @@ echo '<section class="banner">';
 
 echo '</section>';
 
+get_template_part('partials/section-note');
+
 ?>

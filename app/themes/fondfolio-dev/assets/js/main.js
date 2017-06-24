@@ -19,7 +19,6 @@ import {
   ACTIVE_CLASS,
 } from './config'
 
-console.log(stickybits)
 class App {
   constructor() {
     this.init()
@@ -35,6 +34,7 @@ class App {
     this.scroll = new Scroll()
     this.fade = new Fade()
     this.slideshow = new Slideshow()
+    stickybits('.js-sticky', {useStickyClasses: true})
     this.initTransitions()
     Barba.Dispatcher.on('initStateChange', () => {
       document.body.classList.add('js-is-loading')
