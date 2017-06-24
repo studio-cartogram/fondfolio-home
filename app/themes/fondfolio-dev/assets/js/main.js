@@ -13,7 +13,7 @@ import Scroll from './scripts/Scroll'
 import Slideshow from './scripts/Slideshow'
 import Fade from './scripts/Fade'
 import removeClasses from './utils/removeClasses'
-import stickybits from 'stickybits'
+// import stickybits from 'stickybits'
 
 import {
   ACTIVE_CLASS,
@@ -34,7 +34,7 @@ class App {
     this.scroll = new Scroll()
     this.fade = new Fade()
     this.slideshow = new Slideshow()
-    stickybits('.js-sticky', {useStickyClasses: true})
+    // stickybits('.js-sticky', {useStickyClasses: true})
     this.initTransitions()
     Barba.Dispatcher.on('initStateChange', () => {
       document.body.classList.add('js-is-loading')

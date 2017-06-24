@@ -63,6 +63,11 @@ List Component
 .list--right {
   justify-content: flex-end;
 }
+.list--right--tablet {
+  @include bp($bp-tablet) {
+    justify-content: flex-end;
+  }
+}
 
 .list--sep-slash {
   li:after {
