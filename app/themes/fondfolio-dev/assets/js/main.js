@@ -13,10 +13,13 @@ import Scroll from './scripts/Scroll'
 import Slideshow from './scripts/Slideshow'
 import Fade from './scripts/Fade'
 import removeClasses from './utils/removeClasses'
+import stickybits from 'stickybits'
+
 import {
   ACTIVE_CLASS,
 } from './config'
 
+console.log(stickybits)
 class App {
   constructor() {
     this.init()
