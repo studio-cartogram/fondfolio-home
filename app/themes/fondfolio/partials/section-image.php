@@ -5,7 +5,9 @@ $image = get_sub_field('image');
 $orientation = get_sub_field('orientation');
 $size = 'full';
 
-echo '<section class="image row row--full">';
+echo '<section class="image">';
+
+echo '<div class="row ">';
 
   echo '<div class="image__content column column-6-laptop">';
 
@@ -23,6 +25,7 @@ echo '<section class="image row row--full">';
 
   endif;
 
+echo '</div>';
 
 echo '</section>';
 ?>
