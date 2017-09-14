@@ -33,7 +33,7 @@ echo '<section class="' . $section . '">';
 
     echo '<div class="column column-5-laptop column-4-tablet visuallyhidden clearvisuallyhidden--tablet">';
 
-      echo '<p class="text--align-left secondary p--small p--hard">Use offer code WORDSMATTER10, for 20% off.</p>';
+      echo '<p class="text--align-left secondary p--small p--hard">Use offer code WORDSMATTER10, for 10% off.</p>';
 
     echo '</div>';
 
