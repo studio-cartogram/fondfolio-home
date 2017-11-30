@@ -38,6 +38,14 @@
 
     &:last-child {
       margin-right: 0;
+
+      .currency:before {
+        content: 'from';
+        padding-right: 4px;
+        font-family: $t-font-family-serif;
+        font-style: italic;
+      } 
+
     }
 
     .option--heading {
