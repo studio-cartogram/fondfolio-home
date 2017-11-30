@@ -39,6 +39,7 @@
     &:last-child {
       margin-right: 0;
 
+      // redo this in a better way
       .currency:before {
         content: 'from';
         padding-right: 4px;
