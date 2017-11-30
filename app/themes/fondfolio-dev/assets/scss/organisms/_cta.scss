@@ -11,7 +11,11 @@
 }
 
 .cta__button {
-  padding: $d-duo;
+  padding: $d-base;
+
+  @include bp($bp-laptop) {
+    padding: $d-duo;
+  }
 }
 
 .cta-global-pricing {
@@ -29,11 +33,15 @@
     flex-grow: 1;
     flex-basis: 0;
     margin-right: 0;
-    padding-bottom: 24px;
+    padding-bottom: $d-trio;
+    padding-left: $d-quad;
+    padding-right: $d-quad;
 
     @include bp($bp-laptop) {
-      margin-right: 56px;
+      margin-right: $d-sex;
       padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &:last-child {
@@ -42,7 +50,7 @@
       // redo this in a better way
       .currency:before {
         content: 'from';
-        padding-right: 4px;
+        padding-right: $d-half;
         font-family: $t-font-family-serif;
         font-style: italic;
       } 
@@ -57,7 +65,7 @@
 
       .currency {
         font-size: 16px; 
-        padding-bottom: 4px;
+        padding-bottom: $d-half;
         vertical-align: top;
       }
     }
@@ -73,6 +81,6 @@
 
 .pricing-note {
   max-width: 70%;
-  padding-top: 24px;
+  padding-top: $d-trio;
   text-align: center;
 }
