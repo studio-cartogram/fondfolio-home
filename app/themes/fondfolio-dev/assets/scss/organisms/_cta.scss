@@ -43,10 +43,9 @@
       .currency:before {
         content: 'from';
         padding-right: 4px;
-        font-family: $t-font-family-serif;
+        font-family: $t-font-family;
         font-style: italic;
       } 
-
     }
 
     .option--heading {
