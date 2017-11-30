@@ -10,7 +10,61 @@
   }
 }
 
-
 .cta__button {
   padding: $d-duo;
+}
+
+.cta-global-pricing {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include bp($bp-laptop) {
+    flex-direction: row;
+  }
+
+  .option {
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: 0;
+    padding-bottom: 24px;
+
+    @include bp($bp-laptop) {
+      margin-right: 56px;
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .option--heading {
+      padding-bottom: 0;
+    }
+
+    .price {
+      font-family: $t-font-family;
+
+      .currency {
+        font-size: 16px; 
+        padding-bottom: 4px;
+        vertical-align: top;
+      }
+    }
+
+    .badge__icon {
+      max-width: 120px;
+      max-height: 120px;
+      fill: #ffffff;
+      opacity: 0.7;
+    }
+  }
+}
+
+.pricing-note {
+  max-width: 70%;
+  padding-top: 24px;
+  text-align: center;
 }

@@ -20,6 +20,8 @@ echo '<div id="barba-wrapper">';
 
   get_template_part('partials/loop-sections');
 
+  get_template_part('partials/global-pricing');
+
   echo '</div>';
 
 echo '</div>';
