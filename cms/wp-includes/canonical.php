@@ -32,6 +32,7 @@
  * @global bool $is_IIS
  * @global WP_Query $wp_query
  * @global wpdb $wpdb WordPress database abstraction object.
+ * @global WP $wp Current WordPress environment instance. 
  *
  * @param string $requested_url Optional. The URL that was requested, used to
  *		figure if redirect is needed.
@@ -392,19 +393,19 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 	$redirect['path'] = preg_replace('|/' . preg_quote( $wp_rewrite->index, '|' ) . '/*?$|', '/', $redirect['path']);
 
 	$punctuation_pattern = implode( '|', array_map( 'preg_quote', array(
-		' ', '%20',       // space
-		'!', '%21',       // exclamation mark
-		'"', '%22',       // double quote
-		"'", '%27',       // single quote
-		'(', '%28',       // opening bracket
-		')', '%29',       // closing bracket
-		',', '%2C',       // comma
-		'.', '%2E',       // period
-		';', '%3B',       // semicolon
-		'{', '%7B',       // opening curly bracket
-		'}', '%7D',       // closing curly bracket
-		'“', '%E2%80%9C', // opening curly quote
-		'”', '%E2%80%9D', // closing curly quote
+		' ', '%20',  // space
+		'!', '%21',  // exclamation mark
+		'"', '%22',  // double quote
+		"'", '%27',  // single quote
+		'(', '%28',  // opening bracket
+		')', '%29',  // closing bracket
+		',', '%2C',  // comma
+		'.', '%2E',  // period
+		';', '%3B',  // semicolon
+		'{', '%7B',  // opening curly bracket
+		'}', '%7D',  // closing curly bracket
+		'%E2%80%9C', // opening curly quote
+		'%E2%80%9D', // closing curly quote
 	) ) );
 
 	// Remove trailing spaces and end punctuation from the path.
@@ -583,7 +584,11 @@ function strip_fragment_from_url( $url ) {
 		if ( ! empty( $parsed_url['port'] ) ) {
 			$url .= ':' . $parsed_url['port'];
 		}
-		$url .= $parsed_url['path'];
+
+		if ( ! empty( $parsed_url['path'] ) ) {
+			$url .= $parsed_url['path'];
+		}
+
 		if ( ! empty( $parsed_url['query'] ) ) {
 			$url .= '?' . $parsed_url['query'];
 		}
