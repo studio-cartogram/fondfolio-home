@@ -22,6 +22,8 @@ echo '<div id="barba-wrapper">';
 
   get_template_part('partials/global-pricing');
 
+  get_template_part('partials/global-instagram');
+
   echo '</div>';
 
 echo '</div>';

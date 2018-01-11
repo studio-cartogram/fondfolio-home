@@ -9,6 +9,7 @@ import Barba from 'barba.js'
 import log from './utils/log'
 import './vendor/webpack.publicPath'
 import loadSprite from './vendor/loadSprite'
+import Instafeed from './vendor/instafeed'
 import Scroll from './scripts/Scroll'
 import Slideshow from './scripts/Slideshow'
 import Fade from './scripts/Fade'
@@ -23,6 +24,7 @@ class App {
   constructor() {
     this.init()
     loadSprite()
+    // Instafeed()
     document.body.classList.remove('js-is-loading')
     document.body.classList.add('js-is-initialized')
     Barba.Pjax.init()
@@ -75,7 +77,6 @@ class App {
       },
     })
   }
-
 
 }
 

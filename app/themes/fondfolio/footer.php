@@ -16,6 +16,8 @@ set_query_var( 'icon', 'logo-icon' );
 
 echo '<footer class="footer">';
 
+  echo '</div>';
+
   echo '<div class="row footer__inner">';
 
     echo '<div class="footer__left column column-6-tablet ">';
