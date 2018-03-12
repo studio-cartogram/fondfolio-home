@@ -19,7 +19,7 @@ echo '<section class="cta">';
 
       echo '<div class="cta__button">';
 
-      echo '<a href="' . $button_link .'" class="button button--primary button--inverted button--large">' . $button_text . '</a>';
+      echo '<a onclick="gtag_report_conversion" href="' . $button_link .'" class="button button--primary button--inverted button--large">' . $button_text . '</a>';
 
       echo '</div>';
 
