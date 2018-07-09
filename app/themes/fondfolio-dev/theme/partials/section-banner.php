@@ -8,6 +8,7 @@ $button_link = get_sub_field('button_link');
 $image = get_sub_field('image');
 $size = 'full';
 $video = get_sub_field('video');
+$vimeo = get_sub_field('vimeo');
 $type = get_sub_field('type');
 
 echo '<section class="banner">';
@@ -38,11 +39,15 @@ echo '<section class="banner">';
 
    echo '</div>';
 
-  if( $video ) :
+  
 
-    echo 'Put the video in the background';
+    echo '<div class="banner__videoWrapper">';
 
-  else :
+    echo '
+    <script src="https://fast.wistia.com/embed/medias/'. $vimeo .'.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="banner__video"><div class="wistia_responsive_wrapper"><div class="wistia_embed wistia_async_iey28lczmu videoFoam=true muted=true">&nbsp;</div></div></div>';
+
+    echo '</div>';
+
 
     echo '<div class="banner__image">';
 
@@ -50,7 +55,6 @@ echo '<section class="banner">';
 
     echo '</div>';
 
-  endif;
 
 echo '</section>';
 
