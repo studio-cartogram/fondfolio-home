@@ -1,14 +1,17 @@
 .banner {
-  padding: $d-sex 0 0;
+  padding: $d-dec 0 0;
   position: relative;
   height: calc(100vh - #{$d-header-height-mobile + $d-note-height-mobile};
   overflow: hidden;
-  @include bp($bp-tablet) {
-    max-height: 850px;
-    height: calc(100vh - #{$d-header-height + $d-note-height};
-  }
+  margin-top: -$d-header-height-mobile;
 
+  @include bp($bp-tablet) {
+    max-height: 950px;
+    height: calc(100vh - #{$d-header-height + $d-note-height};
+    margin-top: -$d-header-height;
+  }
 }
+
 
 .banner__image {
   position: absolute;
@@ -28,7 +31,7 @@
 
 
 .banner__videoWrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;

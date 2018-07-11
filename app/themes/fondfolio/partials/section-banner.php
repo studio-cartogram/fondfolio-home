@@ -8,7 +8,7 @@ $button_link = get_sub_field('button_link');
 $image = get_sub_field('image');
 $size = 'full';
 $video = get_sub_field('video');
-$vimeo = get_sub_field('vimeo');
+$wystia = get_sub_field('wystia');
 $type = get_sub_field('type');
 
 echo '<section class="banner">';
@@ -31,30 +31,32 @@ echo '<section class="banner">';
 
       if ($button_link && $button_text) :
 
-      echo '<a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a>';
+        echo '<a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a>';
 
       endif;
 
     echo '</div>';
 
-   echo '</div>';
+  echo '</div>';
 
-  
+  if ($wystia) :
 
     echo '<div class="banner__videoWrapper">';
 
-    echo '
-    <script src="https://fast.wistia.com/embed/medias/'. $vimeo .'.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="banner__video"><div class="wistia_responsive_wrapper"><div class="wistia_embed wistia_async_iey28lczmu videoFoam=true muted=true">&nbsp;</div></div></div>';
+      echo '
+      <script src="https://fast.wistia.com/embed/medias/'. $wystia .'.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="banner__video"><div class="wistia_responsive_wrapper"><div class="wistia_embed wistia_async_'. $wystia .' wmode=transparent videoFoam=true muted=true">&nbsp;</div></div></div>';
 
     echo '</div>';
 
+  else :
 
     echo '<div class="banner__image">';
 
-    echo wp_get_attachment_image( $image, $size );
+      echo wp_get_attachment_image( $image, $size );
 
     echo '</div>';
-
+  
+  endif;
 
 echo '</section>';
 
