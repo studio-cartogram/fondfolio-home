@@ -3,7 +3,6 @@
   position: relative;
   height: calc(100vh - #{$d-header-height-mobile + $d-note-height-mobile};
   overflow: hidden;
-  margin-top: -$d-header-height-mobile;
 
   @include bp($bp-tablet) {
     max-height: 950px;
@@ -29,18 +28,27 @@
   }
 }
 
-
 .banner__videoWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
+  display: none;
+ 
+  @include bp($bp-tablet) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
 }
 .banner__video  {
+  display: none;
+
+  @include bp($bp-tablet) {
+  display: block;
   width: 100vw;
   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
   min-height: 100vh;
@@ -49,6 +57,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  }
 }
 
 

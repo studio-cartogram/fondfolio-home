@@ -48,15 +48,13 @@ echo '<section class="banner">';
 
     echo '</div>';
 
-  else :
+  endif;
 
     echo '<div class="banner__image">';
 
       echo wp_get_attachment_image( $image, $size );
 
     echo '</div>';
-  
-  endif;
 
 echo '</section>';
 
