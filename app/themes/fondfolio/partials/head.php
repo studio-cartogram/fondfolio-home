@@ -31,7 +31,7 @@
     <meta property="og:url" content="https://www.fondfolio.com" />
     <meta property="og:title" content="Fondfolio" />
     <meta property="og:description" content="Fondfolio allows you to create a beautiful collaborative book filled with sincere and heartwarming words from loved ones. A personal gift, to be treasured forever." />
-    <meta property="og:image" content="https://fondfolio.com/app/uploads/2017/04/feature-2.png" />
+    <meta property="og:image" content="https://fondfolio.com/app/uploads/2018/07/IMG_2088-feature.png" />
     <?php wp_head(); ?>
   </head>
   <body <?php body_class('site scene js-is-loading'); ?> >
