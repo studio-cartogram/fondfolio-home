@@ -1,4 +1,22 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75355112-1"></script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  function reportConversion(){
+  console.log('conversion!');
+  return gtag_report_conversion('https://my.fondfolio.com/auth/signup');
+}
+
+  var el = document.getElementsByClassName("adwordsTracking");
+  for (var i = 0; i < el.length; i++) {
+    el[i].addEventListener("click", reportConversion);
+  }
+}, false);
+
+</script>
+
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -21,5 +39,14 @@ function gtag_report_conversion(url) {
   });
   return false;
 }
+
+
+// function addTracking() {
+//   var conversionLinks = document.querySelectorAll(".adwordsTracking");
+//   conversionLinks.click(function() {
+//   return gtag_report_conversion('https://my.fondfolio.com/auth/signup');
+//   console.log('conversion!');
+// });
+// }
 
 </script>

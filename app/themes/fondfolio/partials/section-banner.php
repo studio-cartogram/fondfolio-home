@@ -31,7 +31,7 @@ echo '<section class="banner">';
 
       if ($button_link && $button_text) :
 
-        echo '<a href="' . $button_link .'" class="button button--primary button--large">' . $button_text . '</a>';
+        echo '<a href="' . $button_link .'" class="button button--primary button--large adwordsTracking">' . $button_text . '</a>';
 
       endif;
 
