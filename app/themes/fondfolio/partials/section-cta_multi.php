@@ -30,7 +30,7 @@ echo '<section class="cta pricing">';
 
           echo '<div class="cta__button">';
 
-            echo '<a href="' . $button_link .'" class="button button--primary button--inverted button--large adwordsTracking">' . $button_text . '</a>';
+            echo '<a onclick="return gtag_report_conversion("https://my.fondfolio.com/auth/signup");" href="' . $button_link .'" class="button button--primary button--inverted button--large adwordsTracking">' . $button_text . '</a>';
 
           echo '</div>';
 

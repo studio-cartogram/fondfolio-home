@@ -81,7 +81,7 @@ echo '<section class="' . $section . '">';
 
     if ($button_link && $button_text) :
 
-      echo '<p class="buttons"><a href="' . $button_link .'" class="button button--primary button--large adwordsTracking">' . $button_text . '</a></p>';
+      echo '<p class="buttons"><a onclick="return gtag_report_conversion("https://my.fondfolio.com/auth/signup");" href="' . $button_link .'" class="button button--primary button--large adwordsTracking">' . $button_text . '</a></p>';
 
     endif;
 
