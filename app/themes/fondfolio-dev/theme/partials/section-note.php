@@ -27,7 +27,7 @@ echo '<section class="' . $section . '">';
 
     echo '<div class="column-2-laptop column-3-tablet visuallyhidden clearvisuallyhidden--tablet">';
 
-      echo '<a onclick="gtag_report_conversion" href="https://my.fondfolio.com/auth/signup" class="button button--secondary button--small">Get Started Free</a>';
+      echo '<a onclick="return gtag_report_conversion("https://my.fondfolio.com/auth/signup");" href="https://my.fondfolio.com/auth/signup" class="button button--secondary button--small adwordsTracking">Get Started Free</a>';
 
     echo '</div>';
 
