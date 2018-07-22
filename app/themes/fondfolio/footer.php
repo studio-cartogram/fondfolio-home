@@ -87,7 +87,7 @@ echo '<footer class="footer">';
 
     echo '<li>';
 
-      echo '<span class="secondary ">' . 'Made with love by <a href="http://cartogram.ca">Cartogram</a>' . '</span>';
+      echo '<span class="secondary ">' . 'Proudly built in Canada by <a href="http://cartogram.ca">Cartogram</a>' . '</span>';
 
     echo '</li>';
 
