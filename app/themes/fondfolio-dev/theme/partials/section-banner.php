@@ -44,7 +44,7 @@ echo '<section class="banner">';
     echo '<div class="banner__videoWrapper">';
 
       echo '
-      <script src="https://fast.wistia.com/embed/medias/'. $wystia .'.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="banner__video"><div class="wistia_responsive_wrapper"><div class="wistia_embed wistia_async_'. $wystia .' wmode=transparent videoFoam=true muted=true">&nbsp;</div></div></div>';
+      <script src="https://fast.wistia.com/embed/medias/'. $wystia .'.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="banner__video"><div class="wistia_embed wistia_async_'. $wystia .' wmode=transparent videoFoam=true muted=true">&nbsp;</div></div>';
 
     echo '</div>';
 
