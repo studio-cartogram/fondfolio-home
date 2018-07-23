@@ -1,0 +1,1 @@
+¹V[<?php exit; ?>a:1:{s:7:"content";s:209:"Donâ€™t pay anything until all the contributions have been collected and you are ready to order. All prices in Canadian Dollars (CAD).<br>For a limited time use offer code FWENDS20, for 20% off your purchase. ";}

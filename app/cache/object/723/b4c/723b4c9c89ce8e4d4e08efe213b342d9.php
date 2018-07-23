@@ -1,0 +1,1 @@
+�V[<?php exit; ?>a:1:{s:7:"content";s:164:"When you’re ready, customize the design and place the order. We’ll begin production right away and will notify you as soon as it ships (gift wrapping included).";}

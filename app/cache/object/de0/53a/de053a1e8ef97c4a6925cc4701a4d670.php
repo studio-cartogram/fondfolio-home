@@ -1,0 +1,1 @@
+¹V[<?php exit; ?>a:1:{s:7:"content";s:188:"Everything you get with digital, plus a beautiful handmade hardcover versionâ€”each response occupying a spread. Free Furoshiki giftwrapping, free shipping. Something tangible to treasure.";}

@@ -1,0 +1,1 @@
+�V[<?php exit; ?>a:1:{s:7:"content";s:308:"Far superior to other wedding “guestbooks” because there was time for people to actually think about what they wanted to say, rather than being put on the spot with a pen and writing something trite or cliché. Now we have a whole bunch of really thoughtful words, including some truly hilarious stories.";}

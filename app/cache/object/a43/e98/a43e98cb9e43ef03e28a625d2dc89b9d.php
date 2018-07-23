@@ -1,0 +1,1 @@
+¹V[<?php exit; ?>a:1:{s:7:"content";s:163:"Fondfolio allows you to create a beautiful collaborative book filled with sincere and heartwarming words from loved ones. A personal gift, to be treasured forever.";}

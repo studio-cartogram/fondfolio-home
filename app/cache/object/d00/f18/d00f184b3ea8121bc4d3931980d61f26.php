@@ -1,0 +1,1 @@
+¹V[<?php exit; ?>a:1:{s:7:"content";s:155:"When a loved one is struck with illness or simply needs their spirits lifted, this gift will show them in a very tangible way, how much they are cared for.";}
