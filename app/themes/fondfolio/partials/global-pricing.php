@@ -8,6 +8,8 @@ echo '<section class="cta">';
 
 echo '<div class="cta-global-pricing">';
 
+echo '<div class="row row--justify-center">';
+
 if( have_rows('pricing_option', 'options') ):
     
     while ( have_rows('pricing_option', 'options') ) : the_row();
@@ -57,6 +59,8 @@ if( have_rows('pricing_option', 'options') ):
     endwhile;
   
 endif;
+
+echo '</div>';
 
 echo '</div>';
 
