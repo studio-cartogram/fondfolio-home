@@ -2356,7 +2356,6 @@ figure {
   padding: 0 0 0; }
 
 img,
-iframe,
 video {
   width: 100%;
   height: 100%;
@@ -3509,8 +3508,5 @@ Footer Component
  * Shame Styles
  * Obviously keep this to a minimum
  */
-#web-messenger-container {
-  width: auto;
-  height: auto; }
 
 /*# sourceMappingURL=main.css.map */
