@@ -202,8 +202,6 @@
 
   add_filter('get_search_form', 'fondfolio_search_form');
 
-  add_action( 'pre_get_posts', 'se39294_search_pre_get_posts' );
-
   function fondfolio_search_form($html) {
     $isHelpPage = is_post_type_archive('faqs');
     $placeholderText = $isHelpPage ? 'Search our Faqs' : 'Search our blog';
