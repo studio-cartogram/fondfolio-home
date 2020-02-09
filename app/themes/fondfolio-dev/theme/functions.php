@@ -172,7 +172,8 @@
       ======================================================================================================================== */
 
       register_nav_menus( array(
-        'nav_tabs'	=>  'Topics Nav',
+        'nav_tabs'	=>  'Help Topics Nav',
+        'nav_tabs_blog'	=>  'Blog Topics Nav',
         'header_nav_secondary'	=>  'Primary Nav Right',
         'header_nav_primary'	=>  'Primary Nav Left',
         'nav_footer'	=>  'Footer Nav',
@@ -201,7 +202,11 @@
 
   add_filter('get_search_form', 'fondfolio_search_form');
 
+  add_action( 'pre_get_posts', 'se39294_search_pre_get_posts' );
+
   function fondfolio_search_form($html) {
+    $isHelpPage = is_post_type_archive('faqs');
+    $placeholderText = $isHelpPage ? 'Search our Faqs' : 'Search our blog';
 
     $icon = 'search';
 
@@ -209,7 +214,7 @@
 
       $html .= '<label class="visuallyhidden" for="search">Search in ' . home_url( '/' ) . '</label>';
 
-      $html .= '<input class="search-field" placeholder="' . 'Search our FAQs...' . '" type="search" value="' . get_search_query() . '" name="s" id="s" />';
+      $html .= '<input class="search-field" placeholder="' . $placeholderText . '" type="search" value="' . get_search_query() . '" name="s" id="s" />';
 
       $html .= '<button class="searchform__button"><svg class="icon icon--' . $icon . '"><use xlink:href="#icon-' . $icon . '"></use></svg></button>';
 

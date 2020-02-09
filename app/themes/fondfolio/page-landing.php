@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Landing
- *
+ * 
 */
 
 get_template_part('partials/head');
