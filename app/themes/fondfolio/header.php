@@ -49,7 +49,7 @@ echo '<header role="banner" class="js-header header">';
 
   echo '<div class="header__group header__group--right">';
 
-    echo '<ul class="header__nav list--sep-slash list list--right ">';
+    echo '<ul class="header__nav list list--right ">';
 
       wp_nav_menu( $nav_primary_right );
 

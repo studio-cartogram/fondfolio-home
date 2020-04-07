@@ -1,0 +1,86 @@
+.blogpost {
+  margin: $d-sex $d-trio;
+  padding: $d-quad;
+  color: $c-teal;
+  padding: $d-trio;
+
+  position: relative;
+  background: $c-white;
+
+  @include bp($bp-mobile) {
+    padding: $d-quad;
+  }
+  @include bp($bp-tablet) {
+    padding: $d-oct;
+  }
+}
+
+.blogpost---single {
+  color: $ca-heading-color;
+
+  h2 a.is-active {
+    color: $ca-heading-color;
+    font-size: 3.5em;
+    line-height: 1.15;
+    text-align: left;
+    padding-bottom: $d-base;
+  }
+
+  h3 {
+    color: $ca-heading-color;
+    font-size: 1.5em;
+    padding-bottom: $d-quin;
+  }
+
+  h4 {
+    color: $ca-heading-color;
+    padding-top: $d-duo;
+    font-size: 1em;
+  }
+
+  .format p {
+    color: $ca-paragraph-color;
+    font-size: 1.125em;
+  }
+
+  .format blockquote p {
+    color: $ca-heading-primary-color;
+    font-size: 2em;
+  }
+
+  hr {
+    margin-top: $d-quin;
+    margin-bottom: $d-quin;
+  }
+
+  .author-bio {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .subdued {
+      color: $ca-heading-secondary-color;
+    }
+
+    .description {
+      color: $ca-heading-secondary-color;
+      font-size: 0.875em;
+    }
+
+    .author-avatar {
+      display: flex;
+      height: 64px;
+      width: 64px;
+      margin-right: $d-trio;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .faq__footer {
+    justify-content: left;
+    margin-top: $d-quin;
+  }
+}
