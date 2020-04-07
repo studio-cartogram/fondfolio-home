@@ -40,6 +40,8 @@ echo '<article id="' . $item->post_name . '" class="' . $itemType .'' . $context
 
     if ($isBlog) :
 
+      if ($context === 'single') :
+
       echo '<div class="author-bio">';
 
         echo '<div class="author-avatar">';
@@ -53,6 +55,8 @@ echo '<article id="' . $item->post_name . '" class="' . $itemType .'' . $context
         echo '</div>';
 
       echo '</div>';
+
+    endif;
 
     endif;
 
