@@ -1,1 +1,0 @@
-¹V[<?php exit; ?>a:1:{s:7:"content";s:186:"Donâ€™t pay anything until all contributions have been collected and you are ready to order. All prices in US Dollars (USD). Use offer code WORDSMATTER10 for 10% off your first purchase.";}

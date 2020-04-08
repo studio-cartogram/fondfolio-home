@@ -1,1 +1,0 @@
-¹V[<?php exit; ?>a:1:{s:7:"content";s:109:"Probably the best gift I've ever had! It makes me laugh and cry â€“ and I feel so loved every time I read it.";}

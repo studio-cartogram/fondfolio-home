@@ -1,1 +1,0 @@
-¹V[<?php exit; ?>a:1:{s:7:"content";s:164:"I was given a Fondfolio as a milestone 30th birthday gift from friends. The feelings I have reading this outpouring from those I love most will always be cherished.";}

@@ -1,1 +1,0 @@
-¹V[<?php exit; ?>a:1:{s:7:"content";s:163:"A lasting record of an individual life through thoughtful anecdotes and memories of their friends and family. A reminder of good times had and those still to come.";}
