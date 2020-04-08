@@ -1,3 +1,4 @@
 /cms/.htaccess
 /cms/wp-config.php
 app/uploads/
+app/cache/
