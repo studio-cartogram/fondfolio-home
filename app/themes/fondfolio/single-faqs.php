@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 get_template_part('partials/head');
 
@@ -14,10 +14,9 @@ echo '<div id="barba-wrapper">';
 
   while ( have_posts() ) : the_post();
 
-    echo '<div>';
-      
+    echo '<div class="row row--justify-center">';
 
-    echo '<div class="blogpost-container">';      
+    echo '<div class="column column-10-tablet column-7-laptop">';      
 
       set_query_var( 'context', 'single' );
       set_query_var( 'item', $post );

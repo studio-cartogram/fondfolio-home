@@ -1,8 +1,5 @@
 <?php
 
-$isBlog = is_post_type('post');
-$isFaq = is_post_type_archive('faqs');
-
 get_template_part('partials/head');
 
 get_template_part('partials/analytics');
@@ -17,17 +14,10 @@ echo '<div id="barba-wrapper">';
 
   while ( have_posts() ) : the_post();
 
-    echo '<div class="row row--justify-center">';
+    echo '<div>';
       
 
-      if ($isBlog) :
-
-        echo '<div class="column column-10-tablet column-8-laptop">';
-
-      else : echo '<div class="column column-10-tablet column-7-laptop">';
-
-      endif;
-      
+    echo '<div class="blogpost-container">';      
 
       set_query_var( 'context', 'single' );
       set_query_var( 'item', $post );

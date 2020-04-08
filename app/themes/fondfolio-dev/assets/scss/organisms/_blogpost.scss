@@ -15,8 +15,58 @@
   }
 }
 
+.blogpost-container {
+  padding: 2em 4em;
+
+  @include bp($bp-laptop) {
+    padding: 6em 12em;
+  }
+
+  .blogpost {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .blogpost---single {
-  color: $ca-heading-color;
+  display: flex;
+  flex-direction: column;
+
+  .blogpost-mast {
+    width: 100%;
+  }
+
+  .blogpost-content {
+    width: 70%;
+    margin-left: 25%;
+    padding-bottom: 2em;
+
+    img {
+      width: 130%;
+      margin-left: -30%;
+      padding: $d-quin 0 $d-base;
+    }
+
+    blockquote {
+      width: 110%;
+      margin-left: -30%;
+    }
+
+    .caption {
+      margin-left: -30%;
+      font-size: 0.875em;
+    }
+
+    .subdued {
+      color: $ca-heading-secondary-color;
+    }
+  }
+
+  .blogpost-footer.row {
+    width: 100%;
+    margin-left: 25%;
+    padding-bottom: 4em;
+  }
 
   h2 a.is-active {
     color: $ca-heading-color;

@@ -3,90 +3,96 @@
 $isBlog = is_post_type('post');
 $isFaq = is_post_type('faqs');
 $itemType = $isFaq ? 'with paper faq faq---' : 'blogpost blogpost---';
+$contentTop = $isFaq ? 'faq__question' : 'blogpost-mast';
+$contentBottom = $isFaq ? 'faq__answer' : 'blogpost-content';
+$contentFooter= $isFaq ? 'faq__footer' : 'blogpost-footer';
 $item = get_query_var('item');
 $topics = wp_get_post_terms($item->ID, 'topic', array("fields" => "all"));
 $categories = wp_get_post_terms($item->ID, 'category', array("fields" => "all"));
 $context = get_query_var('context');
+$subtitle = get_field('subtitle');
 
 echo '<article id="' . $item->post_name . '" class="' . $itemType .'' . $context . '">';
 
-    echo '<div class="faq__question">';
+    echo '<div class="'. $contentTop .'">';
 
       echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
 
+      echo '<h3>'. $subtitle .'</h3>';
+
+      if ($isBlog) :
+
+        if ($context === 'single') :
+  
+          echo '<div class="author-bio">';
+  
+            echo '<div class="author-avatar">';
+  
+              echo get_avatar( get_the_author_meta( 'ID' ), 60 );
+  
+            echo '</div>';
+            echo '<div class="author-details">';
+              echo '<p class="serif">' . get_the_author_meta('first_name') .'&nbsp;'. get_the_author_meta('last_name') .'<br>';
+              echo '<em class="serif description">' . get_the_author_meta('description') .'</em></p>';
+            echo '</div>';
+  
+          echo '</div>';
+  
+        endif;
+  
+      endif;  
+
     echo '</div>';
 
-    echo '<div class="format faq__answer">';
+    echo '<div class="format '. $contentBottom .'">';
 
-    if ($context === 'single') {
-      the_content();
-    } else {
+      if ($context === 'single') {
+          the_content();
+      } else {
 
       the_excerpt();
 
       if (has_excerpt($item->ID)) {
 
-      echo '<div class="faq__more">';
+        echo '<div class="faq__more">';
 
-        more_link('View Full Answer');
+          more_link('View Full Answer');
 
-      echo '</div>';
+        echo '</div>';
 
-      }
+          }
 
-    }
+        }
 
     echo '</div>';
 
-    if ($isBlog) :
+        echo '<div class="'. $contentFooter .' row">';
 
-      if ($context === 'single') :
+        // tpoics if it's an FAQ
 
-      echo '<div class="author-bio">';
+        if($topics) :
 
-        echo '<div class="author-avatar">';
+          echo '<ul class="list list--small list--sep-comma">';
 
-          echo get_avatar( get_the_author_meta( 'ID' ), 60 );
+          echo '<li>';
 
-        echo '</div>';
-        echo '<div class="author-details">';
-          echo '<p class="serif">' . get_the_author_meta('first_name') .'&nbsp;'. get_the_author_meta('last_name') .'<br>';
-          echo '<em class="serif description">' . get_the_author_meta('description') .'</em></p>';
-        echo '</div>';
+            echo '<em class="serif">filed under &mdash;</em> ';
 
-      echo '</div>';
+          echo '</li>';
 
-    endif;
+        foreach($topics as $topic) :
 
-    endif;
+          echo '<li>';
 
-    echo '<div class="faq__footer row">';
+            echo '<a href="' . get_term_link($topic) . '" class="link link--secondary">' . $topic->slug . '</a>';
 
-    // tpoics if it's an FAQ
+          echo '</li>';
 
-    if($topics) :
+        endforeach;
 
-      echo '<ul class="list list--small list--sep-comma">';
+        echo '</ul>';
 
-      echo '<li>';
-
-        echo '<em class="serif">filed under &mdash;</em> ';
-
-      echo '</li>';
-
-    foreach($topics as $topic) :
-
-      echo '<li>';
-
-        echo '<a href="' . get_term_link($topic) . '" class="link link--secondary">' . $topic->slug . '</a>';
-
-      echo '</li>';
-
-    endforeach;
-
-    echo '</ul>';
-
-    endif;
+      endif;
 
     // categories if it's a blog post
 
