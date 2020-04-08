@@ -32,7 +32,7 @@ gulp.task("default", [
   "scripts:watch",
   "styles:watch",
   "theme:watch",
-  "browser:sync"
+  "browser:sync",
 ]);
 
 gulp.task("build", [
@@ -42,7 +42,7 @@ gulp.task("build", [
   "images:prod",
   "scripts:prod",
   "styles:prod",
-  "theme:prod"
+  "theme:prod",
 ]);
 
 /**
