@@ -1,4 +1,16 @@
 /cms/.htaccess
 /cms/wp-config.php
 app/uploads/
-app/cache/
+/app/cache/
+/app/cache/object/f3f/367/f3f367c67fe509724bc3b9a7eac39c18.php
+/app/cache/object/e40/5a2/e405a2d4e4344dd6f88e6c338acd79b2.php
+/app/cache/object/da7/09c/da709c219a863896d046fc2f5281360c.php
+/app/cache/object/d9d/907/d9d90799218f83c705b230da1cb1ddfd.php
+/app/cache/object/cd2/6a2/cd26a27288da119234512f735ee5aba4.php
+/app/cache/object/9e2/43a/9e243aae3770c10495d99c62ad468b93.php
+/app/cache/object/936/1d6/9361d6819c7084998ef9d8572da65d8f.php
+/app/cache/object/88e/210/88e210c81638171cb4d2129802bf307c.php
+/app/cache/object/876/d76/876d76aaa19a0c9b90629bfb0d9429a5.php
+/app/cache/object/51b/ce0/51bce02ff949ca1e3ef115830d5df490.php
+/app/cache/object/33c/964/33c9642bfb9cee155c120484526ba68d.php
+/app/cache/object/20c/614/20c614d377a73385cfc358d3ef35dd20.php
