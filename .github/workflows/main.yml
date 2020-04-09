@@ -14,4 +14,4 @@ jobs:
         ftp-server: studiocartogram.com
         ftp-username: admin@studiocartogram.com
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        remote-root: domains/fondfolio.com/html
+        remote-root: /fondfolio.com/html
