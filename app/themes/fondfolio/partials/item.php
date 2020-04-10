@@ -18,7 +18,7 @@ echo '<article id="' . $item->post_name . '" class="' . $itemType .'' . $context
 
       echo '<h2><a class="' . ($context === 'single' ? ' is-active ' : '') . '" href="' . get_permalink($item->ID) . '">' . get_the_title($item->ID) . '</a></h2>';
 
-      echo '<h3>'. $subtitle .'</h3>';
+      echo '<h3 class="blogpost-subtitle">'. $subtitle .'</h3>';
 
       if ($isBlog) :
 
