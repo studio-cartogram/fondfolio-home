@@ -1,1 +1,0 @@
-¹V[<?php exit; ?>a:1:{s:7:"content";s:157:"a:9:{i:0;s:6:"banner";i:1;s:3:"cta";i:2;s:7:"explain";i:3;s:12:"testimonials";i:4;s:5:"image";i:5;s:5:"image";i:6;s:5:"image";i:7;s:5:"image";i:8;s:3:"cta";}";}

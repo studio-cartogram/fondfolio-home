@@ -1,1 +1,0 @@
-¹V[<?php exit; ?>a:1:{s:7:"content";s:133:"Share your unique questionnaire url with the friends and family of the recipient. You will be notified each time someone contributes.";}

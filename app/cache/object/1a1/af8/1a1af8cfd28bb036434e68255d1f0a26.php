@@ -1,1 +1,0 @@
-¹V[<?php exit; ?>a:1:{s:7:"content";s:146:"What better gift to give a couple on their wedding day than the memories and wisdom from everyone near and dear, including those unable to attend.";}

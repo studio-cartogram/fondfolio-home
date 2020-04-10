@@ -1,1 +1,0 @@
-‡V[<?php exit; ?>a:1:{s:7:"content";a:2:{s:12:"wpseo_onpage";b:1;s:26:"wp_page_for_privacy_policy";b:1;}}
