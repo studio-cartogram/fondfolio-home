@@ -42,8 +42,8 @@
     padding-bottom: 2em;
 
     img {
-      width: 130%;
-      margin-left: -30%;
+      width: 140%;
+      margin-left: -20%;
       padding: $d-quin 0 $d-base;
     }
 
@@ -53,7 +53,7 @@
     }
 
     .caption {
-      margin-left: -30%;
+      margin-left: -20%;
       font-size: 0.875em;
     }
 
@@ -80,6 +80,7 @@
     color: $ca-heading-color;
     font-size: 1.5em;
     padding-bottom: $d-quin;
+    font-weight: 400;
   }
 
   h4 {
@@ -107,6 +108,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    padding-bottom: $d-quin;
 
     .subdued {
       color: $ca-heading-secondary-color;
