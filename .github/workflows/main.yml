@@ -11,6 +11,6 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
-        ftp-server: studiocartogram.com/domains/fondfolio.com/html
+        ftp-server: studiocartogram.com
         ftp-username: admin@studiocartogram.com
         ftp-password: ${{ secrets.FTP_PASSWORD }}
