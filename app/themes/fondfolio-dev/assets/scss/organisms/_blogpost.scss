@@ -9,6 +9,14 @@
 
   @include bp($bp-mobile) {
     padding: $d-quad;
+
+    h2 a.is-active {
+      color: $ca-heading-color;
+      font-size: 1.5em;
+      line-height: 1.15;
+      text-align: left;
+      padding-bottom: $d-base;
+    }
   }
   @include bp($bp-tablet) {
     padding: $d-oct;
@@ -80,6 +88,7 @@
     color: $ca-heading-color;
     font-size: 1.5em;
     padding-bottom: $d-quin;
+    font-weight: 400;
   }
 
   h4 {
@@ -107,6 +116,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    padding-bottom: $d-quin;
 
     .subdued {
       color: $ca-heading-secondary-color;
@@ -133,4 +143,11 @@
     justify-content: left;
     margin-top: $d-quin;
   }
+}
+
+@include bp($bp-tablet) {
+  padding: $d-oct $d-duo $d-sex;
+}
+@include bp($bp-laptop) {
+  padding: $d-oct $d-oct $d-sex;
 }
