@@ -24,7 +24,11 @@
 }
 
 .blogpost-container {
-  padding: 2em 4em;
+  padding: 1.5em;
+
+  @include bp($bp-tablet) {
+    padding: 3em 6em;
+  }
 
   @include bp($bp-laptop) {
     padding: 6em 12em;
@@ -45,9 +49,15 @@
   }
 
   .blogpost-content {
-    width: 70%;
-    margin-left: 25%;
+    width: 100%;
     padding-bottom: 2em;
+    font-size: 1em;
+
+    @include bp($bp-tablet) {
+      width: 70%;
+      margin-left: 25%;
+      font-size: 1.125em;
+    }
 
     img {
       width: 140%;
@@ -72,23 +82,31 @@
 
   .blogpost-footer.row {
     width: 100%;
-    margin-left: 25%;
-    padding-bottom: 4em;
+    padding-bottom: $d-quin;
   }
 
   h2 a.is-active {
     color: $ca-heading-color;
-    font-size: 3.5em;
+    font-size: 2.25em;
     line-height: 1.15;
     text-align: left;
     padding-bottom: $d-base;
+
+    @include bp($bp-tablet) {
+      font-size: 3.5em;
+      text-align: left;
+    }
   }
 
-  h3 {
+  h3.blogpost-subtitle {
     color: $ca-heading-color;
-    font-size: 1.5em;
+    font-size: 1.0875em;
     padding-bottom: $d-quin;
     font-weight: 400;
+
+    @include bp($bp-tablet) {
+      font-size: 1.5em;
+    }
   }
 
   h4 {
@@ -99,7 +117,11 @@
 
   .format p {
     color: $ca-paragraph-color;
-    font-size: 1.125em;
+    font-size: 1em;
+
+    @include bp($bp-tablet) {
+      font-size: 1.125em;
+    }
   }
 
   .format blockquote p {
@@ -137,11 +159,6 @@
         border-radius: 50%;
       }
     }
-  }
-
-  .faq__footer {
-    justify-content: left;
-    margin-top: $d-quin;
   }
 }
 

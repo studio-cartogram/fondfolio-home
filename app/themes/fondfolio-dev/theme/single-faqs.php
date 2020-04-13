@@ -20,7 +20,7 @@ echo '<div id="barba-wrapper">';
 
       set_query_var( 'context', 'single' );
       set_query_var( 'item', $post );
-      get_template_part('partials/item');
+      get_template_part('partials/item-faq');
       get_template_part('partials/prevnext');
 
       echo '</div>';

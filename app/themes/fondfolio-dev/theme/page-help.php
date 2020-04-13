@@ -1,4 +1,8 @@
- <?php
+<?php
+/**
+ * Template Name: Help Main
+ * 
+*/
 
 get_template_part('partials/head');
 
@@ -16,12 +20,11 @@ echo '<div id="barba-wrapper">';
 
     echo '<div class="row row--justify-center">';
 
-    echo '<div class="column column-10-tablet column-7-laptop">';      
+      echo '<div class="column column-10-tablet column-8-laptop">';
 
       set_query_var( 'context', 'single' );
       set_query_var( 'item', $post );
       get_template_part('partials/item-faq');
-      get_template_part('partials/prevnext');
 
       echo '</div>';
 

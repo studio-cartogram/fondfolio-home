@@ -1,5 +1,9 @@
 <?php
 
+$isBlog = is_post_type('post');
+$isFaq = is_post_type('faqs');
+$itemType = $isFaq ? 'item-faq' : 'item';
+
 $context = get_query_var( 'context' );
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $modifications = array(
@@ -20,7 +24,7 @@ if ( $the_query->have_posts() ) :
 
     set_query_var( 'item', $post );
 
-    get_template_part('partials/item', $context);
+    get_template_part('partials/' . $itemType .'', $context);
 
   endwhile;
 
