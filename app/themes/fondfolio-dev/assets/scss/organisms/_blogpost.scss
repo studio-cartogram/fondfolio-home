@@ -113,6 +113,10 @@
     color: $ca-heading-color;
     padding-top: $d-duo;
     font-size: 1em;
+
+    @include bp($bp-tablet) {
+      font-size: 1.125em;
+    }
   }
 
   .format p {
