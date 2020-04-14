@@ -17,12 +17,12 @@ echo '<div id="barba-wrapper">';
     echo '<div>';
       
 
-    echo '<div class="blogpost-container">';      
+      echo '<div class="blogpost-container">';      
 
-      set_query_var( 'context', 'single' );
-      set_query_var( 'item', $post );
-      get_template_part('partials/item');
-      get_template_part('partials/prevnext');
+        set_query_var( 'context', 'single' );
+        set_query_var( 'item', $post );
+        get_template_part('partials/item');
+        get_template_part('partials/prevnext');
 
       echo '</div>';
 
