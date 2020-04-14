@@ -120,6 +120,7 @@
     }
 
     .caption {
+      font-family: $t-font-family;
       margin-left: 0;
       font-size: 0.7em;
 
@@ -158,6 +159,7 @@
   }
 
   h4 {
+    font-family: $t-font-family-serif;
     color: $ca-heading-color;
     padding-top: $d-duo;
     font-size: 1em;
@@ -168,12 +170,9 @@
   }
 
   .format p {
+    font-family: $t-font-family-serif;
     color: $ca-paragraph-color;
     font-size: 1em;
-
-    @include bp($bp-laptop) {
-      font-size: 1.125em;
-    }
   }
 
   .format blockquote p {
