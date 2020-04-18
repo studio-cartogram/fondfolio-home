@@ -12,23 +12,23 @@ Color Index
  * index
  */
 
-$c-teal: #00838f;
-$c-lightTeal: #83E6EB;
-$c-darkTeal: #00575c;
-$c-lightestTeal: #EBFFFF;
-$c-black: #231D24;
-$c-white: #FFFFFF;
-$c-grey: #7E7A7E;
-$c-lightGrey: #D5D0D4;
-$c-lightestGrey: #F5F5F5;
-$c-green: #0EC8A9;
-$c-lightestGreen: #EEFBF8;
-$c-yellow: #F8D04D;
+$c-teal: #005d63;
+$c-lightTeal: #83e6eb;
+$c-darkTeal: #004c4a;
+$c-lightestTeal: #ebffff;
+$c-black: #231d24;
+$c-white: #ffffff;
+$c-grey: #7e7a7e;
+$c-lightGrey: #d5d0d4;
+$c-lightestGrey: #f5f5f5;
+$c-green: #0ec8a9;
+$c-lightestGreen: #eefbf8;
+$c-yellow: #f8d04d;
 $c-lightestYellow: #fdfcf6;
-$c-red: #EE5E5E;
-$c-lightestRed: #FDEEEE;
-$c-blue: #3FC5D9;
-$c-lightestBlue: #EEFBFD;
+$c-red: #ee5e5e;
+$c-lightestRed: #fdeeee;
+$c-blue: #3fc5d9;
+$c-lightestBlue: #eefbfd;
 
 /* =========================================
 Colors Applied
@@ -110,9 +110,7 @@ $ca-input-background: $c-white;
 $ca-input-border-color: $c-lightGrey;
 $ca-input-focus-border-color: $c-lightTeal;
 
-
 // Sections
 $ca-image-content-background: $c-lightestYellow;
 $ca-badge-title-color: $c-teal;
-$ca-cta-background-gradient: linear-gradient(-137deg, #02858A 0%, #50ABAD 100%);
-
+$ca-cta-background-gradient: linear-gradient(-137deg, #02858a 0%, #50abad 100%);

@@ -21,24 +21,6 @@ echo '<section class="banner">';
 
   echo '</div>';
 
-  echo '<div class="row row--justify-center">';
-
-    echo '<div class="column column-8-laptop intro">';
-
-      echo '<h1 class="">' . $title . '</h1>';
-
-      echo '<p class="p--large">' . $description . '</p>';
-
-      if ($button_link && $button_text) :
-
-        echo '<a onclick="return gtag_report_conversion("https://my.fondfolio.com/auth/signup");" href="' . $button_link .'" class="button button--primary button--large adwordsTracking">' . $button_text . '</a>';
-
-      endif;
-
-    echo '</div>';
-
-  echo '</div>';
-
   if ($wystia) :
 
     echo '<div class="banner__videoWrapper">';
@@ -50,12 +32,26 @@ echo '<section class="banner">';
 
   endif;
 
-    echo '<div class="banner__image">';
+  echo '<div class="banner__image">';
 
-      echo wp_get_attachment_image( $image, $size );
+    echo wp_get_attachment_image( $image, $size );
 
-    echo '</div>';
+  echo '</div>';
 
+  echo '<div class="banner__text">';
+
+    echo '<h1 class="">' . $title . '</h1>';
+
+    echo '<p class="p--large">' . $description . '</p>';
+
+    if ($button_link && $button_text) :
+
+      echo '<a onclick="return gtag_report_conversion("https://my.fondfolio.com/auth/signup");" href="' . $button_link .'" class="button button--primary button--large adwordsTracking">' . $button_text . '</a>';
+
+    endif;
+  
+  echo '</div>';
+ 
 echo '</section>';
 
 get_template_part('partials/section-note');

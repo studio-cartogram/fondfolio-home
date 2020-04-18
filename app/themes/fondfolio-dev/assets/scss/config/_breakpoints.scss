@@ -7,10 +7,12 @@ Breakpoints
  * easily add breakpoints
  */
 
-$bp-mobile: '(min-width: 450px)';
+$bp-mobile: "(min-width: 450px)";
 
-$bp-tablet: '(min-width: 768px)';
+$bp-tablet: "(min-width: 768px)";
 
-$bp-laptop: '(min-width: 950px)';
+$bp-laptop: "(min-width: 950px)";
 
-$bp-desktop: '(min-width: 1280px)';
+$bp-desktop: "(min-width: 1280px)";
+
+$bp-widescreen: "(min-width: 1800px)";
