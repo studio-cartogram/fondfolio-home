@@ -110,7 +110,7 @@
         }
 
         @include bp($bp-desktop) {
-          width: 80%;
+          width: 85%;
         }
       }
       blockquote {
@@ -197,6 +197,10 @@
     color: $ca-paragraph-color;
     font-size: 1em;
     line-height: 1.6;
+
+    a {
+      display: inline;
+    }
   }
 
   .format blockquote p {
