@@ -15,6 +15,10 @@
   }
 }
 
+.blogpost-sidebar {
+  min-width: 27%;
+}
+
 .blogpost-categories {
   width: 100%;
 
@@ -228,9 +232,11 @@
 
     .author-avatar {
       display: flex;
-      height: 64px;
-      width: 64px;
-      margin-right: $d-trio;
+      height: 100%;
+      width: 100%;
+      max-width: 64px;
+      max-height: 64px;
+      margin-right: $d-duo;
 
       img {
         border-radius: 50%;
