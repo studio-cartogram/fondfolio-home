@@ -3,11 +3,13 @@
   position: relative;
   height: calc(100vh - #{$d-header-height-mobile + $d-note-height-mobile};
   overflow: hidden;
+  max-width: 1600px;
+  margin: 0 auto;
 
   @include bp($bp-tablet) {
     max-height: 950px;
     height: calc(100vh - #{$d-header-height + $d-note-height};
-    margin-top: -$d-header-height;
+    margin: -$d-header-height auto 0;
   }
 }
 
@@ -18,24 +20,28 @@
   width: 85%;
 
     @include bp($bp-tablet) {
-      left: 32px;
+      left: 80px;
       width: 60%;
       bottom: 48%;
     }
 
     @include bp($bp-desktop) {
-      bottom: 35%;
-      width: 40%;
+      bottom: 40%;
+      width: 50%;
     }
 
     @include bp($bp-widescreen) {
       bottom: 40%;
-      width: 40%;
+      width: 50%;
     }
 
     h1 {
       font-size: 2.25em;
       line-height: 1.25;
+
+      @include bp($bp-desktop) {
+        font-size: 3em;
+      }
 
     @include bp($bp-widescreen) {
       font-size: 3.5em;
