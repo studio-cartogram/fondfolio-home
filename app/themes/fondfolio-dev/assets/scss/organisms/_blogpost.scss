@@ -15,6 +15,15 @@
   }
 }
 
+.blogpost-categories {
+  width: 100%;
+
+  .description {
+    color: $ca-heading-secondary-color;
+    font-size: 0.75em;
+  }
+}
+
 .blogpost-container {
   padding: 1.5em;
 

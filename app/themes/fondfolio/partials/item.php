@@ -43,10 +43,12 @@ echo '<article id="' . $item->post_name . '" class="blogpost blogpost---' . $con
 
               if($categories) :
 
-              echo '<ul class="list list--small list--sep-comma">';
-                echo '<li>';
-                  echo '<em class="serif">filed under &mdash;</em> ';
-                echo '</li>';
+              
+                echo '<div class="blogpost-categories">';
+                  echo '<em class="serif description">filed under</em> ';
+                echo '</div>';
+
+                echo '<ul class="list list--small list--sep-comma">';
 
               foreach($categories as $category) :
 
