@@ -13,6 +13,15 @@
   @include bp($bp-laptop) {
     padding: $d-oct $d-dec $d-sex;
   }
+
+  h2.text--inverted a {
+    border-bottom: 1px solid white;
+  }
+
+  h2.text--inverted a:hover {
+    color: $c-darkTeal;
+    border-bottom: 1px solid $c-darkTeal;
+  }
 }
 
 .cta__button {
