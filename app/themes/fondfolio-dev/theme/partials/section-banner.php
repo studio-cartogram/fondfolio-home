@@ -54,6 +54,10 @@ echo '<section class="banner">';
  
 echo '</section>';
 
-get_template_part('partials/section-note');
+if ( is_page_template('page-landing.php') ) :
+
+  get_template_part('partials/section-note');
+
+endif;
 
 ?>
