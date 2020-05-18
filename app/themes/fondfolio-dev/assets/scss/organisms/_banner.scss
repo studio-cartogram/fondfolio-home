@@ -5,6 +5,7 @@
   overflow: hidden;
   max-width: 1600px;
   margin: 0 auto;
+  background-color: $c-lightestYellow;
 
   @include bp($bp-tablet) {
     max-height: 950px;

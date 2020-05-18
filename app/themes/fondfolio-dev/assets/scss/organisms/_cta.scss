@@ -14,13 +14,15 @@
     padding: $d-oct $d-dec $d-sex;
   }
 
-  h2.text--inverted a {
+  h2.text--inverted a,
+  p.text--inverted a {
     border-bottom: 1px solid white;
   }
 
-  h2.text--inverted a:hover {
-    color: $c-darkTeal;
-    border-bottom: 1px solid $c-darkTeal;
+  h2.text--inverted a:hover,
+  p.text--inverted a:hover {
+    color: white;
+    border-bottom: none;
   }
 }
 
