@@ -12,7 +12,7 @@
     "build": "gulp build"
   },
   "engines": {
-    "node": ">=5.0.0"
+    "node": ">=6.4.0"
   },
   "devDependencies": {
     "babel-core": "6.24.1",
@@ -60,7 +60,7 @@
     "animejs": "^2.0.1",
     "babel-polyfill": "6.23.0",
     "barba.js": "^1.0.0",
-    "instafeed.js": "^1.4.1",
+    "instafeed.js": "^2.0.0-rc2",
     "swiper": "^3.4.1",
     "whatwg-fetch": "^2.0.3"
   }
