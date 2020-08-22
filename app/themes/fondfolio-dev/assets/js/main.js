@@ -74,13 +74,12 @@ const initInstagram = () => {
     return null;
   }
 
-  console.log("before things");
-  const feed = new Instafeed({
-    limit: 6,
-    accessToken: InstagramToken,
-  });
-  feed.run();
-};
+//   const feed = new Instafeed({
+//     limit: 6,
+//     accessToken: InstagramToken,
+//   });
+//   feed.run();
+// };
 
 const app = new App();
 
