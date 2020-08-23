@@ -2,7 +2,6 @@
  * Setup webpack public path
  * to enable lazy-including of
  * js chunks
- *
  */
 import "babel-polyfill";
 import Barba from "barba.js";
@@ -73,13 +72,12 @@ const initInstagram = () => {
   if (!document.querySelector("#instafeed")) {
     return null;
   }
-
 //   const feed = new Instafeed({
 //     limit: 6,
 //     accessToken: InstagramToken,
 //   });
 //   feed.run();
-// };
+};
 
 const app = new App();
 
