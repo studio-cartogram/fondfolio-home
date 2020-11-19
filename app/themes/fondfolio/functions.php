@@ -100,6 +100,9 @@
 
   function is_post_type($type){
     global $wp_query;
+    if ( empty( $post->ID ) ) { 
+      return; 
+      }
     if($type == get_post_type($wp_query->post->ID)) 
         return true;
     return false;

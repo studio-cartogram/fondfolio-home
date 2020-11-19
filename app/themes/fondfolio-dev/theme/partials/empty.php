@@ -6,17 +6,17 @@ $subtitle = get_field('404_subtitle', 'options');
 $button_text = get_field('404_button_text', 'options');
 $button_link = get_field('404_button_link', 'options');
 
-echo '<section class="banner">';
+echo '<section class="banner search-result">';
 
   echo '<div class="row row--justify-center">';
 
     echo '<div class="column column-8-laptop intro">';
 
-      echo '<h1 class="">';
+      echo '<h2 class="">';
 
-      if ($title) : echo $title; else: echo 'Nothing to see here'; endif;
+      if ($title) : echo $title; else: echo 'Sorry, nothing matches that specific search. Try something more general.'; endif;
 
-      echo '</h1>';
+      echo '</h2>';
 
       echo '<p class="p--large">' . $description . '</p>';
 

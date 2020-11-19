@@ -7,11 +7,19 @@
   margin: 0 auto;
   background-color: $c-lightestYellow;
 
+ 
+
   @include bp($bp-tablet) {
     max-height: 950px;
     height: calc(100vh - #{$d-header-height + $d-note-height};
     margin: -$d-header-height auto 0;
   }
+}
+
+.banner.search-result {
+  background-color: transparent;
+  display: inline-table;
+  margin: $d-sex 0 0 0;
 }
 
 .banner__text {
