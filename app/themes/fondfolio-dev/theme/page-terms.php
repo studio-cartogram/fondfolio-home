@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Template Name: Terms
+ * 
+*/
+
 get_template_part('partials/head');
 
 get_template_part('partials/analytics');
