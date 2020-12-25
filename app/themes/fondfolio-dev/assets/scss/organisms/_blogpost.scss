@@ -122,6 +122,12 @@
       }
     }
 
+    .terms-words {
+      @include bp($bp-tablet) {
+        padding-left: 0em;
+      }
+    }
+
     img {
       width: 100%;
       margin-left: 0;
