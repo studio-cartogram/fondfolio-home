@@ -101,11 +101,17 @@ class Root_AdminMenu {
 				'visible_always' => false,
 				'order' => 2200
 			),
+			'w3tc_setup_guide' => array(
+				'page_title' => __( 'Setup Guide', 'w3-total-cache' ),
+				'menu_text' => __( 'Setup Guide', 'w3-total-cache' ),
+				'visible_always' => false,
+				'order' => 2300
+			),
 			'w3tc_about' => array(
 				'page_title' => __( 'About', 'w3-total-cache' ),
 				'menu_text' => __( 'About', 'w3-total-cache' ),
 				'visible_always' => true,
-				'order' => 2300
+				'order' => 2400
 			)
 		);
 		$pages = apply_filters( 'w3tc_admin_menu', $pages, $this->_config );
@@ -117,7 +123,7 @@ class Root_AdminMenu {
 		$pages = $this->generate_menu_array();
 
 		uasort( $pages, function($a, $b) {
-    			return ($a['order'] - $b['order']);
+				return ($a['order'] - $b['order']);
 			}
 		);
 
@@ -125,7 +131,7 @@ class Root_AdminMenu {
 			__( 'Performance', 'w3-total-cache' ),
 			apply_filters( 'w3tc_capability_menu_w3tc_dashboard',
 				$base_capability ),
-			'w3tc_dashboard', '', 'div' );
+			'w3tc_dashboard', '', 'none' );
 
 		$submenu_pages = array();
 		$is_master = ( is_network_admin() || !Util_Environment::is_wpmu() );
@@ -142,18 +148,9 @@ class Root_AdminMenu {
 					array( $this, 'options' )
 				);
 				$submenu_pages[] = $hook;
-
-				if ( isset( $titles['redirect_faq'] ) ) {
-					add_action( 'load-' . $hook, array( $this, 'redirect_faq' ) );
-				}
 			}
 		}
 		return $submenu_pages;
-	}
-
-	public function redirect_faq() {
-		wp_redirect( W3TC_FAQ_URL );
-		exit;
 	}
 
 	/**
@@ -167,8 +164,8 @@ class Root_AdminMenu {
 			$this->_page = 'w3tc_dashboard';
 
 		/*
-         * Hidden pages
-         */
+		 * Hidden pages
+		 */
 		if ( isset( $_REQUEST['w3tc_dbcluster_config'] ) ) {
 			$options_dbcache = new DbCache_Page();
 			$options_dbcache->dbcluster_config();
@@ -228,6 +225,11 @@ class Root_AdminMenu {
 			$options_cdn->options();
 			break;
 
+		case 'w3tc_stats':
+			$p = new UsageStatistics_Page();
+			$p->render();
+			break;
+
 		case 'w3tc_support':
 			$options_support = new Support_Page();
 			$options_support->options();
@@ -236,6 +238,11 @@ class Root_AdminMenu {
 		case 'w3tc_install':
 			$options_install = new Generic_Page_Install();
 			$options_install->options();
+			break;
+
+		case 'w3tc_setup_guide':
+			$setup_guide = new SetupGuide_Plugin_Admin();
+			$setup_guide->load();
 			break;
 
 		case 'w3tc_about':

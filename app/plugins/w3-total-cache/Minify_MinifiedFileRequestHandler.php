@@ -54,6 +54,15 @@ class Minify_MinifiedFileRequestHandler {
 			if ( ! $cache->store( basename( $file ), array( 'content' => 'content ok' ) ) ) {
 				echo 'error storing';
 			} else {
+				if ( ( function_exists( 'brotli_compress' ) &&
+					   $this->_config->get_boolean( 'browsercache.enabled' ) &&
+					   $this->_config->get_boolean( 'browsercache.cssjs.brotli' ) ) )
+					if ( !$cache->store( basename( $file ) . '_br',
+						array( 'content' => brotli_compress( 'content ok' ) ) ) ) {
+						echo 'error storing';
+						exit();
+					}
+
 				if ( ( function_exists( 'gzencode' ) &&
 						$this->_config->get_boolean( 'browsercache.enabled' ) &&
 						$this->_config->get_boolean( 'browsercache.cssjs.compression' ) ) )
@@ -134,7 +143,8 @@ class Minify_MinifiedFileRequestHandler {
 				'encodeOutput' => ( $browsercache &&
 					!defined( 'W3TC_PAGECACHE_OUTPUT_COMPRESSION_OFF' ) &&
 					!$quiet &&
-					$this->_config->get_boolean( 'browsercache.cssjs.compression' ) ),
+					( $this->_config->get_boolean( 'browsercache.cssjs.compression' ) ||
+					$this->_config->get_boolean( 'browsercache.cssjs.brotli' ) ) ),
 				'bubbleCssImports' => ( $this->_config->get_string( 'minify.css.imports' ) == 'bubble' ),
 				'processCssImports' => ( $this->_config->get_string( 'minify.css.imports' ) == 'process' ),
 				'cacheHeaders' => array(
@@ -167,7 +177,8 @@ class Minify_MinifiedFileRequestHandler {
 			$minifier_type = 'application/x-javascript';
 
 			switch ( true ) {
-			case ( ( $hash || $location == 'include' ) && $this->_config->get_boolean( 'minify.js.combine.header' ) ):
+			case ( $hash && $this->_config->get_string( 'minify.js.method' ) == 'combine' ):
+			case ( $location == 'include' && $this->_config->get_boolean( 'minify.js.combine.header' ) ):
 			case ( $location == 'include-body' && $this->_config->get_boolean( 'minify.js.combine.body' ) ):
 			case ( $location == 'include-footer' && $this->_config->get_boolean( 'minify.js.combine.footer' ) ):
 				$engine = 'combinejs';
@@ -185,7 +196,7 @@ class Minify_MinifiedFileRequestHandler {
 		} elseif ( $type == 'css' ) {
 			$minifier_type = 'text/css';
 
-			if ( ( $hash || $location == 'include' ) && $this->_config->get_boolean( 'minify.css.combine' ) ) {
+			if ( ( $hash || $location == 'include' ) && $this->_config->get_string( 'minify.css.method' ) == 'combine' ) {
 				$engine = 'combinecss';
 			} else {
 				$engine = $this->_config->get_string( 'minify.css.engine' );
@@ -215,9 +226,11 @@ class Minify_MinifiedFileRequestHandler {
 			return $this->finish_with_error( 'Nothing to minify', $quiet, false );
 		}
 
-		/**
-		 * Minify!
-		 */
+		// Minify
+		$serve_options = apply_filters(
+			'w3tc_minify_file_handler_minify_options',
+			$serve_options );
+
 		$return = array();
 		try {
 			$return = \Minify0_Minify::serve( 'MinApp', $serve_options );
@@ -593,7 +606,11 @@ class Minify_MinifiedFileRequestHandler {
 				Util_File::mkdir_from_safe( dirname( $cache_path ), W3TC_CACHE_DIR );
 			}
 
-			Util_Http::download( $url, $cache_path );
+			// google-fonts (most used for external inclusion)
+			// doesnt return full content (unicode-range) for simple useragents
+			Util_Http::download( $url, $cache_path,
+				array( 'user-agent' =>
+					'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92' ) );
 		}
 
 		return file_exists( $cache_path ) ? $this->_get_minify_source( $cache_path, $url ) : false;
@@ -637,7 +654,8 @@ class Minify_MinifiedFileRequestHandler {
 					'persistent' => $this->_config->get_boolean( 'minify.memcached.persistent' ),
 					'aws_autodiscovery' => $this->_config->get_boolean( 'minify.memcached.aws_autodiscovery' ),
 					'username' => $this->_config->get_string( 'minify.memcached.username' ),
-					'password' => $this->_config->get_string( 'minify.memcached.password' )
+					'password' => $this->_config->get_string( 'minify.memcached.password' ),
+					'binary_protocol' => $this->_config->get_boolean( 'minify.memcached.binary_protocol' )
 				);
 				if ( class_exists( 'Memcached' ) ) {
 					$inner_cache = new Cache_Memcached( $config );
@@ -843,12 +861,22 @@ class Minify_MinifiedFileRequestHandler {
 		if ( $type == 'js' ) {
 			$engine = $this->_config->get_string( 'minify.js.engine' );
 
-			switch ( $engine ) {
-			case 'js':
-				$keys = array_merge( $keys, array(
+			if ( $this->_config->get_boolean( 'minify.auto' ) ) {
+				$keys[] = 'minify.js.method';
+			} else {
+				array_merge(
+					$keys,
+					array(
 						'minify.js.combine.header',
 						'minify.js.combine.body',
 						'minify.js.combine.footer',
+					)
+				);
+			}
+
+			switch ( $engine ) {
+			case 'js':
+				$keys = array_merge( $keys, array(
 						'minify.js.strip.comments',
 						'minify.js.strip.crlf',
 					) );
@@ -872,11 +900,11 @@ class Minify_MinifiedFileRequestHandler {
 			}
 		} elseif ( $type == 'css' ) {
 			$engine = $this->_config->get_string( 'minify.css.engine' );
+			$keys[] = 'minify.css.method';
 
 			switch ( $engine ) {
 			case 'css':
 				$keys = array_merge( $keys, array(
-						'minify.css.combine',
 						'minify.css.strip.comments',
 						'minify.css.strip.crlf',
 						'minify.css.imports',

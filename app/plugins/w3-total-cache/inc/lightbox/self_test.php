@@ -84,7 +84,17 @@ if ( !defined( 'W3TC' ) )
             <?php else: ?>
             <span style="background-color: #FFFF00"><?php _e( 'Not installed', 'w3-total-cache' ); ?></span>
             <?php endif; ?>
-            <span class="w3tc-self-test-hint"><?php _e( '(required for compression support)', 'w3-total-cache' ); ?></span>
+            <span class="w3tc-self-test-hint"><?php _e( '(required for gzip compression support)', 'w3-total-cache' ); ?></span>
+        </li>
+
+        <li>
+            brotli extension:
+            <?php if ( function_exists( 'brotli_compress' ) ): ?>
+            <span style="background-color: #33cc33"><?php _e( 'Installed', 'w3-total-cache' ); ?></span>
+            <?php else: ?>
+            <span style="background-color: #FFFF00"><?php _e( 'Not installed', 'w3-total-cache' ); ?></span>
+            <?php endif; ?>
+            <span class="w3tc-self-test-hint"><?php _e( '(required for brotli compression support)', 'w3-total-cache' ); ?></span>
         </li>
 
         <li>
@@ -192,26 +202,74 @@ if ( !defined( 'W3TC' ) )
             <?php endif; ?>
         </li>
 
+        <li>
+            SSH2 extension:
+            <?php if ( function_exists( 'ssh2_connect' ) ): ?>
+                <span style="background-color: #33cc33"><?php _e( 'Installed', 'w3-total-cache' ); ?></span>
+            <?php else: ?>
+                <span style="background-color: #FFFF00"><?php _e( 'Not installed', 'w3-total-cache' ); ?></span>
+            <?php endif; ?>
+            <span class="w3tc-self-test-hint"><?php _e( '(required for Self-hosted (<acronym title="File Transfer Protocol">FTP</acronym>) <acronym title="Content Delivery Network">CDN</acronym> <acronym title="Secure File Transfer Protocol">SFTP</acronym> support)', 'w3-total-cache' ); ?></span>
+        </li>
+
         <?php
 if ( Util_Environment::is_apache() ):
-	$apache_modules = ( function_exists( 'apache_get_modules' ) ? apache_get_modules() : false );
 
-$modules = array(
-	'mod_deflate',
-	'mod_env',
-	'mod_expires',
-	'mod_filter',
-	'mod_ext_filter',
-	'mod_headers',
-	'mod_mime',
-	'mod_rewrite',
-	'mod_setenvif'
-);
+    $modules = array(
+        'mod_deflate',
+        'mod_env',
+        'mod_expires',
+        'mod_filter',
+        'mod_ext_filter',
+        'mod_headers',
+        'mod_mime',
+        'mod_rewrite',
+        'mod_setenvif'
+    );
+
+    if ( function_exists( 'apache_get_modules' ) ) {
+        // apache_get_modules only works when PHP is installed as an Apache module
+        $apache_modules = apache_get_modules();
+
+    } elseif ( function_exists( 'exec' )) {
+        // alternative modules capture for php CGI
+        exec( 'apache2 -t -D DUMP_MODULES', $output, $status);
+
+        if ( $status !== 0 ) {
+            exec( 'httpd -t -D DUMP_MODULES', $output, $status);
+        }
+
+        if ( $status === 0 && count($output > 0) ) {
+            $apache_modules = [];
+
+            foreach ($output as $line) {
+                if ( preg_match('/^\s(\S+)\s\((\S+)\)$/', $line, $matches) === 1) {
+                    $apache_modules[] = $matches[1];
+                }
+            }
+        }
+
+        // modules have slightly different names
+        $modules = array(
+            'deflate_module',
+            'env_module',
+            'expires_module',
+            'filter_module',
+            'ext_filter_module',
+            'headers_module',
+            'mime_module',
+            'rewrite_module',
+            'setenvif_module'
+        );
+    } else {
+        $apache_modules = false;
+    }
+
 ?>
             <?php foreach ( $modules as $module ): ?>
                 <li>
                     <?php echo $module; ?>:
-                    <?php if ( $apache_modules ): ?>
+                    <?php if ( ! empty( $apache_modules ) ): ?>
                         <?php if ( in_array( $module, $apache_modules ) ): ?>
                         <span style="background-color: #33cc33"><?php _e( 'Installed', 'w3-total-cache' ); ?></span>
                         <?php else: ?>
