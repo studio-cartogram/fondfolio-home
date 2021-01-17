@@ -9,7 +9,6 @@ import Barba from "barba.js";
 import log from "./utils/log";
 import "./vendor/webpack.publicPath";
 import loadSprite from "./vendor/loadSprite";
-import Instafeed from "instafeed.js";
 import Scroll from "./scripts/Scroll";
 import Slideshow from "./scripts/Slideshow";
 import Fade from "./scripts/Fade";
@@ -34,7 +33,6 @@ class App {
     this.fade = new Fade();
     this.slideshow = new Slideshow();
     this.initTransitions();
-    initInstagram();
     Barba.Dispatcher.on("initStateChange", () => {
       document.body.classList.add("js-is-loading");
       document.body.classList.remove("js-is-leaving");
@@ -68,22 +66,6 @@ class App {
     });
   };
 }
-
-const initInstagram = () => {
-  if (!document.querySelector("#instafeed")) {
-    return null;
-  }
-
-  console.log("before things");
-  const feed = new Instafeed({
-    get: "user",
-    limit: 6,
-    accessToken: "2949526186.81592dc.9ff406918c514411a6fe1736c2265b73",
-    userId: 2949526186,
-    resolution: "standard_resolution",
-  });
-  feed.run();
-};
 
 const app = new App();
 
