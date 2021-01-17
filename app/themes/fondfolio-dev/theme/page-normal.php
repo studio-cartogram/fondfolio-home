@@ -20,8 +20,6 @@ echo '<div id="barba-wrapper">';
 
   get_template_part('partials/loop-sections');
   
-  get_template_part('partials/global-instagram');
-
   echo '</div>';
 
 echo '</div>';
